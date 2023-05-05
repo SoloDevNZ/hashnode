@@ -588,6 +588,6 @@ This will open the Neo4j Browser interface, where I can start exploring and inte
 
 I have now installed Neo4j on my Ubuntu system.
 
-## Conclusion.
+## In Conclusion.
 
 Looking ahead, the future of Composable Architecture and related technologies is promising. As the demand for scalable and flexible systems continues to grow, the need for efficient data management solutions becomes increasingly important. By leveraging technologies like Neo4j and RedisGraph, developers can create powerful, adaptable, and resilient solutions that can handle the ever-evolving challenges of storing instant messages and social media posts.
