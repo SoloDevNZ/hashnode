@@ -19,7 +19,7 @@ This lab uses the following equipment:
 
 > NOTE: NUC\* stands for Next Unit of Computing which is nothing more than a compact, small form factor computer.
 
-## An Introduction to this Series.
+## An Introduction.
 
 ![intro](https://images.pexels.com/photos/6980429/pexels-photo-6980429.jpeg?cs=srgb&dl=pexels-ann-h-6980429.jpg&fm=jpg&w=640&h=427 align="left")
 
