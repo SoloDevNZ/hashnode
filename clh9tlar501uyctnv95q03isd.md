@@ -10,7 +10,7 @@ tags: microservices, apis, next, deno, composable-architecture
 
 ---
 
-## Introduction.
+## An Introduction.
 
 Composable Architecture is a description of how microservices and APIs combine to form the foundations of modern, distributed, extensible applications.
 
