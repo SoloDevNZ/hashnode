@@ -80,7 +80,7 @@ Another tool for hardening a system is Fail2Ban.
 
 Fail2Ban protects Linux systems against many security threats, such as dictionary, DoS, DDoS, and brute-force attacks.
 
-* On the `homelab` system, I install Fail2Ban, then edit the `jail.local` file:
+* On the `homelab` system, I install Fail2Ban, then create the `jail.local` file:
     
 
 ```bash
