@@ -184,7 +184,7 @@ $ lxd init
 
 > NOTE: In reality, I use a few custom settings when initialising the LXD service. For example, I'd use `eno1` as the host interface. This is so the containers are issued IP addresses from the DHCP server that is running on the LAN. Using a spare partition as storage, as mentioned above, also requires custom settings.
 
-* Finally, I'll install `zfsutils-linux` because I usually choose the zfs storage driver during the LXD initialisation:
+* Optionally, I'll install `zfsutils-linux` if I choose to use the zfs storage driver (an option that is available during the LXD initialisation):
     
 
 ```bash
