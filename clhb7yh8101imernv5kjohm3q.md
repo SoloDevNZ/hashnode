@@ -5,7 +5,7 @@ seoDescription: "Discover virtualization's evolution: from inception to modern h
 datePublished: Sat May 06 2023 00:00:39 GMT+0000 (Coordinated Universal Time)
 cuid: clhb7yh8101imernv5kjohm3q
 slug: the-magic-of-virtualization
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1683286016723/ec98d743-4348-4914-85c3-9f5ba0c08846.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1683350063689/be68f649-bbbf-4c0f-af8b-682d928c27bd.png
 tags: containers, virtualization, virtual-machines, lxd, hypervisors
 
 ---
