@@ -114,7 +114,7 @@ $ sudo systemctl restart fail2ban
 
 The next step, although not necessary, is to set up an empty drive (or partition) where I can store my images.
 
-## OPTIONAL: Preparing an Empty Drive (or Partition).
+## OPTIONAL: Preparing an Empty Drive (or Partition) for LXD Storage.
 
 ![HDD](https://images.pexels.com/photos/33278/disc-reader-reading-arm-hard-drive.jpg?cs=srgb&dl=pexels-pixabay-33278.jpg&fm=jpg&w=640&h=427 align="left")
 
