@@ -44,7 +44,7 @@ The LXD is what I use to create *some* of my containers.
 
 LXD stands for LinuX Daemon and is pronounced: "lexdee". This is a container manager that runs as a background process. It is a tool that helps me manage the containers that I "spin up", "tear down", and use.
 
-LXC stands for Linux Container and is pronounced: "lexsee". These are operating system-level virtualization instances that can run concurrently on a single host. These use the Linux kernel of the host system to reduce the overhead of running multiple, isolated occurances.
+LXC stands for LinuX Container and is pronounced: "lexsee". These are operating system-level virtualization instances that can run concurrently on a single host. These use the Linux kernel of the host system to reduce the overhead of running multiple, isolated occurances.
 
 > NOTE: I can also spin up a virtual machine by using the `--vm` flag. When they're initialised, virtual machines download a different kernel so it can be used *within* the container itself. Virtual machines are useful when I need functionality that is not supported by the host kernel, or when I want to run a completely different operating system.
 
