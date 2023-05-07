@@ -125,7 +125,7 @@ The next step is to install the LXD manager which handles the containers, images
 
 ![manager](https://images.pexels.com/photos/1117211/pexels-photo-1117211.jpeg?cs=srgb&dl=pexels-david-dibert-1117211.jpg&fm=jpg&w=640&h=427 align="left")
 
-> NOTE: Remember, LXD is an abbreviation for \[L\]inu\[X\] \[D\]aemon.
+> NOTE: Remember, LXD is an abbreviation for LinuX Daemon.
 
 * On the `homelab` system, I run the updates and upgrades, install Snap, and install `LXD`:
     
