@@ -151,20 +151,23 @@ The next step, although not necessary, is to set up an empty drive (or partition
 
 ![HDD](https://images.pexels.com/photos/33278/disc-reader-reading-arm-hard-drive.jpg?cs=srgb&dl=pexels-pixabay-33278.jpg&fm=jpg&w=640&h=427 align="left")
 
-* Using an empty drive (or partition) to store my images has advantages. I can:
+Using an empty drive (or partition) to store my images has advantages. I can:
+
+* Secure images with repeatable, scheduled backups (think: CRON Jobs),
     
-    * Secure images with repeatable, scheduled backups (think: CRON Jobs),
+* Rebuild the host system without losing images,
+    
+* Move the drive (or partition) to another system,
+    
+* Improve reliability, performance, or capacity, by...
+    
+    * Enabling the cluster option, and/or
         
-    * Rebuild the host system without losing images,
+    * Including more drives.
         
-    * Move the drive (or partition) to another system,
-        
-    * Improve reliability, performance, or capacity,
-        
-        * Enable the cluster option, and/or
-            
-        * Include more drives.
-            
+
+I'm ambivalent about using an empty drive (or partition) on this test system. However, if this was a clustered production system, then I'd *absolutely* store my images on M.2 drives, SSDs, and HDDs.
+
 * On the `homelab` system, I use Gnome Disks to format an empty partition without installing a filesystem.
     
 * In a terminal, I list the installed devices, unmount an empty partition, and prepare the partition for use:
@@ -203,6 +206,8 @@ These are my settings when I initialise the LXD service:
     
 * ...called `eno1`.
     
+
+The image below shows how I initialise the LXD on my homelab system:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683418968185/e2b4eea4-1e46-4bd4-88bc-383d9102d9de.png align="center")
 
