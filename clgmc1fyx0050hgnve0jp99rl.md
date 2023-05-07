@@ -184,8 +184,10 @@ The next step is to initialise the LXD for use.
 $ lxd init
 ```
 
-These are my settings when I initialise the LXD service: I "like to use an existing empty block device" (as mentioned above)
+These are my settings when I initialise the LXD service:
 
+* I "like to use an existing empty block device" (as mentioned above)
+    
 * ...where the "Path" is `/dev/sda2`,
     
 * I don't use a "local network bridge"
@@ -197,7 +199,7 @@ These are my settings when I initialise the LXD service: I "like to use an exist
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683418968185/e2b4eea4-1e46-4bd4-88bc-383d9102d9de.png align="center")
 
-* Optionally, I install `zfsutils-linux` if I choose to use the zfs storage driver (where zfs is the default option during the LXD initialisation):
+* Also, I install `zfsutils-linux` if I choose to use the zfs storage driver (where zfs is the default option during the LXD initialisation):
     
 
 ```bash
