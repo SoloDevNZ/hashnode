@@ -146,7 +146,7 @@ The next step, although not necessary, is to set up an empty drive (or partition
 
 * Using an empty drive (or partition) to store my images has advantages. I can:
     
-    * Secure images with repeatable, scheduled backups,
+    * Secure images with repeatable, scheduled backups (think: CRON Jobs),
         
     * Rebuild the host system without losing images,
         
@@ -158,7 +158,6 @@ The next step, although not necessary, is to set up an empty drive (or partition
             
         * Include more drives.
             
-
 * On the `homelab` system, I use Gnome Disks to format an empty partition without installing a filesystem.
     
 * In a terminal, I list the installed devices, unmount an empty partition, and prepare the partition for use:
