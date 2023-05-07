@@ -112,37 +112,6 @@ port = 22
 $ sudo systemctl restart fail2ban
 ```
 
-The next step, although not necessary, is to set up an empty drive (or partition) where I can store my images.
-
-## OPTIONAL: Preparing an Empty Drive (or Partition) for LXD Storage.
-
-![HDD](https://images.pexels.com/photos/33278/disc-reader-reading-arm-hard-drive.jpg?cs=srgb&dl=pexels-pixabay-33278.jpg&fm=jpg&w=640&h=427 align="left")
-
-Using an empty drive (or partition) to store my images has the following advantages:
-
-* I can secure the images with a repeatable (think: CRON job), scheduled backup to another drive (or partition, or NAS, or the Cloud),
-    
-* I can rebuild the host system without losing my images,
-    
-* I can move the drive (or partition) to another system, and
-    
-* I can improve reliability, performance, or capacity by:
-    
-    * Enabling the cluster option, and
-        
-    * Including more drives.
-        
-* On the `homelab` system, I list the installed devices, unmount an empty partition, and prepare the partition for use:
-    
-
-```bash
-$ sudo lshw -short
-$ sudo umount /dev/sda2
-$ sudo dd if=/dev/zero of=/dev/sda2 bs=4M count=10
-```
-
-> NOTE: In this example, `/dev/sda2` is the partition device I've decided to use.
-
 The next step is to install the LXD manager which handles the containers, images, profiles, commands, and resources.
 
 ## Installing the LXD Manager.
@@ -169,26 +138,72 @@ $ sudo adduser brian lxd
 
 > NOTE: Adding myself to the LXD group means I can skip the `sudo` requirement when issuing LXD and LXC commands.
 
+The next step, although not necessary, is to set up an empty drive (or partition) where I can store my images.
+
+## OPTIONAL: Preparing an Empty Drive (or Partition) for LXD Storage.
+
+![HDD](https://images.pexels.com/photos/33278/disc-reader-reading-arm-hard-drive.jpg?cs=srgb&dl=pexels-pixabay-33278.jpg&fm=jpg&w=640&h=427 align="left")
+
+Using an empty drive (or partition) to store my images has the following advantages:
+
+* I can secure the images with a repeatable (think: CRON job), scheduled backup to another drive (or partition, or NAS, or the Cloud),
+    
+* I can rebuild the host system without losing my images,
+    
+* I can move the drive (or partition) to another system, and
+    
+* I can improve reliability, performance, or capacity by:
+    
+    * Enabling the cluster option, and
+        
+    * Including more drives.
+        
+* On the `homelab` system, I use Gnome Disks to format an empty partition without installing a filesystem.
+    
+* In a terminal, I list the installed devices, unmount an empty partition, and prepare the partition for use:
+    
+
+```bash
+$ sudo lshw -short
+$ sudo umount /dev/sda2
+$ sudo dd if=/dev/zero of=/dev/sda2 bs=4M count=10
+```
+
+> NOTE: In this example, `/dev/sda2` is the partition device I've decided to use.
+
 The next step is to initialise the LXD for use.
 
 ## Initialising the LXD Manager.
 
 ![initial](https://images.pexels.com/photos/10394994/pexels-photo-10394994.jpeg?cs=srgb&dl=pexels-brett-jordan-10394994.jpg&fm=jpg&w=640&h=480 align="left")
 
-* On the `homelab` system, I initialise the LXD service and use the default settings during setup:
+* On the `homelab` the system, I initialise the LXD service and *mostly* use the default settings during setup:
     
 
 ```bash
 $ lxd init
 ```
 
-> NOTE: In reality, I use a few custom settings when initialising the LXD service. For example, I'd use `eno1` as the host interface. This is so the containers are issued IP addresses from the DHCP server that is running on the LAN. Using a spare partition as storage, as mentioned above, also requires custom settings.
+These are my settings when I initialise the LXD service:
 
-* Optionally, I'll install `zfsutils-linux` if I choose to use the zfs storage driver (an option that is available during the LXD initialisation):
+* I "like to use an existing empty block device" (as mentioned above)
+    
+* ...where the "Path" is `/dev/sda2`,
+    
+* I don't use a "local network bridge"
+    
+* ...but I do use a "host interface"
+    
+* ...called `eno1`.
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683418968185/e2b4eea4-1e46-4bd4-88bc-383d9102d9de.png align="center")
+
+* Optionally, I install `zfsutils-linux` if I choose to use the zfs storage driver (where zfs is the default option during the LXD initialisation):
     
 
 ```bash
-$ sudo apt install zfsutils-linux
+$ sudo apt install -y zfsutils-linux
 ```
 
 The last step is to test the LXC commands by spinning up and tearing down a couple of containers.
