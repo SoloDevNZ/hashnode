@@ -80,21 +80,26 @@ Another tool for hardening a system is Fail2Ban.
 
 Fail2Ban protects Linux systems against many security threats, such as dictionary, DoS, DDoS, and brute-force attacks.
 
-* On the `homelab` system, I install Fail2Ban, then create the `jail.local` file:
+* On the `homelab` system, I install Fail2Ban, change to the fail2ban directory, copy the `jail.conf` file as `jail.local`, and open the `jail.local` file in Nano:
     
 
 ```bash
 $ sudo apt install fail2ban
-$ sudo nano /etc/fail2ban/jail.local
+$ cd /etc/fail2ban
+$ sudo cp ./jail.conf ./jail.local
+$ sudo nano ./jail.local
 ```
 
-* I add the following to the `jail.local` file, save the changes, and exit the Nano editor:
+* I change a few (SSH-centric) settings in the `jail.local` file, then I save those changes, and exit the Nano editor:
     
 
 ```plaintext
 [DEFAULT]
+. . .
+bantime = 1d
+. . .
 destemail = your@email.here
-sendername = Fail2Ban
+sendername = Fail2Ban on Homelab
 
 [sshd]
 enabled = true
@@ -105,11 +110,13 @@ enabled = true
 port = 22
 ```
 
-* Finally, I restart Fail2Ban:
+* Then I restart Fail2Ban, check its status, and enable autostart on boot:
     
 
 ```plaintext
 $ sudo systemctl restart fail2ban
+$ sudo systemctl status fail2ban
+$ sudo systemctl enable fail2ban
 ```
 
 The next step is to install the LXD manager which handles the containers, images, profiles, commands, and resources.
