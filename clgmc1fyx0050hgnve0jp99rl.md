@@ -144,20 +144,21 @@ The next step, although not necessary, is to set up an empty drive (or partition
 
 ![HDD](https://images.pexels.com/photos/33278/disc-reader-reading-arm-hard-drive.jpg?cs=srgb&dl=pexels-pixabay-33278.jpg&fm=jpg&w=640&h=427 align="left")
 
-Using an empty drive (or partition) to store my images has the following advantages:
+* Using an empty drive (or partition) to store my images has advantages. I can:
+    
+    * Secure images with repeatable, scheduled backups,
+        
+    * Rebuild the host system without losing images,
+        
+    * Move the drive (or partition) to another system,
+        
+    * Improve reliability, performance, or capacity,
+        
+        * Enable the cluster option, and/or
+            
+        * Include more drives.
+            
 
-    ** I can secure the images with a repeatable (think: CRON job), scheduled backup to another drive (or partition, or NAS, or the Cloud),
-    
-    ** I can rebuild the host system without losing my images,
-    
-    ** I can move the drive (or partition) to another system, and
-    
-    ** I can improve reliability, performance, or capacity by:
-    
-        ** Enabling the cluster option, and
-        
-        ** Including more drives.
-        
 * On the `homelab` system, I use Gnome Disks to format an empty partition without installing a filesystem.
     
 * In a terminal, I list the installed devices, unmount an empty partition, and prepare the partition for use:
@@ -184,10 +185,8 @@ The next step is to initialise the LXD for use.
 $ lxd init
 ```
 
-These are my settings when I initialise the LXD service:
+These are my settings when I initialise the LXD service: I "like to use an existing empty block device" (as mentioned above)
 
-* I "like to use an existing empty block device" (as mentioned above)
-    
 * ...where the "Path" is `/dev/sda2`,
     
 * I don't use a "local network bridge"
