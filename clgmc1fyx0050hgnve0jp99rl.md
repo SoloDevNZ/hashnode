@@ -236,6 +236,21 @@ $ lxc delete test2 -f
 $ lxc ls
 ```
 
+Here are the results:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683510898323/062a5e54-1b8b-4edf-8d05-a2239461fbbb.png align="center")
+
+Please note the following about these results:
+
+* "Creating test1" happened when I used `init` to build the image, while...
+    
+* "Creating test2" and "Starting test2" happened when I used `launch` to build the container,
+    
+* The `ls` (list) command shows the test1 image has a STOPPED STATE while the test2 container has a RUNNING STATE, and
+    
+* The delete command, which worked on the STOPPED STATE image of test1, did *not* work on the test2 container, until I used the `-f` (force) flag. This flag put the container into a STOPPED STATE and then deleted test2 which, as a consequence of changing states, had become an image.
+    
+
 > NOTE: While the `test1` instance was NOT running, it was called an image. If I told it to START, then it would have become the `test1` container. The `test2` instance WAS running, so it was called a container. If I told it to STOP, then it would have become the `test2` image. Yet another example of useless trivia floating around in my brain.
 
 ## In Conclusion.
