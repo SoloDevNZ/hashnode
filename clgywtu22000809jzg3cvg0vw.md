@@ -1,5 +1,7 @@
 ---
 title: "Throwback: Using MomentJS with VuePress."
+seoTitle: "MomentJS Integration in VuePress"
+seoDescription: "Optimize VuePress static sites with MomentJS for better date formatting and manipulation, enhancing technical documentation and user experiences."
 datePublished: Mon May 11 2020 08:34:18 GMT+0000 (Coordinated Universal Time)
 cuid: clgywtu22000809jzg3cvg0vw
 slug: throwback-using-momentjs-with-vuepress
