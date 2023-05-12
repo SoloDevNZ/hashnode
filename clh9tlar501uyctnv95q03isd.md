@@ -134,41 +134,41 @@ For more information on what to do next, you can refer to the official Next.js d
 
 To install Next.js on Ubuntu, I need to have Node.js and npm installed on my system. I can use the following steps to install Node.js and npm on my Ubuntu system:
 
-1. I update my Ubuntu system:
+1\. I update my Ubuntu system:
     
 
 ```bash
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
 
-1. I install Node.js using the following command:
+2\. I install Node.js using the following command:
     
 
 ```bash
 sudo apt install nodejs
 ```
 
-1. I verify that Node.js is installed correctly by checking its version:
+3\. I verify that Node.js is installed correctly by checking its version:
     
 
 ```bash
 node -v
 ```
 
-1. I install npm using the following command:
+4\. I install npm using the following command:
     
 
 ```bash
 sudo apt install npm
 ```
 
-Once I have Node.js and npm installed, I can create a new Next.js project by running the following command:
+5\. Once I have Node.js and npm installed, I can create a new Next.js project by running the following command:
 
 ```bash
 npx create-next-app [project-name]
 ```
 
-This will create a new Next.js project in a directory named `project-name`. I can then navigate to this directory and start the development server using the following command:
+6\. This will create a new Next.js project in a directory named `project-name`. I can then navigate to this directory and start the development server using the following command:
 
 ```bash
 cd project-name
