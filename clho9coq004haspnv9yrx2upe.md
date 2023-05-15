@@ -38,7 +38,7 @@ There's also a chunk about setting up, and using SSH, the OpenSSH server, and RS
 
 This operation is simple to understand, easy to execute, and results in a deployed relational database I can access with a GUI, that *isn't* phpMyAdmin, across my LAN.
 
-### **Setting Up a Container for the MariaDB Server.**
+## **Setting Up a Container for the MariaDB Server.**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684115919133/9ac63b05-c400-4f59-bb76-263491aefa7f.png align="center")
 
@@ -60,7 +60,7 @@ I update and upgrade the container:
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
 
-### Creating a New User (for the Container).
+## Creating a New User (for the Container).
 
 On the `homelab` system, in the container, I create a new user:
 
@@ -86,7 +86,7 @@ I log in to the container with the 'brian' account:
 lxc exec mariadb -- su brian
 ```
 
-### Installing the MariaDB Service.
+## Installing the MariaDB Service.
 
 On the `homelab` system, in the container, I install MariaDB:
 
