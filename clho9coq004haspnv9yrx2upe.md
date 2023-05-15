@@ -58,6 +58,8 @@ I update and upgrade the container:
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
 
+### Creating a New User (for the container).
+
 I create a new user:
 
 ```plaintext
@@ -81,6 +83,8 @@ I log in to the container with the 'brian' account:
 ```plaintext
 lxc exec mariadb -- su brian
 ```
+
+### Installing MariaDB.
 
 I install MariaDB:
 
