@@ -146,7 +146,7 @@ And finally, I exit the container:
 exit
 ```
 
-### Creating, and Using, RSA Keys.
+## Creating, and Using, RSA Keys.
 
 These steps will enable SSH sessions to the container, across the LAN, without needing a password.
 
