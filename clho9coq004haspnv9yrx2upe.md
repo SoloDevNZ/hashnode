@@ -112,7 +112,7 @@ I run the security script and answer a few questions:
 sudo mysql_secure_installation
 ```
 
-Securing the MariaDB service is important, however, securing the environment in which these services run is also top of the list. Remember: "Black Hats" are trying to penetrate my defences, and I'm trying to push 18 Startups out the door. Security is vital, it's important, it's *ESSENTIAL*. It's not the 1970s anymore.
+Securing the MariaDB service is important, however, securing the environment in which these services run is also top of the list. Remember: "Black Hats" are trying to penetrate my defences, and I'm trying to push 18 Startups out the door. Security is vital, it's important, it's *ESSENTIAL*. (It's not the 1970s anymore.)
 
 ### What is SSH?
 
@@ -192,7 +192,7 @@ PasswordAuthentication yes
 I test the SSH configuration:
 
 ```plaintext
-# sshd -t
+sshd -t
 ```
 
 I restart the SSH system:
@@ -213,19 +213,19 @@ These steps will enable SSH sessions to the container, across the LAN, without n
 
 ### 1/4 - Creating an RSA Key Pair on the Workstation.
 
-On the `workstation` system, I open a terminal (`CTRL` + `ALT` + `T`) and generate an RSA key pair called "/home/brian/.ssh/mariadb":
-
-```plaintext
-ssh-keygen -b 4096
-```
-
-After generating the SSH keys, I start the ssh-agent:
+On the `workstation` system, I start the ssh-agent:
 
 ```plaintext
 eval "$(ssh-agent -s)"
 ```
 
-Once the ssh-agent is running, I add my SSH private key to the ssh-agent:
+I open a terminal (`CTRL` + `ALT` + `T`) and generate an RSA key pair called "/home/brian/.ssh/mariadb":
+
+```plaintext
+ssh-keygen -b 4096
+```
+
+I add my SSH private key to the ssh-agent:
 
 ```plaintext
 ssh-add /home/brian/.ssh/mariadb
@@ -249,7 +249,7 @@ On the `workstation` system, I login to the “brian” account of the remote co
 ssh -p 22 brian@192.168.188.?
 ```
 
-> NOTE: I'd change the -p(ort) flag from 22 to whatever value I set in the "sshd\_config" file.
+> NOTE: I'd change the -p(ort) flag from 22 to whatever value I set in the "sshd\_config" file above.
 
 ### 4/4 - Disabling Password Authentication.
 
@@ -259,14 +259,14 @@ On the `workstation` system, I open the "sshd\_config" file in the remote contai
 sudo nano /etc/ssh/sshd_config
 ```
 
-I edit and save these "sshd\_config" settings:
+I edit, and save, these "sshd\_config" settings:
 
 ```plaintext
 PermitRootLogin no
 PasswordAuthentication no
 ```
 
-> NOTE: Other changes I typically include are changing to "Protocol 2" and switching out the default port number for something less obvious.
+> NOTE: Other changes I typically include are enabling "Protocol 2" and switching out the default port number of 22 for something less obvious.
 
 I restart the "ssh" service:
 
