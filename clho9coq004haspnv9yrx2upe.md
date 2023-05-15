@@ -36,7 +36,7 @@ The operations below show how I:
 
 This operation is simple to understand, easy to execute, and results in a deployed relational database I can access with a GUI... that *isn't* phpMyAdmin.
 
-### **Setting Up MariaDB in a Container.**
+### **Setting Up MariaDB Server in a Container.**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684115919133/9ac63b05-c400-4f59-bb76-263491aefa7f.png align="center")
 
@@ -58,7 +58,7 @@ I update and upgrade the container:
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
 
-### Creating a New User (for the container).
+### Creating a New User (for the Container).
 
 I create a new user:
 
@@ -84,7 +84,7 @@ I log in to the container with the 'brian' account:
 lxc exec mariadb -- su brian
 ```
 
-### Installing MariaDB.
+### Installing the MariaDB Service.
 
 I install MariaDB:
 
