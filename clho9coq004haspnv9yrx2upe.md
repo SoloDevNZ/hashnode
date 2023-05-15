@@ -213,7 +213,7 @@ I restart the "ssh" service:
 sudo systemctl restart ssh.service
 ```
 
-### Installing MySQL Workbench on My Workstation
+## Installing MySQL Workbench on My Workstation
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684114555123/64feb628-5949-403c-ad70-627f4543e662.png align="center")
 
@@ -247,7 +247,7 @@ mysql-workbench
 
 Once MySQL Workbench has launched, I can start using it to manage my MariaDB (and/or MySQL) databases and tables.
 
-### Connecting MySQL Workbench to MariaDB
+## Connecting MySQL Workbench to MariaDB
 
 To connect MySQL Workbench to a MariaDB server running on my LAN, I need to follow these steps:
 
