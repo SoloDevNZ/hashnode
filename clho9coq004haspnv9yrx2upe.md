@@ -112,6 +112,43 @@ I run the security script and answer a few questions:
 sudo mysql_secure_installation
 ```
 
+## What is SSH?
+
+Secure Shell, SSH, is a network protocol used to provide secure encrypted communication between two untrusted hosts over an insecure network. It was designed to replace Telnet and other insecure remote shell protocols.
+
+SSH creates a secure connection between a client and a server, allowing for secure file transfers and remote command-line access to the server's operating system or applications. SSH provides confidentiality and integrity, preventing the interception of data, and it also provides authentication, allowing users to establish their identity in the remote system.
+
+SSH is commonly used to securely access servers remotely, to tunnel traffic between machines, to securely transfer files using SFTP, SCP or Rsync, and to execute remote commands securely. The protocol is implemented in a number of tools such as OpenSSH, PuTTY, and WinSCP, and is widely used for remote administration of servers and network devices.
+
+### What is OpenSSH?
+
+OpenSSH is a free and open-source implementation of the SSH protocol. It was developed as a part of the OpenBSD project and is now used on various Unix-like operating systems.
+
+OpenSSH provides several tools, including ssh (secure shell), scp (secure copy), and sftp (secure file transfer protocol), which enable secure remote access and file transfer. It is widely used for remote administration of servers and network devices, and also for secure communication between computers over an insecure network like the Internet.
+
+OpenSSH supports strong encryption algorithms like AES, Blowfish, and 3DES for secure communication, and provides several features like X11 forwarding, TCP/IP tunnelling, and key authentication for improved security and flexibility.
+
+OpenSSH is free to use and distribute under a BSD-style license, and its source code is available for review and modification. It is one of the most widely-used implementations of the SSH protocol and is considered to be the de facto standard for secure network communication.
+
+### What is RSA?
+
+RSA is a public-key cryptographic algorithm used to encrypt and sign data. It was named after its inventors - Ron Rivest, Adi Shamir, and Leonard Adleman in 1977. RSA is widely used in various applications such as secure email, digital signatures, and online banking.
+
+The RSA algorithm involves the use of two keys - a public key and a private key - to encrypt and decrypt data. The public key is used for encryption, and is widely shared among users, while the private key is kept secret and is used for decryption.
+
+Here's an example of how RSA encryption works:
+
+1. The sender of the message obtains the public key of the recipient.
+    
+2. The sender uses the recipient's public key to encrypt the message.
+    
+3. The encrypted message is sent to the recipient.
+    
+4. The recipient uses their private key to decrypt the message.
+    
+
+RSA is known to be secure, but its security depends on the length of the key used. As computers have become faster, longer keys are required to maintain the same level of security. RSA cypher suite has been widely deployed and trusted, it is included in many SSL/TLS implementations for secure communication.
+
 ## Configuring the SSH File in the Container.
 
 On the `homelab`, in the container, I open the "sshd\_config" file:
@@ -127,6 +164,8 @@ AllowUsers brian
 PermitRootLogin yes
 PasswordAuthentication yes
 ```
+
+> NOTE: I return to this file later in the post specifically to "harden" this container.
 
 I test the SSH configuration:
 
