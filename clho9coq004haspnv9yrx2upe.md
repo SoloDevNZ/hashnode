@@ -6,7 +6,7 @@ datePublished: Mon May 15 2023 03:00:42 GMT+0000 (Coordinated Universal Time)
 cuid: clho9coq004haspnv9yrx2upe
 slug: installing-mariadb-and-mysql-workbench
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1684097758213/546805e8-9ce2-419d-8717-54e77c40a648.png
-tags: mariadb, rdbms, ops, operations, mysql-workbench
+tags: ssh, mariadb, rdbms, ops, mysql-workbench
 
 ---
 
@@ -32,15 +32,17 @@ The operations below show how I:
 * Connect MySQL Workbench to the MariaDB service running in a container.
     
 
+There's also a chunk about setting up, and using SSH, the OpenSSH server, and RSA.
+
 ## A Simple Ops Deployment.
 
-This operation is simple to understand, easy to execute, and results in a deployed relational database I can access with a GUI... that *isn't* phpMyAdmin.
+This operation is simple to understand, easy to execute, and results in a deployed relational database I can access with a GUI, that *isn't* phpMyAdmin, across my LAN.
 
 ### **Setting Up a Container for the MariaDB Server.**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684115919133/9ac63b05-c400-4f59-bb76-263491aefa7f.png align="center")
 
-First, I create a new container called "mariadb":
+On the `homelab` system, I create a new container called "mariadb":
 
 ```plaintext
 lxc launch ubuntu:22.04 mariadb
@@ -60,7 +62,7 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autore
 
 ### Creating a New User (for the Container).
 
-I create a new user:
+On the `homelab` system, in the container, I create a new user:
 
 ```plaintext
 adduser brian
@@ -86,7 +88,7 @@ lxc exec mariadb -- su brian
 
 ### Installing the MariaDB Service.
 
-I install MariaDB:
+On the `homelab` system, in the container, I install MariaDB:
 
 ```plaintext
 sudo apt install mariadb-server -y
@@ -110,19 +112,114 @@ I run the security script and answer a few questions:
 sudo mysql_secure_installation
 ```
 
+## Configuring the SSH File in the Container.
+
+On the `homelab`, in the container, I open the "sshd\_config" file:
+
+```plaintext
+nano /etc/ssh/sshd_config
+```
+
+I edit and save these "sshd\_config" settings:
+
+```plaintext
+AllowUsers brian
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
+I test the SSH configuration:
+
+```plaintext
+# sshd -t
+```
+
+I restart the SSH system:
+
+```plaintext
+sudo systemctl restart ssh.service
+```
+
 And finally, I exit the container:
 
 ```plaintext
 exit
 ```
 
-### Installing MySQL Workbench on My Homelab
+### Creating, and Using, RSA Keys.
+
+These steps will enable SSH sessions to the container, across the LAN, without needing a password.
+
+### 1/4 - Creating an RSA Key Pair on the Workstation.
+
+On the `workstation` system, I open a terminal (`CTRL` + `ALT` + `T`) and generate an RSA key pair called "/home/brian/.ssh/mariadb":
+
+```plaintext
+ssh-keygen -b 4096
+```
+
+After generating the SSH keys, I start the ssh-agent:
+
+```plaintext
+eval "$(ssh-agent -s)"
+```
+
+Once the ssh-agent is running, I add my SSH private key to the ssh-agent:
+
+```plaintext
+ssh-add /home/brian/.ssh/mariadb
+```
+
+### 2/4 - Uploading a Public Key to the Remote Container.
+
+On the `workstation` system, I use "ssh-copy-id" to upload the locally-generated public key to the remote container:
+
+```plaintext
+ssh-copy-id -i /home/brian/.ssh/mariadb.pub brian@192.168.188.?
+```
+
+> NOTE: I replace the "?" with the actual octet for the container.
+
+### 3/4 - Logging In to the Remote Container.
+
+On the `workstation` system, I login to the “brian” account of the remote container:
+
+```plaintext
+ssh -p 22 brian@192.168.188.?
+```
+
+> NOTE: I'd change the -p(ort) flag from 22 to whatever value I set in the "sshd\_config" file.
+
+### 4/4 - Disabling Password Authentication.
+
+On the `workstation` system, I open the "sshd\_config" file in the remote container:
+
+```plaintext
+sudo nano /etc/ssh/sshd_config
+```
+
+I edit and save these "sshd\_config" settings:
+
+```plaintext
+PermitRootLogin no
+PasswordAuthentication no
+```
+
+> NOTE: Other changes I typically include are changing to "Protocol 2" and switching out the default port number for something less obvious.
+
+I restart the "ssh" service:
+
+```plaintext
+sudo systemctl restart ssh.service
+```
+
+### Installing MySQL Workbench on My Workstation
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684114555123/64feb628-5949-403c-ad70-627f4543e662.png align="center")
 
-I open a terminal by pressing `CTRL+ALT+T` on my keyboard.
+On the `workstation` system, I open a terminal by pressing `CTRL+ALT+T` on my keyboard.
 
-I update and upgrade my `homelab` system:
+I update and upgrade my `workstation` system:
 
 ```plaintext
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
@@ -161,7 +258,7 @@ To connect MySQL Workbench to a MariaDB server running on my LAN, I need to foll
 3. In the “Set up a New Connection” window, I enter the following details:
     
 
-* Connection Name: A name for my new connection, for example, "MariaDB on LAN".
+* Connection Name: A name for my new connection, for example, "MariaDB".
     
 * Hostname: The IP address or hostname of my MariaDB server.
     
@@ -179,7 +276,7 @@ To connect MySQL Workbench to a MariaDB server running on my LAN, I need to foll
 
 ## In Conclusion.
 
-This post provided instructions on how I use `LXD` to contain a MariaDB server installation, install MySQL Workbench on my `homelab`, and connect MySQL Workbench to the MariaDB service.
+This post provided instructions on how I use `LXD` to contain a MariaDB server installation, install MySQL Workbench on my `homelab`, and connect MySQL Workbench to the MariaDB service. There was also a bit about the SSH protocol, the OpenSSH server, and generating RSA Key Pairs.
 
 I'll keep pushing out these posts on the details of my operations processes and development processes. I'll also try to keep them small, digestible, and relevant to how I operate.
 
