@@ -112,6 +112,8 @@ I run the security script and answer a few questions:
 sudo mysql_secure_installation
 ```
 
+Securing the MariaDB service is important, however, securing the environment in which these services run is also top of the list. Remember: "Black Hats" are trying to penetrate my defences, and I'm trying to push 18 Startups out the door. Security is vital, it's important, it's *ESSENTIAL*. It's not the 1970s anymore.
+
 ### What is SSH?
 
 Secure Shell, SSH, is a network protocol used to provide secure encrypted communication between two untrusted hosts over an insecure network. It was designed to replace Telnet and other insecure remote shell protocols.
@@ -134,7 +136,7 @@ OpenSSH is free to use and distribute under a BSD-style license, and its source 
 
 RSA is a public-key cryptographic algorithm used to encrypt and sign data. It was named after its inventors - Ron Rivest, Adi Shamir, and Leonard Adleman in 1977. RSA is widely used in various applications such as secure email, digital signatures, and online banking.
 
-The RSA algorithm involves the use of two keys - a public key and a private key - to encrypt and decrypt data. The public key is used for encryption, and is widely shared among users, while the private key is kept secret and is used for decryption.
+The RSA algorithm involves the use of two keys - a public key and a private key - to encrypt and decrypt data. The public key is used for encryption and is widely shared among users, while the private key is kept secret and is used for decryption.
 
 Here's an example of how RSA encryption works:
 
@@ -148,6 +150,26 @@ Here's an example of how RSA encryption works:
     
 
 RSA is known to be secure, but its security depends on the length of the key used. As computers have become faster, longer keys are required to maintain the same level of security. RSA cypher suite has been widely deployed and trusted, it is included in many SSL/TLS implementations for secure communication.
+
+## Installing OpenSSH in the Container.
+
+By default, OpenSSH is included in the containers I create, but installing OpenSSH is very easy:
+
+```plaintext
+sudo apt install openssh-server -y
+```
+
+I can check the status of OpenSSH:
+
+```plaintext
+sudo systemctl status sshd
+```
+
+If needed, I can enable OpenSSH:
+
+```plaintext
+sudo systemctl enable --now ssh
+```
 
 ## Configuring the SSH File in the Container.
 
