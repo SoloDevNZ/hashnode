@@ -112,7 +112,7 @@ I run the security script and answer a few questions:
 sudo mysql_secure_installation
 ```
 
-## What is SSH?
+### What is SSH?
 
 Secure Shell, SSH, is a network protocol used to provide secure encrypted communication between two untrusted hosts over an insecure network. It was designed to replace Telnet and other insecure remote shell protocols.
 
