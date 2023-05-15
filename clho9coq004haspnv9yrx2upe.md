@@ -36,7 +36,7 @@ The operations below show how I:
 
 This operation is simple to understand, easy to execute, and results in a deployed relational database I can access with a GUI... that *isn't* phpMyAdmin.
 
-### **Setting Up the MariaDB Server in a Container.**
+### **Setting Up a Container for the MariaDB Server.**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684115919133/9ac63b05-c400-4f59-bb76-263491aefa7f.png align="center")
 
