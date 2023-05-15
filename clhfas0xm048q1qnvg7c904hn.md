@@ -5,7 +5,7 @@ seoDescription: "Take the "12 Startups in 12 Months" challenge, explore innovati
 datePublished: Mon May 08 2023 20:30:42 GMT+0000 (Coordinated Universal Time)
 cuid: clhfas0xm048q1qnvg7c904hn
 slug: the-12-startups-in-12-months-challenge
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1683367497283/63e8063d-8602-4333-b216-0b343a14ad45.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1684188378948/67b53ea6-fdf0-4ffe-b4d3-d11528e5d5dc.png
 tags: startups, startup, business, business-plan, business-planning
 
 ---
