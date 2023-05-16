@@ -156,6 +156,7 @@ $ lxc exec docker bash
 ```plaintext
 # systemctl is-active docker
 # service docker status
+# docker version
 # docker info
 ```
 
