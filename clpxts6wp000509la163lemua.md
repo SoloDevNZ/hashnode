@@ -8,6 +8,7 @@ tags: ai, artificial-intelligence, machine-learning, deep-learning, llm, large-l
 
 ---
 
+Published: Saturday 12<sup>th</sup> December 2023.  
 Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve.)
 
 ## TL;DR.
