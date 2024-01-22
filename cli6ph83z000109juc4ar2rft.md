@@ -42,8 +42,8 @@ lxc exec container-name -- bash
 sudo apt clean && \
 sudo apt update && \
 sudo apt dist-upgrade -y && \
-sudo apt autoclean && \
 sudo apt --fix-broken install && \
+sudo apt autoclean && \
 sudo apt autoremove -y
 ```
 
