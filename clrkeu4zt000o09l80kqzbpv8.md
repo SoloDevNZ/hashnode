@@ -3,7 +3,7 @@ title: "Installing LXD and Using LXCs."
 datePublished: Fri Jan 19 2024 09:00:13 GMT+0000 (Coordinated Universal Time)
 cuid: clrkeu4zt000o09l80kqzbpv8
 slug: installing-lxd-and-using-lxcs
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704964017492/7fc82ddb-0d11-4faa-80ec-dfa4ec46a693.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706172227189/9597a0ab-3ed4-430a-8115-a95057191614.png
 tags: lxc, containers, virtual-machines, lxd
 
 ---
