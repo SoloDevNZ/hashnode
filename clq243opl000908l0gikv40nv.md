@@ -46,16 +46,69 @@ Embeddings (partly) resolve one of the known LLM memory issues.
     
 
 ```bash
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
 ## Creating an Anaconda Environment.
 
-* I create an Anaconda environment called (langchain):
+* I use `conda` to display a `list` of Anaconda `env`ironments:
     
 
 ```bash
-conda create -n langchain
+conda env list
+```
+
+* I use `conda` to create, and activate, a new environment named (-n) (langchain):
+    
+
+```bash
+conda create -n langchain python=3.11 -y && conda activate langchain
+```
+
+> NOTE: This command creates the (langchain) environment, then activates the (langchain) environment.
+
+# Changing the LangChain Home Directory.
+
+> NOTE: I will define the home directory with settings in the environment directory.
+
+* I create the LangChain home directory:
+    
+
+```bash
+mkdir ~/LangChain
+```
+
+* I make new directories within the (langchain) environment:
+    
+
+```bash
+mkdir -p $HOME/anaconda3/envs/langchain/etc/conda/activate.d
+```
+
+* I use Nano to create the `set_working_directory.sh` shell script:
+    
+
+```bash
+sudo nano $HOME/anaconda3/envs/langchain/etc/conda/activate.d/set_working_directory.sh
+```
+
+* I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
+    
+
+```bash
+cd ~/LangChain
+```
+
+* I activate the (base) environment:
+    
+
+```bash
+conda activate
 ```
 
 * I activate the (langchain) environment:
@@ -64,6 +117,8 @@ conda create -n langchain
 ```bash
 conda activate langchain
 ```
+
+> NOTE: I should now, by default, be in the `~/LangChain` home directory.
 
 ## Installing Ollama.
 
