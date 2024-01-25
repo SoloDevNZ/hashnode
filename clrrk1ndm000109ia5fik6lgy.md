@@ -3,18 +3,18 @@ title: "Installing NVM for Node and NPM."
 datePublished: Wed Jan 24 2024 09:00:25 GMT+0000 (Coordinated Universal Time)
 cuid: clrrk1ndm000109ia5fik6lgy
 slug: installing-nvm-for-node-and-npm
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1705063554178/9f4a525e-61ad-424d-be89-af3fe9fed7b3.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706172468211/10111675-00d7-4151-b609-47bc6265a83b.png
 tags: nodejs, npm, node, nvm, node-js, node-version-manager, node-package-manager
 
 ---
 
 # TL;DR.
 
-This article provides a step-by-step guide on how to install NVM (Node Version Manager) for managing Node and NPM versions. It covers everything from the prerequisites and installation of CURL to installing and activating NVM. It then details how to use NVM to install Node LTS and NPM, setting Node LTS as the default NVM version, and confirming the installations. It also includes instructions on how to test the installation by creating and running a simple Node.js project.
+This post provides a step-by-step guide on how to install NVM (Node Version Manager) for managing Node and NPM versions. It covers everything from the prerequisites and installation of CURL to installing and activating NVM. It then details how to use NVM to install Node LTS and NPM, setting Node LTS as the default NVM version, and confirming the installations. It also includes instructions on how to test the installation by creating and running a simple Node.js project.
 
 > **Attributions:**
 > 
-> [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm) ***↗, and***
+> [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)***↗, and***
 > 
 > [https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/).
 
@@ -180,7 +180,7 @@ Key takeaway? NVM let's me effectively control my Node.js environment, there by 
 
 Have you tried NVM? How was your experience? Share your thoughts in the comments!
 
-Check out [the original](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/) [freecodecamp.org](http://freecodecamp.org) [article](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/).
+Check out [the original](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/)[freecodecamp.org](http://freecodecamp.org)[article](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/).
 
 Until next time: Be safe, be kind, be awesome.
 
