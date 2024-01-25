@@ -3,7 +3,7 @@ title: "Creating a Local LinuX Container."
 datePublished: Mon Jan 22 2024 09:00:49 GMT+0000 (Coordinated Universal Time)
 cuid: clrop6h22000o08jqdlkwexao
 slug: creating-a-local-linux-container
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1705892673291/d3226e2a-8e54-4b5e-b6d4-1503ec5a2996.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706172136304/1d56561a-64c7-4f8a-8dba-dd56ee30cc6e.png
 tags: lxc, lxd, linux-daemon, linux-container
 
 ---
