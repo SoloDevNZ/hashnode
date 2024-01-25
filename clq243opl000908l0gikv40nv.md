@@ -49,18 +49,18 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autore
 
 ## Creating an Anaconda Environment.
 
-* I create an Anaconda environment called `langchain-env1`:
+* I create an Anaconda environment called (langchain):
     
 
 ```bash
-conda create -n langchain-env1
+conda create -n langchain
 ```
 
-* I activate the `langchain-env1` environment:
+* I activate the (langchain) environment:
     
 
 ```bash
-conda activate langchain-env1
+conda activate langchain
 ```
 
 ## Installing Ollama.
