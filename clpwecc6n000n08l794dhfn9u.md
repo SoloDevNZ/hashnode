@@ -8,9 +8,11 @@ tags: python, conda, anaconda, python-packages, anaconda-environments
 
 ---
 
-## TL;DR.
+Update: Sunday 4<sup>th</sup> January 2024.
 
-Anaconda is a tool for managing and deploying Python applications, environments, and packages.
+# TL;DR.
+
+This post serves as a guide on how to install, update, and uninstall Anaconda on Ubuntu. It provides detailed instructions on managing Anaconda environments, including creating, renaming, and removing them, and changing the working directory within an environment. It also explains how to test Python scripts within these environments. Anaconda, likened to Docker or Distrobox but specifically designed for Python, is presented as an essential tool for managing and deploying Python applications, environments, and packages.
 
 > NOTE: [Businesses may need a license](https://www.anaconda.com/pricing/organizations/) (which includes me when I bootstrap my technology startup and begin generating a turnover.)
 
@@ -18,24 +20,26 @@ Anaconda is a tool for managing and deploying Python applications, environments,
 > 
 > [https://www.anaconda.com/](https://www.anaconda.com/). ***↗***
 
-## An Introduction.
+# An Introduction.
 
-This post is a comprehensive guide on installing Anaconda on Ubuntu, which is a tool for managing and deploying Python applications, environments, and packages.
+This post is a guide on installing Anaconda on Ubuntu, which is a tool for managing and deploying Python applications, environments, and packages.
 
-> The purpose of this post is to introduce the Anaconda environment manager.
+> The purpose of this post is to introduce the Anaconda package manager, `conda`.
 
-## The Big Picture.
+# The Big Picture.
 
 This post provides step-by-step instructions on how to install, update, and uninstall Anaconda. It also covers how to manage Anaconda environments, including creating, renaming, and removing them, as well as changing the working directory within an environment. I want to emphasize the utility of Anaconda in Python development, likening it to Docker or Distrobox but specifically designed for Python.
 
-Programs like [LXD](https://solodev.app/2-of-10-lxd-on-the-homelab), [Docker](https://solodev.app/installing-docker), or [Distrobox](https://solodev.app/installing-distrobox), download system images and run those images as containers. Anaconda is similar, but downloads a specific Python version (if defined) and specific packages (that are used within the environment) when running the `conda create` command.
+Programs like [LXD](https://solodev.app/2-of-10-lxd-on-the-homelab), [Docker](https://solodev.app/installing-docker), or [Distrobox](https://solodev.app/installing-distrobox), download system images and run those images as containers. Anaconda is similar, but downloads a specific Python version (if defined) and specific packages (that are used within the environment.)
 
-## **Prerequisites.**
+Anaconda includes a package manager called `conda`. Below is a description of how to install Anaconda yet I'm only interested in using the package manager. This is why I install [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/) instead, which is a free installer of *only* the `conda` package manager.
+
+# **Prerequisites.**
 
 * A Linux-based distro (I use Ubuntu).
     
 
-## Installing Anaconda on Ubuntu.
+# Installing Anaconda on Ubuntu.
 
 * I update my system:
     
@@ -145,7 +149,7 @@ conda config --set auto_activate_base True
 conda config --set auto_activate_base False
 ```
 
-## Updating Anaconda.
+# Updating Anaconda.
 
 * I update Anaconda:
     
@@ -154,7 +158,7 @@ conda config --set auto_activate_base False
 conda update -n base -c defaults conda
 ```
 
-## Uninstalling Anaconda.
+# Uninstalling Anaconda.
 
 * I activate the Anaconda (base) environment:
     
@@ -184,7 +188,7 @@ rm -rf ~/anaconda3
 rm -rf ~/opt/anaconda3
 ```
 
-## Anaconda Environment Commands.
+# Anaconda Environment Commands.
 
 * I display a list of Anaconda commands:
     
@@ -200,6 +204,8 @@ conda
 conda env
 ```
 
+## Creating a New Environment.
+
 * I create a new environment called `new-env` which uses Python 3.11 and includes 3 different packages (numpy, pandas, matplotlib):
     
 
@@ -209,6 +215,8 @@ conda create -n new-env python=3.11 numpy pandas matplotlib
 
 > NOTE: The property after the `-n` or the `--name` flag is the name for the environment.
 
+## Listing the Existing Environments.
+
 * I list the existing environments:
     
 
@@ -216,12 +224,16 @@ conda create -n new-env python=3.11 numpy pandas matplotlib
 conda env list
 ```
 
+## Renaming an Environment.
+
 * I rename the `new-env` environment to `better-env`:
     
 
 ```bash
 conda rename -n new-env better-env
 ```
+
+## Activating an Environment.
 
 * I activate the `better-env` environment:
     
@@ -255,63 +267,53 @@ print("Hello, World!")
 python hello.py
 ```
 
-## Changing the Working Directory.
+# Changing the `better-env` Home Directory.
 
-* I make a working directory:
+> NOTE: I will define the home directory with settings in the environment directory.
+
+* I create the Better-Dir home directory:
     
 
 ```bash
-mkdir ~/work-dir
+mkdir ~/Better-Dir
 ```
 
-> NOTE: This command makes a `work-dir` directory in my login accounts' $HOME directory.
-
-* I find the directory for the environment I want to change:
+* I make new directories within the (better-env) environment:
     
 
 ```bash
-conda env list
+mkdir -p $HOME/anaconda3/envs/better-env/etc/conda/activate.d
 ```
 
-* I change to the environment directory:
+* I use Nano to create the `set_working_directory.sh` shell script:
     
 
 ```bash
-cd /path/to/the/conda/env/dir
+sudo nano $HOME/anaconda3/envs/better-env/etc/conda/activate.d/set_working_directory.sh
 ```
 
-* I make the following directory structure:
+* I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
     
 
 ```bash
-mkdir -p ./etc/conda/activate.d
+cd ~/Better-Dir
 ```
 
-* I change to the `activate.d` directory:
+* I activate the (base) environment:
     
 
 ```bash
-cd ./etc/conda/activate.d
+conda activate
 ```
 
-* I use Nano to create a shell script called `set_working_directory.sh`:
+* I activate the (better-env) environment:
     
 
 ```bash
-sudo nano ./set_working_directory.sh
+conda activate better-env
 ```
 
-* I add the following, save the changes, and exit the Nano editor:
-    
-
-```bash
-cd ~/work-dir
-```
-
-* I (re)start the environment which now opens in the `work-dir` directory.
-    
-
-> NOTE: Although a working directory is now defined, the environment directory remains unchanged.
+> NOTE: I should now, by default, be in the `~/Better-Dir` home directory.
 
 ## Deleting an Environment.
 
@@ -326,14 +328,14 @@ conda activate
     
 
 ```bash
-conda remove -n learn-env --all
+conda env remove -n better-env
 ```
 
-## The Results.
+# The Results.
 
 With the installation of Anaconda, I am now equipped with a powerful tool for managing and deploying Python applications, environments, and packages. I can run multiple environments where they each have their own packages and run specific versions of Python. The `conda` command provides a lot of flexibility to Python developers. The `conda` command serves as a versatile tool for Python developers, providing me with a wide range of functionalities.
 
-## **In Conclusion.**
+# **In Conclusion.**
 
 I need Anaconda to elevate the development of my Python projects. It is a powerful tool for managing and deploying Python applications, environments, and packages. Think of it like Docker or Distrobox, but specifically for Python. I can run multiple environments, each equipped with their own packages and specific Python versions.
 
