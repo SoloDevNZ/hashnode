@@ -206,11 +206,11 @@ conda env
 
 ## Creating a New Environment.
 
-* I create a new environment called `new-env` which uses Python 3.11 and includes 3 different packages (numpy, pandas, matplotlib):
+* I create a new environment called `new-env` which uses Python 3.11 and includes a package called pandas:
     
 
 ```bash
-conda create -n new-env python=3.11 numpy pandas matplotlib
+conda create -n new-env python=3.11 pandas -y
 ```
 
 > NOTE: The property after the `-n` or the `--name` flag is the name for the environment.
@@ -233,6 +233,13 @@ conda env list
 conda rename -n new-env better-env
 ```
 
+* I list the existing environments again:
+    
+
+```bash
+conda env list
+```
+
 ## Activating an Environment.
 
 * I activate the `better-env` environment:
@@ -243,6 +250,54 @@ conda activate better-env
 ```
 
 > NOTE: The environment will change from (base) to (better-env).
+
+## Changing the `better-env` Home Directory.
+
+> NOTE: I will define the home directory with settings in the environment directory.
+
+* I create the `better-dir` home directory:
+    
+
+```bash
+mkdir ~/better-dir
+```
+
+* I make new directories within the (better-env) environment:
+    
+
+```bash
+mkdir -p ~/anaconda3/envs/better-env/etc/conda/activate.d
+```
+
+* I use the Nano text editor to create the `set_working_directory.sh` shell script:
+    
+
+```bash
+sudo nano ~/anaconda3/envs/better-env/etc/conda/activate.d/set_working_directory.sh
+```
+
+* I add the following, save the changes (CTRL + S), and exit (CTRL + X) Nano:
+    
+
+```bash
+cd ~/better-dir
+```
+
+* I activate the (base) environment:
+    
+
+```bash
+conda activate
+```
+
+* I activate the (better-env) environment:
+    
+
+```bash
+conda activate better-env
+```
+
+> NOTE: I should now, by default, be in the `~/better-dir` home directory.
 
 ## Testing Python.
 
@@ -264,56 +319,8 @@ print("Hello, World!")
     
 
 ```bash
-python hello.py
+python3 hello.py
 ```
-
-## Changing the `better-env` Home Directory.
-
-> NOTE: I will define the home directory with settings in the environment directory.
-
-* I create the Better-Dir home directory:
-    
-
-```bash
-mkdir ~/Better-Dir
-```
-
-* I make new directories within the (better-env) environment:
-    
-
-```bash
-mkdir -p $HOME/anaconda3/envs/better-env/etc/conda/activate.d
-```
-
-* I use Nano to create the `set_working_directory.sh` shell script:
-    
-
-```bash
-sudo nano $HOME/anaconda3/envs/better-env/etc/conda/activate.d/set_working_directory.sh
-```
-
-* I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
-    
-
-```bash
-cd ~/Better-Dir
-```
-
-* I activate the (base) environment:
-    
-
-```bash
-conda activate
-```
-
-* I activate the (better-env) environment:
-    
-
-```bash
-conda activate better-env
-```
-
-> NOTE: I should now, by default, be in the `~/Better-Dir` home directory.
 
 ## Deleting an Environment.
 
