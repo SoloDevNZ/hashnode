@@ -267,7 +267,7 @@ print("Hello, World!")
 python hello.py
 ```
 
-# Changing the `better-env` Home Directory.
+## Changing the `better-env` Home Directory.
 
 > NOTE: I will define the home directory with settings in the environment directory.
 
@@ -324,7 +324,7 @@ conda activate better-env
 conda activate
 ```
 
-* I remove the `learn-env` environment:
+* I remove the `better-env` environment:
     
 
 ```bash
