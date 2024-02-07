@@ -14,7 +14,7 @@ This post provides a step-by-step guide to creating and configuring a local Linu
 
 > **Attributions:**
 > 
-> [https://ubuntu.com/containers](https://ubuntu.com/containers) ***↗.***
+> [https://ubuntu.com/containers](https://ubuntu.com/containers)***↗.***
 
 # An Introduction.
 
@@ -122,101 +122,150 @@ cd ~
 sudo reboot
 ```
 
+# Top 20 LXC Commands.
+
+LXC comes with a lot of controls, but I find these 20 commands very useful:
+
+1. `lxc --version` to check the version (and if the command doesn't work, then I'd know an installation problem occurred),
+    
+2. `lxc network list` to list all the network adapters,
+    
+3. `lxc launch ubuntu:22.04 test-container3` to launch a container,
+    
+4. `lxc storage ls` to list storage pool,
+    
+5. `lxc list` or `lxc ls` to list all the running containers,
+    
+6. `lxc stop test-container3` to stop a container,
+    
+7. `lxc start test-container3` to start a container,
+    
+8. `lxc restart test-container3` to restart a container,
+    
+9. `lxc stop test-container3` followed by `lxc delete test-container3`, or `lxc stop test-container3 -f` to delete a container,
+    
+10. `lxc exec test-container3 cat /etc/os-release` to execute a command on the container,
+    
+11. `lxc info test-container3` to check a container's Information,
+    
+12. `lxc exec test-container3 -- bash` to get shell access to an LXC container as root,
+    
+13. `lxc image list images: | grep -i centos` to list prebuilt images,
+    
+14. `lxc network show lxdbr0` to display information about network interface(s),
+    
+15. `lxc profile show default` to check the default profile using lxc command,
+    
+16. `lxc snapshot test-container3 test-container3_snap` followed by `lxc info test-container3` to take snapshot of an instance,
+    
+17. `lxc restore test-container3 test-container3_snap` to restore an instance from a snapshot,
+    
+18. `lxc export test-container3 /root/backup/lxd/test-container3_bkp--$(date +'%m-%d-%Y').tar.xz --optimized-storage` to take backup of an instance,
+    
+19. `lxc import /root/backup/lxd/test-container3_bkp--05-07-2022.tar.xz` followed by `lxc list` to restore instance from a backup, and
+    
+20. `lxc --help` to check all the options that are available to an LXC command.
+    
+
+> Attribution:
+> 
+> [https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+
 # OPTIONAL: Enabling, and Setting Up, UFW.
 
-* From the terminal, I log in to the container with the 'brian' account:
+* [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 lxc exec container-name -- su brian
 ```
 
-* I check the UFW status:
+* I check the UFW status[:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw status
 ```
 
-* I enable the UFW:
+* [I enable the UFW:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw enable
 ```
 
-* I install a UFW rule:
+* [I install a UFW rule:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw allow from 192.168.?.?
 ```
 
-> NOTE: I use `ip a` in my workstation terminal to find my IP address. ***I replace the IP address above with the actual address for the*** `workstation`***, e.g. 192.168.188.41.***
+> [NOTE: I use `ip a` in my workstation terminal to find my IP address. ***I replace the IP address above with the actual address for the***`workstation`***, e.g. 192.168.188.41.***](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
 
-* I check the status of the UFW and list the rules by number:
+* [I check the status of the UFW and list the rules by number:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw status numbered
 ```
 
-> NOTE 1: UFW will, by default, block all incoming traffic, including SSH and HTTP.
+> [NOTE 1: UFW will, by default, block all incoming traffic, including SSH and](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) HTTP.
 > 
-> NOTE 2: I will update the UFW rules as I deploy other services to the container.
+> NOTE 2: I will update the UFW ru[les as I deploy other services to the container.](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
 
-* I delete a UFW rule by number if needed:
+* [I delete a UFW rule by number](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) if n[eeded:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw delete 1
 ```
 
-* I disable UFW if needed:
+* [I disable UFW if needed:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo ufw disable
 ```
 
-* I reboot the container:
+* [I reboot the container:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo reboot
 ```
 
-# OPTIONAL: Installing, and Setting Up, Fail2Ban.
+# [OPTIONAL: Installing, and Se](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)tt[ing Up, Fail2Ban.](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
 
-* From the terminal, I log in to the container with the 'brian' account:
+* [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 lxc exec container-name -- su brian
 ```
 
-* From the `homelab` terminal (`CTRL` + `ALT` + `T`) connected to the container, I install Fail2Ban:
+* [From the `homelab` terminal (`CTRL` + `ALT` + `T`) connected to the container, I install Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo apt install fail2ban -y
 ```
 
-* I copy the `jail.conf` file as `jail.local`:
+* [I copy the `jail.conf` file as `jail.local`:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 
-* I open the `jail.local` file in Nano:
+* [I open the `jail.local` file in Nano:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo nano /etc/fail2ban/jail.local
 ```
 
-* I change a few (SSH-centric) settings in the `jail.local` file, then I save those changes, and exit the Nano editor:
+* [I change a few (SSH-centric) settings in the `jail.local` file, then I save those](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) changes, and exit the Nano editor:
     
 
 ```bash
@@ -230,35 +279,35 @@ enabled = true
 port = ssh,22
 ```
 
-* I restart Fail2Ban:
+* [I restart Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo systemctl restart fail2ban
 ```
 
-* I check the status of Fail2Ban:
+* I check the statu[s of Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo systemctl status fail2ban
 ```
 
-* I enable Fail2Ban to autostart on boot:
+* [I enable Fail2Ban to autostart on boot:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo systemctl enable fail2ban
 ```
 
-* I reboot the container:
+* [I reboot the container:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
 
 ```bash
 sudo reboot
 ```
 
-# OPTIONAL: Installing, and Setting Up, CrowdSec.
+# [OPTION](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)AL: Installing, and Setting Up, CrowdSec.
 
 I can also use [CrowdSec](https://solodev.app/10-of-10-crowdsec-in-the-docker-container) as another security layer.
 
