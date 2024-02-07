@@ -8,21 +8,52 @@ tags: docker, containers, isolation, installation, portability
 
 ---
 
+Update: Thursday 8<sup>th</sup> February 2024.
+
+# TL;DR.
+
+This post explains how to install Docker, a tool that makes it easy to develop, ship, and run apps. Docker puts an app's code, infrastructure, libraries, and dependencies into one small package that works on any computer. To install, I update my system, install any requirements, add Docker's official GPG key, install the Docker repository, and check the installation. The post also shows how to uninstall Docker. The main advantages of using Docker include:
+
+* An ability to run anywhere,
+    
+* Isolated processes,
+    
+* Quick deployments, and
+    
+* Easily making containers.
+    
+
+> **Attributions:**
+> 
+> [https://www.docker.com/](https://www.docker.com/) ***↗***
+
+# An Introduction.
+
+Docker is a utility that helps me package my applications so they can run on any computer system.
+
+> The purpose of this post is to present a process for installing, and using, Docker.
+
+# The Big Picture.
+
 Docker is a container system. The main advantages of using Docker include:
 
 * The isolation of running processes,
     
-* The ease of creating new instances,
+* The ease of creating new containers,
     
 * Fast deployments, and
     
 * Fast migrations.
     
 
-## **Prerequisites.**
+# **Prerequisites.**
 
 * A Linux-based distro (I use Ubuntu).
     
+
+# What is Docker?
+
+Docker is a free tool that helps me develop, ship, and run my applications in containers. Containers are lightweight bundles that package my application source code, infrastructure, libraries, and dependencies into one file that can run on any PC.
 
 ## Installing Docker.
 
@@ -146,8 +177,53 @@ sudo docker run hello-world
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
 ```
 
-## In Conclusion.
+# The Results.
 
-Now that I have Docker installed, I can quickly deploy and scale applications into any environment and know my code will run.
+Docker is an invaluable tool that allows me to package my applications into containers, ensuring that they can run on any system. This simplifies the process of developing, shipping, and running my applications, and also enhances the efficiency of deployments and migrations. After going through the installation process, I should now have Docker installed on my Linux-based system, and be able to leverage its capabilities to improve my development workflow. Remember, the power of Docker lies in its ability to isolate running processes and easily create new containers, improving the way I deploy my applications.
+
+# In Conclusion.
+
+How do I package my applications so they can run on ANY computer?
+
+This was Docker, a container system that isolated any running processes, easily created new containers, supported fast app deployments, and allowed quick and easy migrations. It was like having my own, personal mini-shipyard for "shipping" applications to... anywhere.
+
+How did it work?
+
+Docker packaged the source code for my app, its infrastructure, any required libraries, and all the needed dependencies into one lightweight bundle. This bundle, or 'container', could then run on any PC. It was like having my entire tech stack in a portable suitcase!
+
+This guide walked me through installing Docker.
+
+First, I needed a Linux-based distro. I use Ubuntu. Then followed these steps:
+
+1. I updated my system.
+    
+2. I installed the necessary requirements.
+    
+3. I made a 'keyrings' directory.
+    
+4. I added Docker’s official GPG key.
+    
+5. I changed the mode of the 'docker.gpg' file.
+    
+6. I installed the Docker repository.
+    
+7. I updated the repo list.
+    
+8. I installed Docker and its requirements.
+    
+9. I checked if Docker was active.
+    
+10. I verified the installation.
+    
+11. I rebooted the system to load the Docker settings into memory.
+    
+
+Voila! I installed Docker.
+
+But what if I wanted to uninstall Docker? Just one command does the trick. Easy-peasy, right?
+
+Docker is an invaluable tool that simplifies the process of developing, shipping, and running applications. It's a game-changer in the world of deployments and migrations.
+
+So, who's ready to give Docker a try? Or if you're already using it, share your experience. How has Docker improved your workflow?
 
 Until next time: Be safe, be kind, be awesome.
