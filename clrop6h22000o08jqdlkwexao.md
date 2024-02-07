@@ -142,7 +142,7 @@ LXC comes with a lot of controls, but I find these 20 commands very useful:
     
 8. `lxc restart test-container3` to restart a container,
     
-9. `lxc stop test-container3` followed by `lxc delete test-container3`, or `lxc stop test-container3 -f` to delete a container,
+9. `lxc stop test-container3` followed by `lxc delete test-container3`, or `lxc delete test-container3 -f` to delete a container,
     
 10. `lxc exec test-container3 cat /etc/os-release` to execute a command on the container,
     
