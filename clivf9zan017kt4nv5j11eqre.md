@@ -17,7 +17,7 @@ Updated: Sunday 29<sup>th</sup> October, 2023.
 
 LXD is a container manager for creating and managing containers. A remote `homelab`, for me, is simply an Intel NUC (Next Unit of Computing) that hosts containers. Most of my experiments involve passing data between containers.
 
-This article covers setting up my remote `homelab`, hardening the lab with UFW and Fail2Ban, preparing an empty partition for LXD (<mark>L</mark>inu<mark>X</mark> <mark>D</mark>aemon), installing the LXD manager, initializing LXD, testing a few LXC (<mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainer) commands, and listing a few LXC commands that I find useful.
+This article covers setting up my remote `homelab`, hardening the lab with UFW and Fail2Ban, preparing an empty partition for LXD (<mark>L</mark>inu<mark>XD</mark>aemon), installing the LXD manager, initializing LXD, testing a few LXC (<mark>L</mark>inu<mark>XC</mark>ontainer) commands, and listing a few LXC commands that I find useful.
 
 ## An Introduction.
 
@@ -38,9 +38,9 @@ LXD is what I use to create *some* of my containers.
 > * Docker (which I'll cover over the the remaining *FOUR* posts that make up this mini-series.)
 >     
 
-LXD stands for <mark>L</mark>inu<mark>X</mark> <mark>D</mark>aemon and is pronounced: "lexdee". This is a container manager that runs as a background process on my `homelab`. It is a tool that helps me manage the containers that I "spin up", "tear down", and use.
+LXD stands for <mark>L</mark>inu<mark>XD</mark>aemon and is pronounced: "lexdee". This is a container manager that runs as a background process on my `homelab`. It is a tool that helps me manage the containers that I "spin up", "tear down", and use.
 
-LXC stands for <mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainer and is pronounced: "lexsee". These are the container instances that can run concurrently on a single host. These containers use the Linux kernel of the host system, as well as other OS resources, to reduce the overhead of running multiple, isolated occurrences.
+LXC stands for <mark>L</mark>inu<mark>XC</mark>ontainer and is pronounced: "lexsee". These are the container instances that can run concurrently on a single host. These containers use the Linux kernel of the host system, as well as other OS resources, to reduce the overhead of running multiple, isolated occurrences.
 
 > NOTE: I can also spin up a virtual machine by using the `--vm` flag. When they're initialised, virtual machines download, and use, a kernel *within* the container itself. Virtual machines are useful when I need functionality that is not supported by the host kernel, or when I want to run a completely different operating system form the host.
 
@@ -432,7 +432,7 @@ LXC comes with a lot of controls, but I find these 20 commands very useful:
     
 8. `lxc restart test-container3` to restart a container,
     
-9. `lxc stop test-container3` followed by `lxc delete test-container3`, or `lxc stop test-container3 -f` to delete a container,
+9. `lxc stop test-container3` followed by `lxc delete test-container3`, or `lxc delete test-container3 -f` to delete a container,
     
 10. `lxc exec test-container3 cat /etc/os-release` to execute a command on the container,
     
