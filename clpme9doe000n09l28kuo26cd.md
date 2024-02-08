@@ -12,20 +12,20 @@ Update: Thursday 8<sup>th</sup> February 2024.
 
 # TL;DR.
 
-This post explains how to install Docker, a tool that makes it easy to develop, ship, and run apps. Docker puts an app's code, infrastructure, libraries, and dependencies into one small package that works on any computer. To install, I update my system, install any requirements, add Docker's official GPG key, install the Docker repository, and check the installation. The post also shows how to uninstall Docker. The main advantages of using Docker include:
+This post explains how to install Docker, a tool that makes it easy to develop, ship, and run apps. Docker puts an app's code, infrastructure, libraries, and dependencies into one small package that runs on any computer. To install Docker, I update my system, install any requirements, add Docker's official GPG key, install the Docker repository, and check the installation. This post also shows how to uninstall Docker. The main advantages of using Docker include:
 
-* An ability to run anywhere,
+* An ability to run my apps on any system,
     
-* Isolated processes,
+* Isolating processes from other containers and the host,
     
-* Quick deployments, and
+* Quick assembly and deployment, and
     
-* Easily making containers.
+* Easily making containers for my apps.
     
 
 > **Attributions:**
 > 
-> [https://www.docker.com/](https://www.docker.com/) ***↗***
+> [https://www.docker.com/](https://www.docker.com/)***↗***
 
 # An Introduction.
 
