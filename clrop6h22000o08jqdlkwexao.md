@@ -55,7 +55,7 @@ LXD (LinuX Daemon) is a container manager for creating and managing LXCs (LinuX 
 
 LXCs (LinuX Containers) are isolated, OS-level virtualizations which, for efficiency, uses the Linux kernel of the host system. LXCs are virtual environments where its system processes can *not* affect other containers, or the host system, without running specific commands.
 
-## Installing LXD.
+## Installing the LXD.
 
 * I install the snap package manager, if required:
     
@@ -64,14 +64,14 @@ LXCs (LinuX Containers) are isolated, OS-level virtualizations which, for effici
 sudo apt install snapd -y
 ```
 
-* I install LXD:
+* I install the LXD:
     
 
 ```plaintext
 sudo snap install lxd
 ```
 
-* I initialise LXD:
+* I initialise the LXD:
     
 
 ```plaintext
@@ -80,7 +80,26 @@ lxd init
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707467534222/31398c54-97a1-46e1-a179-acb1c430e9c5.png align="center")
 
-> NOTE: I choose to use BTRFS and an existing host interface (enp6s0.)
+> NOTE: I choose to use BTRFS and an existing host interface called enp6s0.  
+> (I used the `ip addr` command to find the name of my host interface.)
+
+## Deleting the LXD.
+
+* I can delete the LXD:
+    
+
+```plaintext
+sudo snap remove --purge lxd
+```
+
+* I can delete the LXD installer:
+    
+
+```plaintext
+sudo apt remove --purge lxd-installer
+```
+
+> NOTE: The `--purge` flag removes of everything, including configuration files, etc.
 
 ## Creating a New Container.
 
