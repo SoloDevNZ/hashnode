@@ -8,6 +8,8 @@ tags: lxc, lxd, linux-daemon, linux-container
 
 ---
 
+Update: Friday 9<sup>th</sup> February 2024.
+
 # TL;DR.
 
 This post provides a step-by-step guide to creating and configuring a local Linux container on a Debian-based Linux distro. It covers the procedures of creating a new container, adding a user account, fixing home directory issues, and setting up security measures like UFW, Fail2Ban, and CrowdSec.
@@ -33,7 +35,54 @@ Containers, unlike virtual machines, are lightweight and efficient. Yes, contain
 * an [LXD installation](https://solodev.app/installing-lxd-and-using-lxcs).
     
 
-# Creating a New Container.
+# Updating the System.
+
+* I update my system:
+    
+
+```python
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+# What is LXD and LXC?
+
+LXD (LinuX Daemon) is a container manager for creating and managing LXCs (LinuX Containers.) As a background service, LXD can automatically start containers when the host system boots.
+
+LXCs (LinuX Containers) are isolated, OS-level virtualizations which, for efficiency, uses the Linux kernel of the host system. LXCs are virtual environments where its system processes can *not* affect other containers, or the host system, without running specific commands.
+
+## Installing LXD.
+
+* I install the snap package manager, if required:
+    
+
+```plaintext
+sudo apt install snapd -y
+```
+
+* I install LXD:
+    
+
+```plaintext
+sudo snap install lxd
+```
+
+* I initialise LXD:
+    
+
+```plaintext
+lxd init
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707467534222/31398c54-97a1-46e1-a179-acb1c430e9c5.png align="center")
+
+> NOTE: I choose to use BTRFS and an existing host interface (enp6s0.)
+
+## Creating a New Container.
 
 > NOTE: The "container-name" below is a placeholder. This placeholder should be replaced with an actual container name.
 
@@ -63,7 +112,7 @@ sudo apt --fix-broken install && \
 sudo apt autoremove -y
 ```
 
-# Adding a User Account to the Container.
+## Adding a User Account to the Container.
 
 * From within the container, I create a new user:
     
@@ -90,7 +139,7 @@ reboot
 
 The next step is to fix the home directory problem.
 
-# Fixing the Home Directory Problem.
+## Fixing the Home Directory Problem.
 
 > NOTE: I use Nano to add an entry to the `.bashrc` file.
 
@@ -171,7 +220,7 @@ LXC comes with a lot of controls, but I find these 20 commands very useful:
 > 
 > [https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
 
-# OPTIONAL: Enabling, and Setting Up, UFW.
+## OPTIONAL: Enabling, and Setting Up, UFW.
 
 * [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
@@ -235,7 +284,7 @@ sudo ufw disable
 sudo reboot
 ```
 
-# [OPTIONAL: Installing, and Se](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)tt[ing Up, Fail2Ban.](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+## OPTIONAL: Installing, and Setting Up, Fail2Ban.
 
 * [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
     
@@ -307,7 +356,7 @@ sudo systemctl enable fail2ban
 sudo reboot
 ```
 
-# [OPTION](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)AL: Installing, and Setting Up, CrowdSec.
+## OPTIONAL: Installing, and Setting Up, CrowdSec.
 
 I can also use [CrowdSec](https://solodev.app/10-of-10-crowdsec-in-the-docker-container) as another security layer.
 
