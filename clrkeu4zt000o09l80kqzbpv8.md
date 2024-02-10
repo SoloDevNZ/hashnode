@@ -10,11 +10,11 @@ tags: lxc, containers, virtual-machines, lxd
 
 # TL;DR.
 
-LXD (<mark>L</mark>inu<mark>X</mark> <mark>D</mark>aemon) is a container manager for creating and managing containers. LXCs (<mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainers) are isolated system instances where anything within the container can NOT affect other containers or the base distro/OS. Also, multiple container instances can run concurrently on a single host.
+LXD (<mark>L</mark>inu<mark>XD</mark>aemon) is a container manager for creating and managing containers. LXCs (<mark>L</mark>inu<mark>XC</mark>ontainers) are isolated system instances where anything within the container can NOT affect other containers or the base distro/OS. Also, multiple container instances can run concurrently on a single host.
 
 > **Attributions:**
 > 
-> [https://ubuntu.com/lxd](https://ubuntu.com/lxd) ***↗.***
+> [https://ubuntu.com/lxd](https://ubuntu.com/lxd)***↗.***
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973638230/7de81bc6-cc05-4948-9bee-df36ca3ca67f.png align="center")
 
@@ -45,148 +45,163 @@ Containers are considered the Second Wave of System Isolation Technologies. The 
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973704880/d291b34b-927a-4873-8ad3-b3bf39b53771.png align="center")
 
-# Installing the Snap Package Manager.
+# Updating the System.
 
-* I update and upgrade my system:
+* I update my system:
+    
+
+```python
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+# What is LXD and LXC?
+
+LXD (LinuX Daemon) is a container manager for creating and managing LXCs (LinuX Containers.) As a background service, LXD can automatically start containers when the host system boots.
+
+LXCs (LinuX Containers) are isolated, OS-level virtualizations which, for efficiency, uses the Linux kernel of the host system. LXCs are virtual environments where its system processes can *not* affect other containers, or the host system, without running specific commands.
+
+## Installing the LXD.
+
+* I install the snap package manager, if required:
     
 
 ```plaintext
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+sudo apt install snapd -y
 ```
 
-* I install the Snap package manager:
-    
-
-```plaintext
-sudo apt install snapd
-```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973721961/f524db87-84e9-4877-9daa-9c84c7c33f07.png align="center")
-
-# Using Snap to Install the LXD Container Manager.
-
-* I use the Snap package manager to install the LXD container manager:
+* I install the LXD:
     
 
 ```plaintext
 sudo snap install lxd
 ```
 
-* I add my account to the LXD group (to avoid `sudo` when using LXD/LXC):
-    
-
-```plaintext
-sudo adduser brian lxd
-```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973740417/c6baee44-5816-42fb-82ae-03f0a2042cf9.png align="center")
-
-# Initialising the LXD Container Manager.
-
-* I list the host interfaces:
-    
-
-```plaintext
-ip link show
-```
-
-> NOTE: These are my results when I display my host interfaces.
-> 
-> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704966803709/e7f3f444-f0d7-461a-9627-05788179fa06.png align="center")
-> 
-> I will use the "enp6s0" host interface when `init`ialising the LXD service.
-
-* I `init`ialise the LXD service and *mostly* use the default settings during setup:
+* I initialise the LXD:
     
 
 ```plaintext
 lxd init
 ```
 
-> NOTE: These are my settings when I initialise the LXD service:
-> 
-> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704966903788/7965e5a7-ccbc-41a5-9779-9fb273a6c74f.png align="center")
-> 
-> Notice my deviations in the above screen grab:
-> 
-> * Q9 where I answer "no" to a local network bridge,
->     
-> * Q10 where I answer "yes" to using a host interface, and
->     
-> * Q11 where I answer "enp6s0" as the name of the interface.
->     
-> 
-> With these settings, my router will assign IP addresses to any containers I launch.
+> NOTE: I choose to use BTRFS and an existing host interface called eno1.  
+> (I used the `ip addr` command to find the name of my host interface.)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973824000/1d3972b9-fdb6-4b2a-b634-796794b1dd07.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707522220201/f9686c89-4a0b-4749-9b59-32f1cc84bc7a.png align="center")
 
-# Running a Quick Test.
+## Deleting the LXD.
 
-* I `init`ialise an image called `test1`:
-    
-
-```plaintext
-lxc init ubuntu:22.04 test1
-```
-
-* I `launch` a container called `test2`:
-    
-
-```plaintext
-lxc launch ubuntu:22.04 test2
-```
-
-* I `list` the images and containers:
-    
-
-```plaintext
-lxc ls
-```
-
-> NOTE: `lxc init` creates a static image while `lxc launch` also creates a static image but then runs it as a dynamic container.
-
-* I (try to) delete `test1` and `test2`:
-    
-
-```plaintext
-lxc delete test1 test2
-```
-
-* I list the containers again only to see that `test2` still exists:
-    
-
-```plaintext
-lxc ls
-```
-
-* I delete `test2` using the -f(orce) flag:
-    
-
-```plaintext
-lxc delete test2 -f
-```
-
-* I list the containers one more time to see everything has been deleted:
-    
-
-```plaintext
-lxc ls
-```
-
-> NOTE: Images can be deleted because they are real files, but a container is an ephemeral instance of an image. Containers are not deleted, they are stopped. Once the container is stopped, I can delete it's image. Or I can -(f)orce the issue, as above, which stops the container and deletes the image in one command.
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973846712/332bdfb7-d6d2-4896-bc7f-ea1a43428cee.png align="center")
-
-## Using Snap to Uninstall the LXD Container Manager.
-
-* I use the Snap package manager to uninstall the LXD container manager:
+* I can delete the LXD:
     
 
 ```plaintext
 sudo snap remove --purge lxd
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704973867211/6aa0899d-e834-451f-8a15-b92af966eb7e.png align="center")
+* I can also delete the LXD installer, if required:
+    
+
+```plaintext
+sudo apt remove --purge lxd-installer
+```
+
+> NOTE: The `--purge` flag removes of everything, including configuration files, etc.
+
+## Setting Up an LXC.
+
+* I list the existing containers:
+    
+
+```plaintext
+lxc ls
+```
+
+* I launch a new container called GitLab:
+    
+
+```plaintext
+lxc launch ubuntu:22.04 GitLab
+```
+
+* I bash into the container:
+    
+
+```plaintext
+lxc exec GitLab -- bash
+```
+
+* I update and upgrade the container:
+    
+
+```plaintext
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+## Adding a User Account to the LXC.
+
+* From within the container, I add a new user:
+    
+
+```plaintext
+adduser brian
+```
+
+* I add the new user to the `sudo` group:
+    
+
+```plaintext
+usermod -aG sudo brian
+```
+
+> NOTE: usermod let's me (-a)ppend the sudo (-G)roup to the brian account.
+
+* I exit the container:
+    
+
+```plaintext
+exit
+```
+
+## Fixing the Home Directory Problem.
+
+* From the terminal, I log in to the container with the `brian` account:
+    
+
+```plaintext
+lxc exec GitLab -- su brian
+```
+
+* I use the Nano text editor to open the `.bashrc` file:
+    
+
+```plaintext
+sudo nano ~/.bashrc
+```
+
+* I copy the following, add it (CTRL + SHIFT + V) to the bottom of the `.bashrc` file, save (CTRL +S) the changes, and exit (CTRL + X) Nano:
+    
+
+```plaintext
+cd ~
+```
+
+* I exit the container:
+    
+
+```plaintext
+exit
+```
+
+> NOTE: Within the container, I can optionally install (or enable) [UFW](https://solodev.app/creating-a-local-linux-container#heading-optional-enabling-and-setting-up-ufw), [Fail2Ban](https://solodev.app/creating-a-local-linux-container#heading-optional-installing-and-setting-up-fail2ban), and [CrowdSec](https://solodev.app/10-of-10-crowdsec-in-the-docker-container).
 
 # 23 Common Commands.
 
