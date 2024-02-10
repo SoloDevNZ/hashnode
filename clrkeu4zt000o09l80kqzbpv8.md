@@ -8,6 +8,8 @@ tags: lxc, containers, virtual-machines, lxd
 
 ---
 
+Update: Saturday 10<sup>th</sup> February 2024.
+
 # TL;DR.
 
 LXD (<mark>L</mark>inu<mark>XD</mark>aemon) is a container manager for creating and managing containers. LXCs (<mark>L</mark>inu<mark>XC</mark>ontainers) are isolated system instances where anything within the container can NOT affect other containers or the base distro/OS. Also, multiple container instances can run concurrently on a single host.
