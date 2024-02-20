@@ -9,9 +9,10 @@ tags: ai, artificial-intelligence, machine-learning, deep-learning, llm, large-l
 ---
 
 Published: Saturday 12<sup>th</sup> December 2023.  
-Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve.)
+Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve.)  
+Update: Tuesday 20<sup>th</sup> February 2024.
 
-## TL;DR.
+# TL;DR.
 
 \[pending\]
 
@@ -19,24 +20,28 @@ Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve
 > 
 > [Ollama.ai](https://ollama.ai/)↗.
 
-## An Introduction.
+# An Introduction.
 
 LLMs (large language models) are amazing machines. They are the bleeding edge of modern technology and devs should learn, and adapt to, these awesome engines.
 
 > The purpose of this post is to describe how to install Ollama, a local LLM manager.
 
-## The Big Picture.
+# The Big Picture.
 
 There are many open-source LLMs. Ollama provides easy access to a small set of those models. Visit the [Ollama models library](https://ollama.ai/library) to get a list of the LLMs they support. The index is continually updated, so I frequently revisit this archive.
 
 I love Hugging Face, but it's *also* nice to have a curated series of models.
 
-## Prerequisites.
+# Prerequisites.
 
 * A Linux-based distro (I use Ubuntu), and
     
 * [Anaconda](https://solodev.app/installing-anaconda).
     
+
+# What is Anaconda?
+
+\[pending\]
 
 ## Using Anaconda to Setup an Environment.
 
@@ -44,7 +49,12 @@ I love Hugging Face, but it's *also* nice to have a curated series of models.
     
 
 ```python
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
 * I use `conda` to display a `list` of Anaconda `env`ironments:
@@ -81,21 +91,14 @@ mkdir ~/Ollama
 mkdir -p $HOME/anaconda3/envs/ollama/etc/conda/activate.d
 ```
 
-* I change to the `activate.d` directory:
+* I use the Nano text editor to create the `set_working_directory.sh` shell script:
     
 
 ```bash
-cd $HOME/anaconda3/envs/ollama/etc/conda/activate.d
+sudo nano ~/anaconda3/envs/ollama/etc/conda/activate.d/set_working_directory.sh
 ```
 
-* I use Nano to create the `set_working_directory.sh` shell script:
-    
-
-```bash
-sudo nano ./set_working_directory.sh
-```
-
-* I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
+* I copy the following, add it (CTRL + SHIFT + V) to the script, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
     
 
 ```bash
@@ -117,6 +120,10 @@ conda activate ollama
 ```
 
 > NOTE: I should now, by default, be in the `~/Ollama` home directory.
+
+# What is Ollama?
+
+\[pending\]
 
 ## Installing Ollama.
 
@@ -174,13 +181,13 @@ tell me a joke
 
 > NOTE: Do NOT expect the joke to be any good.
 
-## The Results.
+# The Results.
 
 By following the steps outlined in this post, I can set up dedicated Anaconda environments, install Ollama, download LLMs from [Ollama.ai](https://ollama.ai/), and test them locally. This process enables me to evaluate the power of cutting-edge models for research, development, business, and personal use.
 
 > NOTE: Commercial use depends on the licenses of each model.
 
-## In Conclusion.
+# In Conclusion.
 
 LLMs are the bleeding edge of modern technology and we should adapt to these awesome engines.
 
