@@ -14,7 +14,7 @@ Update: Tuesday 20<sup>th</sup> February 2024.
 
 # TL;DR.
 
-\[pending\]
+This post describes the installation of Ollama, a local large language model (LLM) manager. It requires a Linux-based distro and Anaconda. After setting up an environment in Anaconda, Ollama is installed and used to download and run LLMs. I use the Mistral model as an example. Ollama enables the use of powerful LLMs for research, development, business, and personal use.
 
 > ***Attributions:***
 > 
@@ -39,9 +39,9 @@ I love Hugging Face, but it's *also* nice to have a curated series of models.
 * [Anaconda](https://solodev.app/installing-anaconda).
     
 
-# What is Anaconda?
+# What is `Anaconda`?
 
-\[pending\]
+Python projects can run in virtual environments, which are isolated spaces for managing dependencies, where different versions of the same package can run in different environments while avoiding version conflicts; `venv` is a built-in Python 3.3+ module for running virtual environments, [`Anaconda`](https://www.anaconda.com/) is a Python and R distribution for scientific computing that includes the `conda` package manager, and [`Miniconda`](https://docs.anaconda.com/free/miniconda/index.html) is a small bootstrap version of `Anaconda` that includes only `conda`, Python, packages they both depend on, and a small number of other useful packages (like pip and zlib).
 
 ## Using Anaconda to Setup an Environment.
 
@@ -121,9 +121,9 @@ conda activate ollama
 
 > NOTE: I should now, by default, be in the `~/Ollama` home directory.
 
-# What is Ollama?
+# What is `Ollama`?
 
-\[pending\]
+`Ollama` is a tool that is used to download, set up, and run large language models on a local PC. It lets me use powerful models like Llama 2 and Mistral on my personal computer. `Ollama` natively runs on Linux, macOS, and Windows.
 
 ## Installing Ollama.
 
