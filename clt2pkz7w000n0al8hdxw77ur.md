@@ -360,6 +360,6 @@ I use Miniconda to make my Python project management a breeze.
 
 Has anyone else used Miniconda? What's been your experience? Share your thoughts below!
 
-#Python #PythonDevelopment, #Miniconda #MinicondaGuide, #Programming, #Coding, #DataScience, #Ubuntu, #EnvironmentManagement, #Anaconda, #PythonApplications
-
 Until next time: Be safe, be kind, be awesome.
+
+#Python #PythonDevelopment, #Miniconda #MinicondaGuide, #Programming, #Coding, #DataScience, #Ubuntu, #EnvironmentManagement, #Anaconda, #PythonApplications
