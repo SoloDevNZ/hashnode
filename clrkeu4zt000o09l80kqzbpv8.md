@@ -8,7 +8,8 @@ tags: lxc, containers, virtual-machines, lxd
 
 ---
 
-Update: Saturday 10<sup>th</sup> February 2024.
+Update: Saturday 10<sup>th</sup> February 2024.  
+Update: Wednesday 28<sup>th</sup> February 2024.
 
 # TL;DR.
 
@@ -122,18 +123,18 @@ sudo apt remove --purge lxd-installer
 lxc ls
 ```
 
-* I launch a new container called GitLab:
+* I launch a new container called Default:
     
 
 ```plaintext
-lxc launch ubuntu:22.04 GitLab
+lxc launch ubuntu:22.04 Default
 ```
 
 * I bash into the container:
     
 
 ```plaintext
-lxc exec GitLab -- bash
+lxc exec Default -- bash
 ```
 
 * I update and upgrade the container:
@@ -179,7 +180,7 @@ exit
     
 
 ```plaintext
-lxc exec GitLab -- su brian
+lxc exec Default -- su brian
 ```
 
 * I use the Nano text editor to open the `.bashrc` file:
