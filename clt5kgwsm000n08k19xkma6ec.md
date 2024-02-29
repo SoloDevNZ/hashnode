@@ -32,7 +32,7 @@ In [my last post](https://solodev.app/1-of-2-installing-anythingllm-for-linux), 
 
 # The Big Picture.
 
-AnythingLLM runs natively on Windows and macOS. Although a Linux deployment is still to emerge, that didn't stop me (mostly because the developers created a Dockerized version.) from exploring how to install it on an Ubuntu system. Now that AnythingLLM is installed, I will show how to set it up as a powerful, personal assistant.
+AnythingLLM runs natively on Windows and macOS. Although a Linux deployment is still to emerge, that didn't stop me (mostly because the developers created a Dockerized version) from exploring how to install it on an Ubuntu system. Now that AnythingLLM is installed, I will show how to set it up as a powerful, personal assistant.
 
 # Prerequisites.
 
