@@ -57,11 +57,16 @@ Docker is a free tool that helps me develop, ship, and run my applications in co
 
 ## Installing Docker.
 
-* I update my `homelab` system:
+* I update my system:
     
 
 ```bash
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
 * I install the following requirements:
@@ -102,19 +107,21 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-* I update the `homelab` repo list:
+* I update the repo list:
     
 
 ```bash
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
 ```
 
-* I install `Docker` and its requirements:
+* I install the `Docker` Community Edition engine, the Docker CLI, the container daemon, and the Buildx and Compose plugins:
     
 
 ```bash
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
+## Checking Docker.
 
 * I check if `Docker` is active:
     
@@ -143,6 +150,8 @@ sudo docker version
 ```bash
 sudo docker info
 ```
+
+## Docker Setup.
 
 * I create the Docker group, if required:
     
