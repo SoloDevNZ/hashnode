@@ -35,6 +35,20 @@ Although this is a very short post, the possibilities presented by a Rust instal
 * [Creating a LinuX Container](https://solodev.app/creating-a-linux-container).
     
 
+# Updating my Base System.
+
+* In a terminal, I update my base system:
+    
+
+```python
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
 # What is an LXC and LXD?
 
 An LXC (LinuX Container) is an isolated, OS-level virtualization which, for efficiency, uses the Linux kernel of the host system. An LXC is a virtual environment where system processes within the LXC container can not affect other containers, or the host system, without specifically running certain commands.
@@ -43,18 +57,18 @@ The LXD (LinuX Daemon) is the container manager that is used to create, and mana
 
 ## Creating a Container.
 
-* I create an LXC (LinuX Container) called (`rust`):
+* I create an LXC (LinuX Container) called (`Rust`):
     
 
 ```bash
-lxc launch ubuntu:22.04 rust
+lxc launch ubuntu:22.04 Rust
 ```
 
 * I bash into the container:
     
 
 ```bash
-lxc exec rust -- bash
+lxc exec Rust -- bash
 ```
 
 * I update and upgrade the container:
@@ -121,7 +135,7 @@ sudo nano ~/.bashrc
 cd ~
 ```
 
-## Hardening the LXC.
+## Hardening the Container.
 
 * From within the container, I use the `Nano` text editor to open the `sshd_config` file:
     
@@ -168,7 +182,7 @@ Rust is a systems programming language that empowers everyone to build reliable 
     
 
 ```bash
-lxc exec rust -- su yt
+lxc exec Rust -- su yt
 ```
 
 * I use `curl` to download, and run, the `rustup` script:
@@ -191,7 +205,7 @@ sudo reboot
     
 
 ```bash
-lxc exec rust -- su yt
+lxc exec Rust -- su yt
 ```
 
 * I use `rustup` to update `rustup`:
