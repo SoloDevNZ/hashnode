@@ -64,9 +64,17 @@ sudo apt autoremove -y
 
 # What is LXD and LXC?
 
-LXD (LinuX Daemon) is a container manager for creating and managing LXCs (LinuX Containers.) As a background service, LXD can automatically start containers when the host system boots.
+The LXD (LinuX Daemon) is the container manager that is used to create, and manage, LXCs (LinuX Containers). It is a background service that can automatically start LXCs when the host system boots, or stop any container from starting at all.
 
-LXCs (LinuX Containers) are isolated, OS-level virtualizations which, for efficiency, uses the Linux kernel of the host system. LXCs are virtual environments where its system processes can *not* affect other containers, or the host system, without running specific commands.
+An LXC (LinuX Container) is an isolated, OS-level virtualization which, for efficiency, uses the Linux kernel of the host system. An LXC is a virtual environment where system processes within the LXC container can not affect other containers, or the host system, without specifically running certain commands.
+
+[https://ubuntu.com/server/docs/containers-lxd](https://ubuntu.com/server/docs/containers-lxd)***↗,***
+
+[https://ubuntu.com/server/docs/containers-lxc](https://ubuntu.com/server/docs/containers-lxc)***↗, and***
+
+[https://solodev.app/installing-lxd-and-using-lxcs](https://solodev.app/installing-lxd-and-using-lxcs).
+
+I need to ensure that [LXD and LXC has been installed](https://solodev.app/installing-lxd-and-using-lxcs) before continuing with this post.
 
 ## Installing the LXD.
 
@@ -155,17 +163,17 @@ sudo apt autoremove -y
     
 
 ```plaintext
-adduser brian
+adduser yt
 ```
 
 * I add the new user to the `sudo` group:
     
 
 ```plaintext
-usermod -aG sudo brian
+usermod -aG sudo yt
 ```
 
-> NOTE: usermod let's me (-a)ppend the sudo (-G)roup to the brian account.
+> NOTE: usermod let's me (-a)ppend the sudo (-G)roup to the yt account.
 
 * I exit the container:
     
@@ -174,14 +182,18 @@ usermod -aG sudo brian
 exit
 ```
 
-## Fixing the Home Directory Problem.
+> NOTE: I exit the `root` account to use the `yt` account.
 
-* From the terminal, I log in to the container with the `brian` account:
+## Setting the LXC Home Directory.
+
+* From the terminal, I log in to the container with the `yt` account:
     
 
 ```plaintext
-lxc exec Default -- su brian
+lxc exec Default -- su yt
 ```
+
+> NOTE: At the moment, the home directory is `/root`. This section will address the issue by changing the home directory to `~`.
 
 * I use the Nano text editor to open the `.bashrc` file:
     
@@ -197,14 +209,42 @@ sudo nano ~/.bashrc
 cd ~
 ```
 
-* I exit the container:
+## Hardening the Container.
+
+* From within the container, I use the `Nano` text editor to open the `sshd_config` file:
     
 
 ```plaintext
-exit
+sudo nano /etc/ssh/sshd_config
 ```
 
-> NOTE: Within the container, I can optionally install (or enable) [UFW](https://solodev.app/creating-a-local-linux-container#heading-optional-enabling-and-setting-up-ufw), [Fail2Ban](https://solodev.app/creating-a-local-linux-container#heading-optional-installing-and-setting-up-fail2ban), and [CrowdSec](https://solodev.app/10-of-10-crowdsec-in-the-docker-container).
+* I copy the following, add it (CTRL + SHIFT + V) to the bottom (CTRL + END) of the `sshd_config` file, save (CTRL +S) the changes, and exit (CTRL + X) Nano:
+    
+
+```plaintext
+PasswordAuthentication no
+PermitRootLogin no
+Protocol 2
+Port 22
+```
+
+> NOTE: Port 22 is the default, so I'll choose my own, random, available port number.
+
+* I restart the "ssh" service:
+    
+
+```bash
+sudo systemctl restart ssh.service
+```
+
+* I reboot the container:
+    
+
+```plaintext
+sudo reboot
+```
+
+> NOTE: Within the container, I can also install (or enable) [UFW](https://solodev.app/creating-a-local-linux-container#heading-optional-enabling-and-setting-up-ufw), [Fail2Ban](https://solodev.app/creating-a-local-linux-container#heading-optional-installing-and-setting-up-fail2ban), and [CrowdSec](https://solodev.app/10-of-10-crowdsec-in-the-docker-container).
 
 # 23 Common Commands.
 
