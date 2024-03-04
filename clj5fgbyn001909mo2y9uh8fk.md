@@ -12,7 +12,7 @@ tags: docker, lxc, rsa, hardening, lxd
 
 ## TL;DR.
 
-Create a Docker-compatible <mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainer, set up storage, install Docker within the container, add a user account, and install an SSH server for security.
+Create a Docker-compatible <mark>L</mark>inu<mark>XC</mark>ontainer, set up storage, install Docker within the container, add a user account, and install an SSH server for security.
 
 ## An Introduction.
 
@@ -20,7 +20,7 @@ My previous post in this 8-part mini-series covered [how I installed LXD on my r
 
 > The purpose of this post is to present the process of running Docker within an LXD container.
 
-Containers are great [virtualization environments](https://solodev.app/the-magic-of-virtualization) because they isolate running processes from my `homelab` system. After running these containers, I can easily delete any of them. <mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainers (LXCs) are better than virtual machines because they use fewer resources while running their virtual processes.
+Containers are great [virtualization environments](https://solodev.app/the-magic-of-virtualization) because they isolate running processes from my `homelab` system. After running these containers, I can easily delete any of them. <mark>L</mark>inu<mark>XC</mark>ontainers (LXCs) are better than virtual machines because they use fewer resources while running their virtual processes.
 
 In a previous post, I discussed installing [the LXD container manager](https://solodev.app/1-of-5-lxd-on-my-homelab) on my `homelab` system. This time, I'm going to *use* LXD to create a container, make it Docker-compatible and, after deploying the container, install Docker *within* that container.
 
@@ -38,7 +38,7 @@ Now that I know what I want to achieve, it's time to build the first part of my 
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683422567413/4b5f131b-ba87-4ffc-ad3f-0c5526903bc4.png align="center")
 
-> NOTE: Remember, LXC (lek-see) is an abbreviation for <mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainer.
+> NOTE: Remember, LXC (lek-see) is an abbreviation for <mark>L</mark>inu<mark>XC</mark>ontainer.
 
 These are the steps I follow after opening a terminal (CTRL + ALT + T).
 
@@ -347,14 +347,14 @@ lxc exec docker -- bash
     
 
 ```plaintext
-adduser brian
+adduser yt
 ```
 
 * I add the new user to the `sudo` group:
     
 
 ```plaintext
-usermod -aG sudo brian
+usermod -aG sudo yt
 ```
 
 * I exit the container:
@@ -372,11 +372,11 @@ The next step is to install OpenSSH within the container.
 
 I can use OpenSSH to block access to this container.
 
-* From the `homelab` terminal, I log in to the container with the 'brian' account:
+* From the `homelab` terminal, I log in to the container with the 'yt' account:
     
 
 ```plaintext
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
 * I install OpenSSH:
@@ -479,7 +479,7 @@ sudo ufw enable
 sudo ufw allow from 192.168.?.?
 ```
 
-> ***NOTE: I replace the IP address above with the actual address for the*** `workstation`***, e.g. 192.168.188.41.***
+> ***NOTE: I replace the IP address above with the actual address for the***`workstation`***, e.g. 192.168.188.41.***
 
 * I check the status of the UFW:
     
@@ -629,7 +629,7 @@ The next step is to upload the local public key to the remote Docker container.
     
 
 ```plaintext
-ssh-copy-id -i /home/brian/.ssh/container-name.pub brian@192.168.?.?
+ssh-copy-id -i /home/brian/.ssh/container-name.pub yt@192.168.?.?
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -638,11 +638,11 @@ The next step is to use SSH to login to the remote container.
 
 ## Using SSH to Login to the Remote Container.
 
-* From the `workstation` terminal, I login to the “brian” account of the remote container:
+* From the `workstation` terminal, I login to the “yt” account of the remote container:
     
 
 ```plaintext
-ssh 'brian@192.168.?.?'
+ssh 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -694,7 +694,7 @@ sudo reboot
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the -p(ort) number with the actual port defined in the "sshd\_config" file, and replace the "?" with the actual octet for the container.
@@ -703,7 +703,7 @@ And that's it.
 
 ## The Results.
 
-This post demonstrated how to create a Docker-compatible <mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainer, set up storage for Docker, install Docker within the container, add a user account to the container, install an SSH server, create RSA keys on another PC, upload the public key to the Docker container, connect to the Docker container without using a username or password, and further harden the container by disabling the PasswordAuthentication feature. Understanding the appropriate use of virtual machines, LXCs, and Docker containers is crucial in modern engineering, as each technology offers unique benefits and efficiencies.
+This post demonstrated how to create a Docker-compatible <mark>L</mark>inu<mark>XC</mark>ontainer, set up storage for Docker, install Docker within the container, add a user account to the container, install an SSH server, create RSA keys on another PC, upload the public key to the Docker container, connect to the Docker container without using a username or password, and further harden the container by disabling the PasswordAuthentication feature. Understanding the appropriate use of virtual machines, LXCs, and Docker containers is crucial in modern engineering, as each technology offers unique benefits and efficiencies.
 
 ## In Conclusion.
 
