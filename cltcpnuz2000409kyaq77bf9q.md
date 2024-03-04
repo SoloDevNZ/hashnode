@@ -186,6 +186,8 @@ Microservices are small, independent "components" that communicate over well-def
 
 The microservice architecture enables an organization to deliver large, complex applications rapidly, frequently, reliably, and sustainably - a necessity for deploying my 12 Startups.
 
+[https://www.ibm.com/topics/microservices](https://www.ibm.com/topics/microservices)***↗.***
+
 # What is NGINX?
 
 NGINX is a free, open-source tool for web hosting, reverse proxying, caching, load balancing, media streaming, and more. It began as a web server focused on top performance and stability. Besides its HTTP server features, NGINX can also work as an email proxy server (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.
