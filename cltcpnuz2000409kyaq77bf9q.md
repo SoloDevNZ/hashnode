@@ -163,7 +163,28 @@ I need to ensure that [LXD and LXC has been installed](https://solodev.app/insta
 
 MAX (Modular Accelerated Engine) is a set of tools that makes it easier for me to work on AI projects. It includes the MAX Engine, MAX Serving, and the Mojo programming language. These tools help me create, and run, the next generation of machine learning solutions.
 
-[https://www.modular.com/max](https://www.modular.com/max)
+[https://www.modular.com/max](https://www.modular.com/max).
+
+# What are Microservices?
+
+Microservices are small, independent "components" that communicate over well-defined APIs. They are usually developed, and maintained, by small teams of programmers. Each microservice is:
+
+* Small,
+    
+* Autonomous,
+    
+* Loosely coupled,
+    
+* Focused on one task,
+    
+* Independently deployable,
+    
+* Aligned with a bounded context, and
+    
+* An abstraction at the level of the problem domain.
+    
+
+The microservice architecture enables an organization to deliver large, complex applications rapidly, frequently, reliably, and sustainably - a necessity for deploying my 12 Startups.
 
 # What is NGINX?
 
