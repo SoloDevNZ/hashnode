@@ -24,7 +24,7 @@ Deno, ExpressJS, and Axios are fundamental to building APIs and microservices.
 
 ## The Big Picture.
 
-The view of my services from up here in the clouds shows all of the servers that I've quietly assembled. There's Docker Desktop that runs on my local `workstation` and the Docker container that is running on my `homelab`. There's also the LXD (<mark>L</mark>inu<mark>X</mark> <mark>D</mark>aemon) manager that I use to spin up LXCs (<mark>L</mark>inu<mark>X</mark> <mark>C</mark>ontainers). This week, I'm installing Deno, ExpressJS, and Axios because these are the services I'll need to build the APIs and microservices that will be used by the 12 Startups.
+The view of my services from up here in the clouds shows all of the servers that I've quietly assembled. There's Docker Desktop that runs on my local `workstation` and the Docker container that is running on my `homelab`. There's also the LXD (<mark>L</mark>inu<mark>XD</mark>aemon) manager that I use to spin up LXCs (<mark>L</mark>inu<mark>XC</mark>ontainers). This week, I'm installing Deno, ExpressJS, and Axios because these are the services I'll need to build the APIs and microservices that will be used by the 12 Startups.
 
 ## What is Deno?
 
@@ -48,7 +48,7 @@ To install Deno in the Docker container, I follow these steps:
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > I replace the -p(ort) number and '?' above with the actual port number and IP address of the Docker container.
@@ -133,7 +133,7 @@ ExpressJS is a powerful and flexible web application framework. It simplifies th
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > I replace the -p(ort) number and '?' above with the actual port number and IP address of the Docker container.
