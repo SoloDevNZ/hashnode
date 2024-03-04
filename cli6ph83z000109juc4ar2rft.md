@@ -55,17 +55,17 @@ sudo apt autoremove -y
     
 
 ```plaintext
-adduser brian
+adduser yt
 ```
 
 * I add the new user to the 'sudo' group:
     
 
 ```plaintext
-usermod -aG sudo brian
+usermod -aG sudo yt
 ```
 
-> usermod let's me (-a)ppend the sudo (-G)roup to the brian account.
+> usermod let's me (-a)ppend the sudo (-G)roup to the 'yt' account.
 
 * I exit the container:
     
@@ -80,11 +80,11 @@ The next step is to fix the home directory problem.
 
 I can use Nano to add an entry to the `.bashrc` file.
 
-* From the `homelab` terminal, I log in to the container with the 'brian' account:
+* From the `homelab` terminal, I log in to the container with the 'yt' account:
     
 
 ```plaintext
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
 * I open the `.bashrc` file with Nano:
@@ -116,11 +116,11 @@ The next step is to install OpenSSH within the container.
 
 I can use OpenSSH to block access to this container.
 
-* From the `homelab` terminal, I log in to the container with the 'brian' account:
+* From the `homelab` terminal, I log in to the container with the 'yt' account:
     
 
 ```plaintext
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
 * I install OpenSSH:
