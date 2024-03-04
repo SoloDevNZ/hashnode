@@ -137,17 +137,17 @@ sudo apt autoremove -y
     
 
 ```bash
-adduser brian
+adduser yt
 ```
 
 * I add the new user to the 'sudo' group:
     
 
 ```bash
-usermod -aG sudo brian
+usermod -aG sudo yt
 ```
 
-> NOTE: usermod let's me (-a)ppend the sudo (-G)roup to the brian account.
+> NOTE: usermod let's me (-a)ppend the sudo (-G)roup to the 'yt' account.
 
 * I reboot the container:
     
@@ -162,11 +162,11 @@ The next step is to fix the home directory problem.
 
 > NOTE: I use Nano to add an entry to the `.bashrc` file.
 
-* From the terminal, I log in to the container with the 'brian' account:
+* From the terminal, I log in to the container with the 'yt' account:
     
 
 ```bash
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
 * I open the `.bashrc` file with the Nano text editor:
@@ -241,62 +241,62 @@ LXC comes with a lot of controls, but I find these 20 commands very useful:
 
 ## OPTIONAL: Enabling, and Setting Up, UFW.
 
-* [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* From the terminal, I log in to the container with the 'yt' account:
     
 
 ```bash
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
-* I check the UFW status[:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I check the UFW status:
     
 
 ```bash
 sudo ufw status
 ```
 
-* [I enable the UFW:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I enable the UFW:
     
 
 ```bash
 sudo ufw enable
 ```
 
-* [I install a UFW rule:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I install a UFW rule:
     
 
 ```bash
 sudo ufw allow from 192.168.?.?
 ```
 
-> [NOTE: I use `ip a` in my workstation terminal to find my IP address. ***I replace the IP address above with the actual address for the***`workstation`***, e.g. 192.168.188.41.***](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+> NOTE: I use `ip a` in my workstation terminal to find my IP address. ***I replace the IP address above with the actual address for the***`workstation`***, e.g. 192.168.188.41.***
 
-* [I check the status of the UFW and list the rules by number:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I check the status of the UFW and list the rules by number:
     
 
 ```bash
 sudo ufw status numbered
 ```
 
-> [NOTE 1: UFW will, by default, block all incoming traffic, including SSH and](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) HTTP.
+> NOTE 1: UFW will, by default, block all incoming traffic, including SSH and HTTP.
 > 
-> NOTE 2: I will update the UFW ru[les as I deploy other services to the container.](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+> NOTE 2: I will update the UFW rules as I deploy other services to the container.
 
-* [I delete a UFW rule by number](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) if n[eeded:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I delete a UFW rule by number if needed:
     
 
 ```bash
 sudo ufw delete 1
 ```
 
-* [I disable UFW if needed:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I disable UFW if needed:
     
 
 ```bash
 sudo ufw disable
 ```
 
-* [I reboot the container:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I reboot the container:
     
 
 ```bash
@@ -305,35 +305,35 @@ sudo reboot
 
 ## OPTIONAL: Installing, and Setting Up, Fail2Ban.
 
-* [From the terminal, I log in to the container with the 'brian' account:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* From the terminal, I log in to the container with the 'yt' account:
     
 
 ```bash
-lxc exec container-name -- su brian
+lxc exec container-name -- su yt
 ```
 
-* [From the `homelab` terminal (`CTRL` + `ALT` + `T`) connected to the container, I install Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* From the `homelab` terminal (`CTRL` + `ALT` + `T`) connected to the container, I install Fail2Ban:
     
 
 ```bash
 sudo apt install fail2ban -y
 ```
 
-* [I copy the `jail.conf` file as `jail.local`:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I copy the `jail.conf` file as `jail.local`:
     
 
 ```bash
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 
-* [I open the `jail.local` file in Nano:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I open the `jail.local` file in Nano:
     
 
 ```bash
 sudo nano /etc/fail2ban/jail.local
 ```
 
-* [I change a few (SSH-centric) settings in the `jail.local` file, then I save those](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/) changes, and exit the Nano editor:
+* I change a few (SSH-centric) settings in the `jail.local` file, then I save those changes, and exit the Nano editor:
     
 
 ```bash
@@ -347,28 +347,28 @@ enabled = true
 port = ssh,22
 ```
 
-* [I restart Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I restart Fail2Ban:
     
 
 ```bash
 sudo systemctl restart fail2ban
 ```
 
-* I check the statu[s of Fail2Ban:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I check the status of Fail2Ban:
     
 
 ```bash
 sudo systemctl status fail2ban
 ```
 
-* [I enable Fail2Ban to autostart on boot:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I enable Fail2Ban to autostart on boot:
     
 
 ```bash
 sudo systemctl enable fail2ban
 ```
 
-* [I reboot the container:](https://www.cyberithub.com/20-best-lxc-command-examples-to-manage-linux-containers/)
+* I reboot the container:
     
 
 ```bash
