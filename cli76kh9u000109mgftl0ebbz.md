@@ -52,7 +52,7 @@ ssh-add /home/brian/.ssh/key-name
     
 
 ```plaintext
-ssh-copy-id -i /home/brian/.ssh/container-name.pub brian@192.168.?.?
+ssh-copy-id -i /home/brian/.ssh/container-name.pub yt@192.168.?.?
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -63,7 +63,7 @@ ssh-copy-id -i /home/brian/.ssh/container-name.pub brian@192.168.?.?
     
 
 ```plaintext
-ssh 'brian@192.168.?.?'
+ssh 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -114,7 +114,7 @@ sudo reboot
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the -p(ort) number with the actual port defined in the "sshd\_config" file, and replace the "?" with the IP address for the container.
