@@ -103,7 +103,7 @@ distrobox enter ubuntu
 > 
 > NOTE 2: The installation will ask to setup a minimum 8-character password.
 > 
-> NOTE 3: I The command prompt is used to identify the distro name, e.g. `brian@ubuntu:~/Desktop$` is my prompt for the Ubuntu distro container.
+> NOTE 3: I The command prompt is used to identify the distro name, e.g. `yt@ubuntu:~/Desktop$` is my prompt for the Ubuntu distro container.
 
 ## Installing the DaVinci Resolve Dependencies.
 
