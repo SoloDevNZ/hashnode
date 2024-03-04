@@ -61,18 +61,18 @@ ssh-add /home/brian/.ssh/docker
     
 
 ```plaintext
-ssh-copy-id -i /home/brian/.ssh/docker.pub brian@192.168.?.?
+ssh-copy-id -i /home/brian/.ssh/docker.pub yt@192.168.?.?
 ```
 
 > NOTE: I replace the "?" with the actual octet for the container.
 
 ### 3/4 - Logging In to the Remote Container.
 
-* From the `workstation` terminal (`CTRL` + `ALT` + `T`), I log in to the “brian” account of the Docker container:
+* From the `workstation` terminal (`CTRL` + `ALT` + `T`), I log in to the “yt” account of the Docker container:
     
 
 ```plaintext
-ssh 'brian@192.168.?.?'
+ssh 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -120,7 +120,7 @@ sudo reboot
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -291,7 +291,7 @@ Thanks to the private keys I installed on my `workstation` and pushed across the
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -323,7 +323,7 @@ sudo reboot
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -370,7 +370,7 @@ Portainer is a web-based user interface for managing Docker environments. It can
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
@@ -415,7 +415,7 @@ After setting up the remote Portainer account, I now need to enable the API. Thi
     
 
 ```plaintext
-ssh -p '4444' 'brian@192.168.?.?'
+ssh -p '4444' 'yt@192.168.?.?'
 ```
 
 > NOTE: I replace the "?" with the actual IP address for the container.
