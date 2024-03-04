@@ -64,17 +64,17 @@ Docker is a tool for easily deploying, and running my applications on any platfo
 
 Sometimes, I need to ensure that [Docker is installed](https://solodev.app/installing-docker) before continuing with a post.
 
-# What is a Docker Container?
-
-Docker Containers are ephemeral (temporary) system simulations that run on PCs. Containers, which are created from Docker Images, are virtual spaces that separates my running applications from the base OS and other apps. Containers are easy to run on other systems that also support Docker.
-
-[https://docs.docker.com/guides/walkthroughs/what-is-a-container/](https://docs.docker.com/guides/walkthroughs/what-is-a-container/)***↗.***
-
 # What is Docker Compose?
 
 Docker Compose is a tool that helps define and run applications with multiple containers. It makes development and deployment smoother and more efficient. Compose makes it simple to control my whole application stack, managing services, networks, and volumes in one easy-to-understand YAML configuration file. I can create, and start, all the services from my configuration file with just one command. Compose works in all environments, like production, staging, development, testing, and CI/CD. It also has commands to manage my applications' entire lifecycle.
 
 [https://docs.docker.com/compose/](https://docs.docker.com/compose/)***↗.***
+
+# What is a Docker Container?
+
+Docker Containers are ephemeral (temporary) system simulations that run on PCs. Containers, which are created from Docker Images, are virtual spaces that separates my running applications from the base OS and other apps. Containers are easy to run on other systems that also support Docker.
+
+[https://docs.docker.com/guides/walkthroughs/what-is-a-container/](https://docs.docker.com/guides/walkthroughs/what-is-a-container/)***↗.***
 
 # What is Docker Desktop?
 
