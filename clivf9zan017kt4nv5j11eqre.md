@@ -241,7 +241,7 @@ sudo snap install lxd
     
 
 ```bash
-sudo adduser brian lxd
+sudo adduser yt lxd
 ```
 
 > NOTE: Adding myself to the LXD group means I can skip the `sudo` requirement when issuing LXD and LXC commands.
