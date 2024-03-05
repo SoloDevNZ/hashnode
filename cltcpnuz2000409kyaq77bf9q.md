@@ -60,7 +60,9 @@ Docker is a tool for easily deploying, and running my applications on any platfo
 
 [https://ubuntu.com/tutorials/how-to-run-docker-inside-lxd-containers](https://ubuntu.com/tutorials/how-to-run-docker-inside-lxd-containers)***↗,***
 
-[https://www.docker.com/](https://www.docker.com/)***↗.***
+[https://solodev.app/installing-docker](https://solodev.app/installing-docker), and
+
+[https://www.docker.com/***↗***](https://www.docker.com/↗)[***.***](https://www.docker.com/)
 
 Sometimes, I need to ensure that [Docker is installed](https://solodev.app/installing-docker) before continuing with a post.
 
