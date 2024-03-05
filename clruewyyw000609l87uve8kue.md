@@ -4,7 +4,7 @@ datePublished: Fri Jan 26 2024 09:00:07 GMT+0000 (Coordinated Universal Time)
 cuid: clruewyyw000609l87uve8kue
 slug: installing-git
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1705186335383/057a5ad7-46ff-4419-b2c5-085c4b646f65.png
-tags: repository, github, git, repo
+tags: repository, ubuntu, software-development, linux, github, version-control, git, source-code, repo, installation-guide, programming-tools, tech-guide, ppa
 
 ---
 
@@ -14,9 +14,9 @@ This post provides a comprehensive guide on how to install Git, a popular versio
 
 > **Attributions:**
 > 
-> [https://git-scm.com/](https://git-scm.com/) ***↗, and***
+> [https://git-scm.com/](https://git-scm.com/)***↗, and***
 > 
-> [https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/](https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/) ***↗.***
+> [https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/](https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/)***↗.***
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705218912034/3ecd6bd0-d9d7-4a3d-8253-c2696dda891a.png align="center")
 
@@ -58,13 +58,85 @@ If a file is in the Git directory, it is `committed`. If the file has been chang
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219084253/9c631530-17ad-478b-afcc-0a52e2ee4a85.png align="center")
 
-# Finding the Latest Version.
+# Installing Git: The Easiest Way.
+
+* I update my base system:
+    
+
+```plaintext
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I use APT to install Git:
+    
+
+```plaintext
+sudo apt install git
+```
+
+* There also exists [a slightly modified APT command](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from the official docs:
+    
+
+```plaintext
+sudo apt install git-all
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219288433/7efd66dc-e65f-47d1-9e62-ae3f66e687d8.png align="center")
+
+# Installing Git: From the PPA Repo.
+
+* I update my base system:
+    
+
+```plaintext
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I install the PPA (personal package archive) repo:
+    
+
+```plaintext
+add-apt-repository ppa:git-core/ppa
+```
 
 * I update my system:
     
 
+```bash
+sudo apt update
+```
+
+* I install Git:
+    
+
 ```plaintext
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+sudo apt install git
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219254106/6968b607-abdb-4f4a-9656-6bbc0dfc83ea.png align="center")
+
+# Installing Git: From the Source Code.
+
+* I update my base system:
+    
+
+```plaintext
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
 * I visit the GitHub repo to find the latest version number:
@@ -73,10 +145,6 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-
 ```plaintext
 https://github.com/git/git/tags
 ```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219119464/680d172e-53e6-43c8-a688-287fe5dc2f9d.png align="center")
-
-# Installing the Prerequisites.
 
 * I install the prerequisites:
     
@@ -99,22 +167,18 @@ sudo apt install -y wget
 sudo apt install -y autoconf
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219143797/04d9d66c-75cd-47d1-a72f-d9514aab56d2.png align="center")
-
-# Building Git.
-
 * I use `wget` to download the latest version of Git:
     
 
 ```plaintext
-wget https://github.com/git/git/archive/refs/tags/v2.43.0.tar.gz
+wget https://github.com/git/git/archive/refs/tags/v2.44.0.tar.gz
 ```
 
 * I use `tar` to extract the archive:
     
 
 ```plaintext
-tar -xvf v2.43.0.tar.gz
+tar -xvf v2.44.0.tar.gz
 ```
 
 * I list the name of the extracted directory:
@@ -128,7 +192,7 @@ ls
     
 
 ```plaintext
-cd ./git-2.43.0
+cd ./git-2.44.0
 ```
 
 * I configure the build:
@@ -168,52 +232,9 @@ git --version
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219203147/20d4ce0a-f29f-44e3-b449-be573fb4a0d2.png align="center")
 
-# Alt: Installing Git from the PPA Repo.
-
-* I install the PPA (personal package archive) repo:
-    
-
-```plaintext
-add-apt-repository ppa:git-core/ppa
-```
-
-* I update my system:
-    
-
-```plaintext
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
-```
-
-* I install Git:
-    
-
-```plaintext
-sudo apt install git
-```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219254106/6968b607-abdb-4f4a-9656-6bbc0dfc83ea.png align="center")
-
-# Alt: Installing Git the Easiest Way.
-
-* I use APT to install Git:
-    
-
-```plaintext
-sudo apt install git
-```
-
-* There also exists [a slightly modified APT command](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from the official docs:
-    
-
-```plaintext
-sudo apt install git-all
-```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219288433/7efd66dc-e65f-47d1-9e62-ae3f66e687d8.png align="center")
-
 # To Be Continued...
 
-Installing Git is the start of a more important process: Version control. [TBC](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
+Installing Git is the start of a more important process: [Version control](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705219309436/7f4bce1e-b535-4dee-8b53-1aa7cd230d91.png align="center")
 
@@ -234,5 +255,7 @@ Regardless of the method you choose to install Git, remember that it is more tha
 Have you used Git before? How has it transformed your development process? Share your thoughts below.
 
 Until next time: Be safe, be kind, be awesome.
+
+#Git GitHub #Repository #Repo #VersionControl #SoftwareDevelopment #Linux #Ubuntu #PPA #SourceCode #ProgrammingTools #TechGuide #InstallationGuide
 
 > NOTE: All images generated by [ComfyUI](https://github.com/comfyanonymous/ComfyUI) using the [sd\_xl\_base\_1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0.safetensors) checkpoint.
