@@ -62,7 +62,7 @@ Docker is a tool for easily deploying, and running my applications on any platfo
 
 [https://solodev.app/installing-docker](https://solodev.app/installing-docker), and
 
-[https://www.docker.com/***↗***](https://www.docker.com/↗)[***.***](https://www.docker.com/)
+[https://www.docker.com/***↗***](https://www.docker.com/%E2%86%97)[***.***](https://www.docker.com/)
 
 Sometimes, I need to ensure that [Docker is installed](https://solodev.app/installing-docker) before continuing with a post.
 
@@ -135,7 +135,7 @@ I can self-host GitLab CE on my own servers, in a container, or on a cloud provi
 
 # What is Jekyll?
 
-Jekyll is a free, open-source tool for creating static websites, and is built with Ruby. You don't need to know Ruby; It just needs to be installed. It is ideal for various static websites, such as personal blogs, portfolios, and documentation sites, eliminating the need for databases or content management systems. Jekyll works with text and markdown files, converting them into secure static HTML files, which can be easily hosted without complex systems. It is secure, does not require a database or server-side scripts, and is highly customizable. Additionally, Jekyll has a large community that provides inspiration and assistance.
+Jekyll is a free, Ruby-based, open-source tool for creating static websites. I don't need to know Ruby; It just needs to be installed. It is ideal for various static websites, such as personal blogs, portfolios, and documentation sites, eliminating the need for databases or content management systems. Jekyll works with text and markdown files, converting them into secure static HTML files, which can be easily hosted without complex systems. It is secure, does not require a database or server-side scripts, and is highly customizable. Additionally, Jekyll has a large community that provides inspiration and assistance.
 
 [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/)***↗.***
 
