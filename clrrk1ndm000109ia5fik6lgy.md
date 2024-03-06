@@ -1,9 +1,9 @@
 ---
-title: "Installing NVM for Node and NPM."
+title: "Installing Node and NPM with NVM."
 datePublished: Wed Jan 24 2024 09:00:25 GMT+0000 (Coordinated Universal Time)
 cuid: clrrk1ndm000109ia5fik6lgy
-slug: installing-nvm-for-node-and-npm
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706172468211/10111675-00d7-4151-b609-47bc6265a83b.png
+slug: installing-node-and-npm-with-nvm
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1709711513513/6e0820e9-a6c2-4ecf-aab4-a566aafb4797.png
 tags: nodejs, npm, node, nvm, node-js, node-version-manager, node-package-manager
 
 ---
