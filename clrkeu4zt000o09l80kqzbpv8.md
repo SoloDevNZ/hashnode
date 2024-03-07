@@ -74,8 +74,6 @@ An LXC (LinuX Container) is an isolated, OS-level virtualization which, for effi
 
 [https://solodev.app/installing-lxd-and-using-lxcs](https://solodev.app/installing-lxd-and-using-lxcs).
 
-I need to ensure that [LXD and LXC has been installed](https://solodev.app/installing-lxd-and-using-lxcs) before continuing with this post.
-
 ## Installing the LXD.
 
 * I install the snap package manager, if required:
