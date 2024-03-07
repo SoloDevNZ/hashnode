@@ -159,7 +159,7 @@ A LXC (LinuX Container) is an isolated, OS-level virtualization which, for effic
 
 [https://solodev.app/installing-lxd-and-using-lxcs](https://solodev.app/installing-lxd-and-using-lxcs).
 
-I need to ensure that [LXD and LXC has been installed](https://solodev.app/installing-lxd-and-using-lxcs) before continuing with this post.
+I ensure that [LXD is installed](https://solodev.app/installing-lxd-and-using-lxcs) (`lxc --version`) before continuing with this post.
 
 # What is MAX?
 
@@ -212,9 +212,13 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 [https://nodejs.org/en/learn/getting-started/introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)↗,
 
-[https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm)↗, and
+[https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm)↗,
 
-[https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)↗.
+[https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)↗, and
+
+[https://solodev.app/installing-node-and-npm-with-nvm](https://solodev.app/installing-node-and-npm-with-nvm).
+
+I first ensure that [Node.js is installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
 
 # What is Ollama?
 
