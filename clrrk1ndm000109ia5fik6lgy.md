@@ -171,9 +171,7 @@ I've crafted a step-by-step guide on how I install and use NVM on a Debian-based
 
 Key takeaway? NVM let's me effectively control my Node.js environment, there by enhancing my development workflow. Node.js version management is now easier and more efficient.
 
-Have you tried NVM? How was your experience? Share your thoughts in the comments!
-
-Check out [the original](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/)[freecodecamp.org](http://freecodecamp.org)[article](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/).
+Have you tried NVM? How was your experience? Share your thoughts in the comments below!
 
 Until next time: Be safe, be kind, be awesome.
 
