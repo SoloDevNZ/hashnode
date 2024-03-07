@@ -202,23 +202,19 @@ A reverse proxy is a server that sits behind the firewall in a network and direc
 
 [https://www.nginx.com/resources/glossary/reverse-proxy-server/](https://www.nginx.com/resources/glossary/reverse-proxy-server/)***↗.***
 
-# What is Node.js?
+# What is Node.js, NPM, and NVM?
 
 Node.js is a free, JavaScript (JS) server runtime. It runs JS code as single-threaded, non-blocking, asynchronous programs, which makes it very memory efficient. Node.js performs many system-level tasks, but is commonly used to run JS servers.
 
-[https://nodejs.org/en/learn/getting-started/introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)***↗.***
+NPM (Node Package Manager) is the world's largest software registry. Open source developers use it to share packages with each other. Many organizations use NPM to manage private development as well. Most developers interact with NPM using the CLI (Command Line Interface), and usually ships with Node.js.
 
-# What is NPM?
+NVM (Node Version Manager) is used to switch between versions of Node.js. NVM works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash) and runs on Linux distros, macOS, and Windows WSL.
 
-NPM (Node Package Manager) is the world's largest software registry. Open source developers use it to share packages with each other. Many organizations use NPM to manage private development as well. Most developers interact with NPM using the CLI (Command Line Interface), and usually ships with Node.js (which is a JavaScript server runtime).
+[https://nodejs.org/en/learn/getting-started/introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)↗,
 
-[https://docs.npmjs.com/about-npm/](https://docs.npmjs.com/about-npm/)***↗.***
+[https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm)↗, and
 
-# What is NVM?
-
-NVM (Node Version Manager) is used to switch between versions of Node.js (which is a JavaScript server runtime). NVM works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash) and runs on Linux distros, macOS, and Windows WSL.
-
-[https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)***↗.***
+[https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)↗.
 
 # What is Ollama?
 
