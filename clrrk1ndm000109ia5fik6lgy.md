@@ -41,34 +41,25 @@ NVM (Node Version Manager) is capable of much more than is described in this pos
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058819339/4c70bd64-9a99-4f94-b5c3-f8c760f341e6.png align="center")
 
-# Installing CURL.
+## Installing CURL.
 
-* I update my system:
-    
-
-```bash
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
-```
-
-* I install CURL:
+* From the terminal, I install CURL:
     
 
 ```bash
 sudo apt install -y curl
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058883515/ad1334b3-b6c9-423c-a80e-70d479219579.png align="center")
+# Installing Node.js, NPM, and NVM.
 
-# Installing the NVM.
-
-* I install the NVM (Node Version Manager):
+* From the terminal, I install the NVM (Node Version Manager):
     
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-> NOTE: The version numbers are [listed on the GitHub page](https://github.com/nvm-sh/nvm/tags).
+> NOTE: The version numbers are [listed on the NVM GitHub page](https://github.com/nvm-sh/nvm/tags).
 
 * I activate the NVM:
     
@@ -77,11 +68,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058896044/3fcb9698-ca79-482d-8201-ecb1b604d403.png align="center")
-
-# Using NVM to Install Node LTS and NPM.
-
-* I use NVM to install the LTS version of Node:
+* I use the NVM to install the LTS version of Node.js:
     
 
 ```bash
@@ -90,20 +77,12 @@ nvm install --lts
 
 > NOTE: The Node and NPM versions are listed on the screen.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058995257/3a0ae3eb-08df-43a4-92a3-58f1cda178d8.png align="center")
-
-# Making Node LTS the Default NVM Version.
-
-* I make Node LTS the default NVM version, as listed in the previous section:
+* I make Node LTS the default NVM version, as listed in the previous command:
     
 
 ```bash
 nvm alias default 20.11.0
 ```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705059161714/e4a4cd7e-3261-42b2-9e8d-36486234342a.png align="center")
-
-# Confirming the Installations.
 
 * I confirm the Node installation:
     
@@ -118,8 +97,6 @@ node -v
 ```bash
 npm -v
 ```
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705059789177/760b9d75-ac62-4f92-a97b-3f04002a5651.png align="center")
 
 # Testing the Installation.
 
@@ -168,7 +145,7 @@ node app.js
 
 # The Results.
 
-Installing NVM on a Debian-based Linux system like Ubuntu allows for easy management of Node.js and NPM versions. This guide walked through the necessary steps, from installing CURL and NVM, to installing and setting the default Node LTS and NPM versions. The successful execution of a simple Node.js project confirmed the installation processes. With NVM, I can now effortlessly switch between different Node versions as needed, enhancing my development workflow.
+Installing NVM on a Debian-based Linux system like Ubuntu allows for easy management of Node.js and NPM versions. This guide walked through installing CURL and NVM to installing, and setting up, the default Node LTS and NPM versions. The successful execution of a simple Node.js project confirmed the installation processes. With NVM, I can now effortlessly switch between different Node versions as needed, enhancing my development workflow.
 
 # In Conclusion.
 
