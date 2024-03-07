@@ -14,9 +14,11 @@ This post provides a step-by-step guide on how to install NVM (Node Version Mana
 
 > **Attributions:**
 > 
-> [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)***↗, and***
+> [https://nodejs.org/en/learn/getting-started/introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)↗,
 > 
-> [https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/).
+> [https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm)↗, and
+> 
+> [https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)↗.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058792137/dc96dd05-e3dd-4b7d-8e02-0010c2afcb57.png align="center")
 
@@ -40,6 +42,20 @@ NVM (Node Version Manager) is capable of much more than is described in this pos
     
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705058819339/4c70bd64-9a99-4f94-b5c3-f8c760f341e6.png align="center")
+
+# What is Node.js, NPM, and NVM?
+
+Node.js is a free, JavaScript (JS) server runtime. It runs JS code as single-threaded, non-blocking, asynchronous programs, which makes it very memory efficient. Node.js performs many system-level tasks, but is commonly used to run JS servers.
+
+NPM (Node Package Manager) is the world's largest software registry. Open source developers use it to share packages with each other. Many organizations use NPM to manage private development as well. Most developers interact with NPM using the CLI (Command Line Interface), and usually ships with Node.js (which is a JavaScript server runtime).
+
+NVM (Node Version Manager) is used to switch between versions of Node.js (which is a JavaScript server runtime). NVM works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash) and runs on Linux distros, macOS, and Windows WSL.
+
+[https://nodejs.org/en/learn/getting-started/introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)↗,
+
+[https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm)↗, and
+
+[https://github.com/nvm-sh/nvm#intro](https://github.com/nvm-sh/nvm#intro)↗.
 
 ## Installing CURL.
 
@@ -129,7 +145,7 @@ sudo nano app.js
     
 
 ```plaintext
-console.log("Hello, Node.js from Ubuntu!");
+console.log("Hello, from Node.js!");
 ```
 
 * I run the following command:
@@ -139,7 +155,7 @@ console.log("Hello, Node.js from Ubuntu!");
 node app.js
 ```
 
-> NOTE: A successful test result has the "Hello, Node.js from Ubuntu!" message printed to the terminal.
+> NOTE: A successful test result has the "Hello, from Node.js!" message printed to the terminal.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705059281951/2aafc759-bd9b-4c65-94cb-25017f0bc51d.png align="center")
 
