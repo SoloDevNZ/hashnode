@@ -34,7 +34,7 @@ venv is a built-in Python 3.3+ module that runs virtual environments. Anaconda i
 
 [https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
 
-I need to ensure that [Miniconda has been installed](https://solodev.app/installing-miniconda) before continuing with this post.
+I ensure [Miniconda is installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
 
 # What is AnythingLLM?
 
@@ -64,7 +64,7 @@ Docker is a tool for easily deploying, and running my applications on any platfo
 
 [https://www.docker.com/***↗***](https://www.docker.com/%E2%86%97)[***.***](https://www.docker.com/)
 
-Sometimes, I need to ensure that [Docker is installed](https://solodev.app/installing-docker) before continuing with a post.
+I ensure [Docker is installed](https://solodev.app/installing-docker) (`docker -v`) before continuing with this post.
 
 # What is Docker Compose?
 
@@ -120,6 +120,8 @@ Git is a version control manager created by Linus Torvalds in 2005 and, since th
 
 [https://git-scm.com/book/en/v2/Getting-Started-What-is-Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)***↗.***
 
+I ensure [Git is installed](https://solodev.app/installing-git) (`git -v`) before continuing with this post.
+
 # What is GitHub?
 
 GitHub hosts a collection of remote repos where local changes to a code base can be saved to an off-site location. These remote repos can either be public or private. Competing Git-based repos include GitLab and Bitbucket.
@@ -159,7 +161,7 @@ A LXC (LinuX Container) is an isolated, OS-level virtualization which, for effic
 
 [https://solodev.app/installing-lxd-and-using-lxcs](https://solodev.app/installing-lxd-and-using-lxcs).
 
-I ensure that [LXD is installed](https://solodev.app/installing-lxd-and-using-lxcs) (`lxc --version`) before continuing with this post.
+I ensure [LXD is installed](https://solodev.app/installing-lxd-and-using-lxcs) (`lxc --version`) before continuing with this post.
 
 # What is MAX?
 
@@ -218,13 +220,15 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 [https://solodev.app/installing-node-and-npm-with-nvm](https://solodev.app/installing-node-and-npm-with-nvm).
 
-I first ensure that [Node.js is installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
+I ensure [Node.js is installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
 
 # What is Ollama?
 
 Ollama is a tool that is used to download, set up, and run large language models on a local PC. It lets me use powerful models like Llama 2 and Mistral on my personal computer. Ollama natively runs on Linux, macOS, and Windows.
 
 [https://ollama.com/](https://ollama.com/)***↗.***
+
+I ensure [Ollama is installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
 
 # What is Python?
 
