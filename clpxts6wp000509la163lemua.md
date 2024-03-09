@@ -10,11 +10,12 @@ tags: ai, artificial-intelligence, machine-learning, deep-learning, llm, large-l
 
 Published: Saturday 12<sup>th</sup> December 2023.  
 Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve.)  
-Update: Tuesday 20<sup>th</sup> February 2024.
+Update: Tuesday 20<sup>th</sup> February 2024.  
+Update: Sunday 10<sup>th</sup> March 2024.
 
 # TL;DR.
 
-This post describes the installation of Ollama, a local large language model (LLM) manager. It requires a Linux-based distro and Anaconda. After setting up an environment in Anaconda, Ollama is installed and used to download and run LLMs. I use the Mistral model as an example. Ollama enables the use of powerful LLMs for research, development, business, and personal use.
+This post describes the installation of Ollama, a local large language model (LLM) manager. It requires a Linux-based distro and Miniconda. After setting up a Miniconda environment, I install Ollama, which is used to download and run LLMs. I use the Mistral model as an example. Ollama enables the use of powerful LLMs for research, development, business, and personal use.
 
 > ***Attributions:***
 > 
@@ -34,18 +35,14 @@ I love Hugging Face, but it's *also* nice to have a curated series of models.
 
 # Prerequisites.
 
-* A Linux-based distro (I use Ubuntu), and
+* A Debian-based Linux distro (I use Ubuntu),
     
-* [Anaconda](https://solodev.app/installing-anaconda).
+* [Miniconda](https://solodev.app/installing-miniconda).
     
 
-# What is `Anaconda`?
+# Updating my Base System.
 
-Python projects can run in virtual environments, which are isolated spaces for managing dependencies, where different versions of the same package can run in different environments while avoiding version conflicts; `venv` is a built-in Python 3.3+ module for running virtual environments, [`Anaconda`](https://www.anaconda.com/) is a Python and R distribution for scientific computing that includes the `conda` package manager, and [`Miniconda`](https://docs.anaconda.com/free/miniconda/index.html) is a small bootstrap version of `Anaconda` that includes only `conda`, Python, packages they both depend on, and a small number of other useful packages (like pip and zlib).
-
-## Using Anaconda to Setup an Environment.
-
-* I update my system:
+* In the base terminal, I update my base system:
     
 
 ```python
@@ -57,23 +54,39 @@ sudo apt autoclean && \
 sudo apt autoremove -y
 ```
 
-* I use `conda` to display a `list` of Anaconda `env`ironments:
+# What is Anaconda and Miniconda?
+
+Python projects can run in virtual environments. These isolated spaces are used to manage project dependencies. Different versions of the same package can run in different environments while avoiding version conflicts.
+
+venv is a built-in Python 3.3+ module that runs virtual environments. Anaconda is a Python and R distribution for scientific computing that includes the `conda` package manager. Miniconda is a small, free, bootstrap version of Anaconda that also includes the `conda` package manager, Python, and other packages that are required or useful (like pip and zlib).
+
+[http://www.anaconda.com/](http://www.anaconda.com/)***↗,***
+
+[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html)***↗, and***
+
+[https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
+
+I ensure [Miniconda is installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
+
+## Creating a Miniconda Environment.
+
+* I use the `conda` command to display a `list` of Miniconda `env`ironments:
     
 
 ```bash
 conda env list
 ```
 
-* I use `conda` to create, and activate, a new environment named (-n) (ollama):
+* I use `conda` to create, and activate, a new environment named (-n) (Ollama):
     
 
 ```bash
-conda create -n ollama python=3.11 -y && conda activate ollama
+conda create -n Ollama python=3.11 -y && conda activate Ollama
 ```
 
-> NOTE: This command creates the (ollama) environment, then activates the (ollama) environment.
+> NOTE: This command creates the (Ollama) environment, then activates the (Ollama) environment.
 
-## Changing the `env` Home Directory.
+## Changing the `Ollama` Home Directory.
 
 > NOTE: I will define the home directory with settings in the environment directory.
 
@@ -84,18 +97,18 @@ conda create -n ollama python=3.11 -y && conda activate ollama
 mkdir ~/Ollama
 ```
 
-* I make new directories within the (ollama) environment:
+* I make new directories within the (Ollama) environment:
     
 
 ```bash
-mkdir -p $HOME/anaconda3/envs/ollama/etc/conda/activate.d
+mkdir -p ~/miniconda3/envs/Ollama/etc/conda/activate.d
 ```
 
 * I use the Nano text editor to create the `set_working_directory.sh` shell script:
     
 
 ```bash
-sudo nano ~/anaconda3/envs/ollama/etc/conda/activate.d/set_working_directory.sh
+sudo nano ~/miniconda3/envs/Ollama/etc/conda/activate.d/set_working_directory.sh
 ```
 
 * I copy the following, add it (CTRL + SHIFT + V) to the script, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
@@ -112,11 +125,11 @@ cd ~/Ollama
 conda activate
 ```
 
-* I activate the (ollama) environment:
+* I activate the (Ollama) environment:
     
 
 ```bash
-conda activate ollama
+conda activate Ollama
 ```
 
 > NOTE: I should now, by default, be in the `~/Ollama` home directory.
@@ -193,7 +206,7 @@ LLMs are the bleeding edge of modern technology and we should adapt to these awe
 
 I've been exploring Ollama, a local LLM manager that provides easy access to a selection of open-source LLMs from [Ollama.ai](https://ollama.ai). Their list of supported LLMs is continually updated. It's a buffet of cutting-edge tech that keeps on growing!
 
-The installation process was straightforward because all I needed was a Linux-based distro and [Anaconda](https://solodev.app/installing-anaconda). I created and activated a new environment named (ollama) using the `conda` command. Then, I set up an Ollama home directory and made new directories within the (ollama) environment. Once I got my environment set up, I installed Ollama and started downloading and running an LLM. I've been testing it out with the 'Mistral' model. And let me tell you, it's impressive!
+The installation process was straightforward because all I needed was a Linux-based distro and [Anaconda](https://solodev.app/installing-anaconda). I created and activated a new environment named (Ollama) using the `conda` command. Then, I set up an Ollama home directory and made new directories within the (Ollama) environment. Once I got my environment set up, I installed Ollama and started downloading and running an LLM. I've been testing it out with the 'Mistral' model. And let me tell you, it's impressive!
 
 By following these steps, I can set up dedicated Anaconda environments, install Ollama, download LLMs from [Ollama.ai](http://Ollama.ai), and test them locally.
 
