@@ -157,13 +157,13 @@ LangeServe is a platform for deploying and maintaining my LLM applications. It h
 
 LangGraph is a tool for creating complex applications with LLMs that involve multiple parts working together. It is designed to work with LangChain and adds new features to the LangChain Expression Language, helping me manage several chains (or parts) through many steps in a loop.
 
-[https://python.langchain.com/docs/get\_started/introduction](https://python.langchain.com/docs/get_started/introduction)
+[https://python.langchain.com/docs/get\_started/introduction](https://python.langchain.com/docs/get_started/introduction)↗,
 
-[https://docs.smith.langchain.com](https://docs.smith.langchain.com)
+[https://docs.smith.langchain.com](https://docs.smith.langchain.com)↗,
 
-[https://www.langchain.com/langserve](https://www.langchain.com/langserve)
+[https://www.langchain.com/langserve](https://www.langchain.com/langserve)↗, and
 
-[https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)
+[https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)↗.
 
 I ensure these LangChain tools are installed (pending) before continuing with this post.
 
