@@ -147,6 +147,14 @@ Jupyter Notebook is an open source web application that lets me create, and shar
 
 [https://jupyter-notebook.readthedocs.io/en/latest/](https://jupyter-notebook.readthedocs.io/en/latest/)***↗.***
 
+# What is LiteLLM?
+
+LiteLLM provides LLMs with IP addresses. It is a unified interface that calls 100+ LLMs using the same Input/Output format, supporting OpenAI, Huggingface, Anthropic, vLLM, Cohere, and even custom LLM API services.
+
+[https://litellm.ai/](https://litellm.ai/)***↗.***
+
+I ensure [LiteLLM is installed](https://solodev.app/installing-litellm) (pending) before continuing with this post.
+
 # What is LXD and LXC?
 
 The LXD (LinuX Daemon) is the container manager that is used to create, and manage, LXCs (LinuX Containers). It is a background service that can automatically start LXCs when the host system boots, or stop any container from starting at all.
