@@ -147,6 +147,26 @@ Jupyter Notebook is an open source web application that lets me create, and shar
 
 [https://jupyter-notebook.readthedocs.io/en/latest/](https://jupyter-notebook.readthedocs.io/en/latest/)***↗.***
 
+# What is LangChain, LangSmith, LangeServe, and LangGraph?
+
+LangChain is a Python and JavaScript library that helps me build language model applications. It uses these models to help with tasks like answering questions, creating text, or performing other tasks.
+
+LangSmith is a tool for creating professional LLM applications. It helps me debug, test, check, and keep an eye on chains, and smart agents, made with any LLM framework, and is designed to work smoothly with LangChain.
+
+LangeServe is a platform for deploying and maintaining my LLM applications. It helps me turn any LangChain runnable, or chain, into a REST API, making my LangChain projects ready for real-world use.
+
+LangGraph is a tool for creating complex applications with LLMs that involve multiple parts working together. It is designed to work with LangChain and adds new features to the LangChain Expression Language, helping me manage several chains (or parts) through many steps in a loop.
+
+[https://python.langchain.com/docs/get\_started/introduction](https://python.langchain.com/docs/get_started/introduction)
+
+[https://docs.smith.langchain.com](https://docs.smith.langchain.com)
+
+[https://www.langchain.com/langserve](https://www.langchain.com/langserve)
+
+[https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)
+
+I ensure these LangChain tools are installed (pending) before continuing with this post.
+
 # What is LiteLLM?
 
 LiteLLM provides LLMs with IP addresses. It is a unified interface that calls 100+ LLMs using the same Input/Output format, supporting OpenAI, Huggingface, Anthropic, vLLM, Cohere, and even custom LLM API services.
