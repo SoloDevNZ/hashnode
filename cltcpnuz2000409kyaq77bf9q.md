@@ -34,7 +34,7 @@ venv is a built-in Python 3.3+ module that runs virtual environments. Anaconda i
 
 [https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
 
-I ensure [Miniconda is installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
+[Miniconda must be installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
 
 # What is AnythingLLM?
 
@@ -64,7 +64,7 @@ Docker is a tool for easily deploying, and running my applications on any platfo
 
 [https://www.docker.com/***↗***](https://www.docker.com/%E2%86%97)[***.***](https://www.docker.com/)
 
-I ensure [Docker is installed](https://solodev.app/installing-docker) (`docker -v`) before continuing with this post.
+[Docker must be installed](https://solodev.app/installing-docker) (`docker -v`) before continuing with this post.
 
 # What is Docker Compose?
 
@@ -120,7 +120,7 @@ Git is a version control manager created by Linus Torvalds in 2005 and, since th
 
 [https://git-scm.com/book/en/v2/Getting-Started-What-is-Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)***↗.***
 
-I ensure [Git is installed](https://solodev.app/installing-git) (`git -v`) before continuing with this post.
+[Git must be installed](https://solodev.app/installing-git) (`git -v`) before continuing with this post.
 
 # What is GitHub?
 
@@ -165,7 +165,7 @@ LangGraph is a tool for creating complex applications with LLMs that involve mul
 
 [https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)↗.
 
-I ensure these LangChain tools are installed (pending) before continuing with this post.
+These LangChain tools must be installed (pending) before continuing with this post.
 
 # What is LiteLLM?
 
@@ -173,7 +173,7 @@ LiteLLM provides LLMs with IP addresses. It is a unified interface that calls 10
 
 [https://litellm.ai/](https://litellm.ai/)***↗.***
 
-I ensure [LiteLLM is installed](https://solodev.app/installing-litellm) (pending) before continuing with this post.
+[LiteLLM must be installed](https://solodev.app/installing-litellm) (pending) before continuing with this post.
 
 # What is LXD and LXC?
 
@@ -189,7 +189,7 @@ A LXC (LinuX Container) is an isolated, OS-level virtualization which, for effic
 
 [https://solodev.app/installing-lxd-and-using-lxcs](https://solodev.app/installing-lxd-and-using-lxcs).
 
-I ensure [LXD is installed](https://solodev.app/installing-lxd-and-using-lxcs) (`lxc --version`) before continuing with this post.
+[LXD must be installed](https://solodev.app/installing-lxd-and-using-lxcs) (`lxc --version`) before continuing with this post.
 
 # What is MAX?
 
@@ -248,15 +248,15 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 [https://solodev.app/installing-node-and-npm-with-nvm](https://solodev.app/installing-node-and-npm-with-nvm).
 
-I ensure [Node.js is installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
+[Node.js must be installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
 
 # What is Ollama?
 
-Ollama is a tool that is used to download, set up, and run large language models on a local PC. It lets me use powerful models like Llama 2 and Mistral on my personal computer. Ollama natively runs on Linux, macOS, and Windows.
+Ollama is a tool for downloading, setting up, and running LLMs (large language models). It helps me access powerful models like Llama 2 and Mistral and lets me run them on my local Linux, macOS, and Windows systems.
 
-[https://ollama.com/](https://ollama.com/)***↗.***
+[https://ollama.com/↗](https://ollama.com/↗).
 
-I ensure [Ollama is installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
+[Ollama must be installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
 
 # What is Python?
 
