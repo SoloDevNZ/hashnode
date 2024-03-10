@@ -169,7 +169,7 @@ These LangChain tools must be installed (pending) before continuing with this po
 
 # What is LiteLLM?
 
-LiteLLM provides LLMs with IP addresses. It is a unified interface that calls 100+ LLMs using the same Input/Output format, supporting OpenAI, Huggingface, Anthropic, vLLM, Cohere, and even custom LLM API services.
+LiteLLM is a proxy that provides LLMs with IP addresses. It is a unified interface that calls 100+ LLMs using the same Input/Output format, supporting OpenAI, Huggingface, Anthropic, vLLM, Cohere, and even custom LLM API services.
 
 [https://litellm.ai/](https://litellm.ai/)***↗.***
 
@@ -254,7 +254,7 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 Ollama is a tool for downloading, setting up, and running LLMs (large language models). It helps me access powerful models like Llama 2 and Mistral and lets me run them on my local Linux, macOS, and Windows systems.
 
-[https://ollama.com/↗](https://ollama.com/↗).
+[https://ollama.com/↗](https://ollama.com/%E2%86%97).
 
 [Ollama must be installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
 
