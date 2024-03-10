@@ -14,7 +14,7 @@ This post is a guide to installing ComfyUI and Stable Diffusion XL (SDXL) within
 
 > **Attributions:**
 > 
-> [https://aituts.com/comfyui/](https://aituts.com/comfyui/) ***↗.***
+> [https://aituts.com/comfyui/](https://aituts.com/comfyui/)***↗.***
 
 # An Introduction.
 
@@ -28,35 +28,56 @@ The practical reason for installing ComfyUI is to generate images for my posts a
 
 # Prerequisites.
 
-* A Debian-based Linux distro (I use Ubuntu), and
+* A Debian-based Linux distro (I use Ubuntu),
     
-* [Anaconda](https://solodev.app/installing-anaconda).
+* [Miniconda](https://solodev.app/installing-miniconda).
     
 
-# Using Anaconda to Setup an Environment.
+# Updating my Base System.
 
-* I update my system:
+* In the base terminal, I update my base system:
     
 
 ```python
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
-* I use `conda` to display a `list` of Anaconda `env`ironments:
+# What is Anaconda and Miniconda?
+
+Python projects can run in virtual environments. These isolated spaces are used to manage project dependencies. Different versions of the same package can run in different environments while avoiding version conflicts.
+
+venv is a built-in Python 3.3+ module that runs virtual environments. Anaconda is a Python and R distribution for scientific computing that includes the `conda` package manager. Miniconda is a small, free, bootstrap version of Anaconda that also includes the `conda` package manager, Python, and other packages that are required or useful (like pip and zlib).
+
+[http://www.anaconda.com/](http://www.anaconda.com/)***↗,***
+
+[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html)***↗, and***
+
+[https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
+
+I ensure [Miniconda is installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
+
+## Creating a Miniconda Environment.
+
+* I use the `conda` command to display a `list` of Miniconda `env`ironments:
     
 
 ```bash
 conda env list
 ```
 
-* I use `conda` to create, and activate, a new environment named (-n) (comfyui):
+* I use `conda` to create, and activate, a new environment named (-n) (ComfyUI):
     
 
 ```bash
-conda create -n comfyui python=3.11 -y && conda activate comfyui
+conda create -n ComfyUI python=3.11 -y && conda activate ComfyUI
 ```
 
-> NOTE: This command creates the (comfyui) environment, then activates the (comfyui) environment.
+> NOTE: This command creates the (ComfyUI) environment, then activates the (ComfyUI) environment.
 
 # Cloning the ComfyUI Repo.
 
@@ -76,18 +97,18 @@ git clone https://github.com/comfyanonymous/ComfyUI.git
 
 # Changing the ComfyUI Home Directory.
 
-* I make new directories within the (comfyui) environment:
+* I make new directories within the (ComfyUI) environment:
     
 
 ```bash
-mkdir -p ~/anaconda3/envs/comfyui/etc/conda/activate.d
+mkdir -p ~/miniconda3/envs/ComfyUI/etc/conda/activate.d
 ```
 
 * I use the Nano text editor to create the `set_working_directory.sh` shell script:
     
 
 ```bash
-sudo nano ~/anaconda3/envs/comfyui/etc/conda/activate.d/set_working_directory.sh
+sudo nano ~/miniconda3/envs/ComfyUI/etc/conda/activate.d/set_working_directory.sh
 ```
 
 * I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
@@ -106,14 +127,14 @@ conda activate
 
 # Installing the ComfyUI Requirements.
 
-* I activate the (comfyui) environment:
+* I activate the (ComfyUI) environment:
     
 
 ```bash
-conda activate comfyui
+conda activate ComfyUI
 ```
 
-> NOTE: Activating the (comfyui) environment takes me to the `ComfyUI` directory.
+> NOTE: Activating the (ComfyUI) environment takes me to the `ComfyUI` directory.
 
 * I install the ComfyUI requirements:
     
