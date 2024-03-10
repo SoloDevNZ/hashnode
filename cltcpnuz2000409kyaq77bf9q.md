@@ -252,7 +252,7 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 # What is Ollama?
 
-Ollama is a tool for downloading, setting up, and running LLMs (large language models). It helps me access powerful models like Llama 2 and Mistral and lets me run them on my local Linux, macOS, and Windows systems.
+Ollama is a tool for downloading, setting up, and running LLMs (large language models). It lets me access powerful models like Llama 2 and Mistral and helps me run them on my local Linux, macOS, and Windows systems.
 
 [https://ollama.com/↗](https://ollama.com/%E2%86%97).
 
