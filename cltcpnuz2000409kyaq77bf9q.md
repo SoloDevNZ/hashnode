@@ -165,7 +165,7 @@ LangGraph is a tool for creating complex applications with LLMs that involve mul
 
 [https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)↗.
 
-These LangChain tools must be installed (pending) before continuing with this post.
+These LangChain tools must be installed (`pip show langchain`) before continuing with this post.
 
 # What is LiteLLM?
 
@@ -173,7 +173,7 @@ LiteLLM is a proxy that provides LLMs with IP addresses. It is a unified interfa
 
 [https://litellm.ai/](https://litellm.ai/)***↗.***
 
-[LiteLLM must be installed](https://solodev.app/installing-litellm) (pending) before continuing with this post.
+[LiteLLM must be installed](https://solodev.app/installing-litellm) (`litellm -v`) before continuing with this post.
 
 # What is LXD and LXC?
 
