@@ -199,7 +199,7 @@ MAX (Modular Accelerated Engine) is a set of tools that makes it easier for me t
 
 # What is MemGPT?
 
-MemGPT is a memory manager that empowers LLMs (large language models) to overcome their limited context windows. It learns about me, modifies its' personality, and when connected to an LLM, assumes the duties of a chatbot. When MemGPT is connected to my own filesystem, tools, databases, and APIs, a new level of LLM proficiency emerges. For instance, combining this utility with the AutoGen facility combines pair programming abilities with an infinite memory.
+MemGPT is a memory manager that empowers LLMs (large language models) to overcome their limited context windows. It learns about me, modifies its' personality, and when connected to an LLM, assumes the duties of a chatbot. When MemGPT is connected to my own filesystem, tools, databases, and APIs, a new level of LLM proficiency emerges. For instance, combining MemGPT with the AutoGen facility combines pair programming abilities with an infinite memory.
 
 # What are Microservices?
 
