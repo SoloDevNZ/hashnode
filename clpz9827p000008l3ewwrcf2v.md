@@ -30,7 +30,7 @@ LLMs have memory issues. To improve session memory, I can use MemGPT. However, l
 
 However, how can I add *new* knowledge to an existing LLM? That's where vector databases come into play. A model is used to create vectors. Then a vector database stores indexes for the vectors, and the vectors themselves are stored in an embedding space. The embedding space is tuned to the model that created the vectors, so it is easy for that model to access the embeddings and use them when generating a response.
 
-Here's a practical example of using an LLM with a vector database. \[pending\]
+Here's a practical example of [using an LLM with a vector database](https://solodev.app/local-embeddings-with-langchain).
 
 ## Introducing Embeddings.
 
