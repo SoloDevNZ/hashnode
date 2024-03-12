@@ -114,28 +114,22 @@ distrobox enter ubuntu
 sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
 ```
 
+> <mark>WARNING === WARNING === WARNING</mark>
+> 
+> The DaVinci Resolve installer does NOT work with fuse3. The fuse command below will replace fuse3. After installing DaVinci Resolve, I needed to re-install my desktop (which includes fuse3) to get my desktop icons and right-click functionality to work again:
+> 
+> ```bash
+> sudo apt install --reinstall ubuntu-desktop
+> ```
+> 
+> <mark>YOU HAVE BEEN WARNED!!!</mark>
+
 * I install the Fuse library:
     
 
 ```bash
 sudo apt install -y fuse
 ```
-
-> <mark>WARNING === WARNING === WARNING</mark>
-> 
-> If installing DaVinci Resolve on my actual system (i.e. not in a Distrobox environment) then the fuse command above will replace fuse3. After installing Resolve, I needed to re-install my desktop (which includes fuse3) to get back my desktop icons and right-click functionality:
-> 
-> ```bash
-> sudo apt install --reinstall ubuntu-desktop
-> ```
-> 
-> NOTE: I've not tried installing DaVinci Resolve using fuse3. Let me know in the comments below if fuse3 works so I can delete the "install fuse" command.
-> 
-> Or, when I find time, I'll just spin up a Distrobox environment and use the `sudo apt install -y fuse3` command and see what happens.
-> 
-> Edit: \[pending\]
-> 
-> <mark>THANK-YOU === THANK-YOU === THANK-YOU</mark>
 
 * I install the rest of the required dependencies:
     
@@ -148,10 +142,10 @@ sudo apt install -y libapr1 libaprutil1 libglu1-mesa libnuma1 libxcb-composite0 
     
 
 ```bash
-sudo apt install -y nvidia-driver-470
+sudo apt install -y nvidia-driver-535
 ```
 
-> NOTE 1: This device driver is propriatery and works with my graphics card.
+> NOTE 1: This device driver is proprietary and works with my GTX3060 graphics card. I must select the right driver for the GPU I have installed.
 > 
 > NOTE 2: Installing this device driver may take up to 5 minutes.
 
@@ -177,6 +171,8 @@ cd ~/Downloads/
 ```bash
 unzip ./DaVinci_Resolve_18.6.3_Linux.zip
 ```
+
+> NOTE: At the time of writing, 18.6.3 was the latest version.
 
 * I change the mode of the `.run` file to an executable, for example:
     
@@ -234,12 +230,12 @@ Openbox has advantages over Docker and LXD/LXC including:
     
 * Direct access to the host hardware resources,
     
-* Its easy to setup and use, and
+* It is easy to setup and use, and
     
-* Its lightweight.
+* It is lightweight.
     
 
-When it comes to installing and running DaVinci Resolve, each distro will require unique deployment tweaks depending on the following system components:
+When it comes to installing (and running) DaVinci Resolve, each distro will require unique deployment tweaks depending on the following system components:
 
 * Intel vs. AMD CPUs,
     
@@ -250,12 +246,14 @@ When it comes to installing and running DaVinci Resolve, each distro will requir
 
 Although my NUC doesn't use an NVIDIA chipset, I still had the option of using OpenCL. (The Internet exists to solve ALL my problems. Except...)
 
-One major issue is that MP4 videos are not supported in the *free* version of DaVinci Resolve for Linux. Also, I am not sure if this issue *also* exists when using the *paid* Studio version. Fortunately, ffmpeg can address this concern by re-encoding the audio and/or video streams within the MP4 container. Sadly, ffmpeg is beyond the scope of this post. The Windows version of DaVinci Resolve doesn't suffer from this limitation so, for now, I'll need to switch to Windows when editing my videos.
+One major issue is that MP4 videos are not supported in the *free* version of DaVinci Resolve for Linux. This issue does NOT exist when using the *paid* version called DaVinci Resolve Studio (at least, that is my personal experience when running Studio on my Ubuntu system) or DaVinci Resolve for Windows. The ffmpeg utility can re-encode the audio and/or video from MP4 and there are many online resources that show this process.
+
+Other *possible* solutions (which I haven't tried yet) is to run Rocky Linux or CentOS on Distrobox.
 
 ## In Conclusion.
 
 Running DaVinci Resolve on Ubuntu using Distrobox on Ubuntu is a viable solution for testing this powerful video editor on unsupported distributions. By defining and following these installation and configuration steps, I can set up DaVinci Resolve in a containerized environment which allows me to evaluate if installation on my preferred Linux distribution is possible.
 
-BTW, video editing is my *least* favourite media production activity. I suck at it. (Alright, I suck at a lot of *other* things, too.)
+BTW, video editing is my *least* favourite media production activity. I suck at it. (Alright, I <s>suck</s> am not very good at a lot of *other* things, too.)
 
 Until next time: Be safe, be kind, be awesome.
