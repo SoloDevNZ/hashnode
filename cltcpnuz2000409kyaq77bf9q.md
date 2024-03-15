@@ -135,6 +135,10 @@ I can self-host GitLab CE on my own servers, in a container, or on a cloud provi
 
 [https://gitlab.com/free-releases/gitlab-ce](https://gitlab.com/free-releases/gitlab-ce)***↗.***
 
+# What is GPT Pilot?
+
+GPT Pilot is the main engine that powers the Pythagora VS Code extension. (The developers of Pythagora want it to be the first, *true* AI assistant for developers.) Together, GPT Pilot and Pythagora do more than just fill in missing code or help with pull request messages. GPT Pilot helps Pythagora act like a real AI developer that can write complete features, fix bugs, discuss problems, request reviews, and do many other tasks related to coding.
+
 # What is Jekyll?
 
 Jekyll is a free, Ruby-based, open-source tool for creating static websites. I don't need to know Ruby; It just needs to be installed. It is ideal for various static websites, such as personal blogs, portfolios, and documentation sites, eliminating the need for databases or content management systems. Jekyll works with text and markdown files, converting them into secure static HTML files, which can be easily hosted without complex systems. It is secure, does not require a database or server-side scripts, and is highly customizable. Additionally, Jekyll has a large community that provides inspiration and assistance.
@@ -261,6 +265,10 @@ Ollama is a tool for downloading, setting up, and running LLMs (large language m
 [https://ollama.com/↗](https://ollama.com/%E2%86%97).
 
 [Ollama must be installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
+
+# What is Pythagora?
+
+Pythagora is a tool that helps create apps from the ground up using large language models. It's an extension for VS Code and runs on GPT Pilot, one of the best code generators around. While designed around GPT-4, I have adjusted the GPT Pilot settings so Pythagora can work with local LLMs (large language models).
 
 # What is Python?
 
