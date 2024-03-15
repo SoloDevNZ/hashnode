@@ -1,9 +1,9 @@
 ---
-title: "aiChat about the VocalCue Project."
+title: "aiChat: The VocalCue Project."
 datePublished: Mon Dec 04 2023 09:00:09 GMT+0000 (Coordinated Universal Time)
 cuid: clpqokvha00030alc9hiq880v
-slug: aichat-about-the-vocalcue-project
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1702928425147/350ec0ee-f586-410b-9fcc-9622854f6ac0.png
+slug: aichat-the-vocalcue-project
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1710541472104/a50fe04e-cbef-45d3-883c-4a499f678d52.png
 tags: ai, machine-learning, chatbot, deep-learning, chatgpt
 
 ---
