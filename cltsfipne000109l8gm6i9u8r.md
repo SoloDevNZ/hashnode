@@ -286,15 +286,15 @@ The advent of Pythagora and GPT Pilot marks a significant leap forward in the de
 
 # In Conclusion.
 
-I can now dive into the future of app development with Pythagora and GPT Pilot. I can now discover how these powerful tools are revolutionizing the way I create software.
+I can now dive into the future of app development with Pythagora and GPT Pilot. I can also discover how these powerful tools are revolutionizing the way I create software.
 
-Pythagora is a VS Code extension that uses the might of GPT Pilot, enabling me to efficiently build applications from scratch. But before I leapt into this installation, I ensured my system was ready. I used a Linux distro called Ubuntu and a virtual environment manager called Miniconda. Virtual environments are key elements to Python projects.
+Pythagora is a VS Code extension that uses the might of GPT Pilot, enabling me to efficiently build applications from scratch. But before I leapt into this installation, I ensured my system was ready. I used a Linux distro called Ubuntu and virtual environment managers called Miniconda and venv. A virtual environment is key to many Python projects.
 
-Setting up Pythagora involved creating a dedicated environment and home directory. Following my step-by-step guide is how I navigated through this involved installation. GPT Pilot could enhance Pythagora by powering it with GPT-4 capabilities. However, I tweaked the configurations to use local language models instead. Sadly, there was a RuntimeError that stopped Pythagora from running, so I spent all day tweaking the settings that lead to a perfectly running installation.
+Setting up Pythagora involved creating a dedicated environment and home directory. I navigated through this involved installation by following this step-by-step guide. GPT Pilot enhances Pythagora by powering it with GPT-4 capabilities. However, I tweaked the configurations to use local LLMs instead. Sadly, there was a RuntimeError that stopped Pythagora from running, so I spent the rest of the day tweaking the settings that eventually lead to a running installation.
 
 The combination of Pythagora and GPT Pilot signifies a major leap in the application development cycle. I wholly embrace a future where coding meets efficiency.
 
-I am now ready to start developing my own apps with Pythagora. This detailed guide ensured I had all the tools and knowledge at my fingertips. Join me on my journey as I explore how Pythagora and GPT Pilot are shaping the future of code generation. Don't miss out on unlocking the full potential of these groundbreaking tools. I plan to dive in and transform my software development process.
+I am now ready to start developing my own apps with Pythagora. This detailed guide ensured I had all the tools and knowledge for a clean installation. Join me on my journey as I explore how Pythagora and GPT Pilot are shaping the future of code generation. Don't miss out on unlocking the full potential of these groundbreaking tools. I plan to transform my software development process from "not coding" to "some coding". Eventually.
 
 Until next time: Be safe, be kind, be awesome.
 
