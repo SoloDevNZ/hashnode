@@ -1,9 +1,9 @@
 ---
-title: "aiChat Interrogation."
+title: "aiChat: Interrogation."
 datePublished: Fri Aug 04 2023 08:00:09 GMT+0000 (Coordinated Universal Time)
 cuid: clkwaps9z001o09l351io80eb
 slug: aichat-interrogation
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1702928246016/ca098ea3-1017-463b-8f0b-f421c28091ae.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1710541174174/f99c6357-a344-482e-81d2-11cd45bfdc28.png
 tags: ai, machine-learning, chatbot, deep-learning, chatgpt
 
 ---
