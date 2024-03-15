@@ -1,9 +1,9 @@
 ---
-title: "aiChat about Embeddings."
+title: "aiChat: About Embeddings."
 datePublished: Sun Dec 10 2023 09:00:13 GMT+0000 (Coordinated Universal Time)
 cuid: clpz9827p000008l3ewwrcf2v
 slug: aichat-about-embeddings
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1702928510907/fd177f6c-12fd-4c44-bec5-580fa1f959df.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1710541735616/27de7ff7-623d-4e3f-a2c4-55a61c807c2a.png
 tags: vectors, embeddings, vector-database, vector-embeddings, rag, retrieval-augmented-generation
 
 ---
