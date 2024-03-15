@@ -1,5 +1,5 @@
 ---
-title: "**Installing Pythagora and GPT Pilot for Ollama."
+title: "Installing Pythagora and GPT Pilot for Ollama."
 datePublished: Fri Mar 15 2024 09:00:53 GMT+0000 (Coordinated Universal Time)
 cuid: cltsfipne000109l8gm6i9u8r
 slug: installing-pythagora-and-gpt-pilot-for-ollama
