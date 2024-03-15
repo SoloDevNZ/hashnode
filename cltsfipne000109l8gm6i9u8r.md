@@ -249,7 +249,7 @@ pip install --upgrade pip
 pip install -r ~/Pythagora/gpt-pilot/requirements.txt
 ```
 
-* I deactivate (pilot-env) environment:
+* I deactivate the (pilot-env) environment:
     
 
 ```plaintext
