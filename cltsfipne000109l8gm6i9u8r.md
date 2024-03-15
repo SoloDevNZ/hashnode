@@ -133,7 +133,7 @@ conda activate Pythagora
 
 # What is Pythagora?
 
-Pythagora is a tool that helps create apps from the ground up using large language models. It's an extension for VS Code and runs on GPT Pilot, one of the best code generators around. While designed around GPT-4, I have adjusted the GPT Pilot settings so Pythagora can work with local LLMs (large language models).
+Pythagora is a tool that creates apps, from the ground up, by utilising the power of LLMs (large language models). It is an extension for VS Code and runs on GPT Pilot, one of the best code generators around. While designed around GPT-4, I have adjusted the GPT Pilot settings so Pythagora can work with local LLMs.
 
 ## Installing Pythagora.
 
