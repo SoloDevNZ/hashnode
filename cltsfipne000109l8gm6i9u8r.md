@@ -161,7 +161,7 @@ Pythagora is a tool that creates apps, from the ground up, by utilising the powe
 
 # What is GPT Pilot?
 
-GPT Pilot is the main engine that powers the Pythagora VS Code extension. (The developers of Pythagora want it to be the first, *true* AI assistant for developers.) Together, GPT Pilot and Pythagora do more than just fill in missing code or help with pull request messages. GPT Pilot helps Pythagora act like a real AI developer that can write complete features, fix bugs, discuss problems, request reviews, and do many other tasks related to coding.
+GPT Pilot is the main engine that powers the Pythagora VS Code extension. (The developers of Pythagora want it to be the first, *true* AI assistant for developers.) Together, GPT Pilot and Pythagora do more than just fill in missing code or help with pull request messages. GPT Pilot helps Pythagora act like a *real* AI developer that can write complete features, fix bugs, discuss problems, request reviews, and perform many other code-related tasks.
 
 ## Installing GPT Pilot.
 
