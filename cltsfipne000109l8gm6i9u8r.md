@@ -10,7 +10,7 @@ tags: app-development, python-development, miniconda, vscode-extensions, virtual
 
 # TL;DR.
 
-This post provides a detailed guide on installing and setting up Pythagora and GPT Pilot, two powerful tools for app development using large language models like GPT-4. The prerequisites include using a Debian-based Linux distro (I use Ubuntu) and building virtual environments with Miniconda and venv. I start with creating a Miniconda environment, setting up a Pythagora home directory, installing Pythagora through VS Code, and configuring GPT Pilot for use with Pythagora. I concludes with listing the potential benefits of using these tools for efficient app development.
+This post provides a detailed guide on installing and setting up Pythagora and GPT Pilot, two powerful tools for app development using large language models like GPT-4. The prerequisites include using a Debian-based Linux distro (I use Ubuntu) and building virtual environments with Miniconda and venv. I start with creating a Miniconda environment, setting up a Pythagora home directory, installing Pythagora through VS Code, and configuring GPT Pilot for use with Pythagora. I conclude with listing the potential benefits of using these tools for efficient app development.
 
 > **Attributions:**
 > 
