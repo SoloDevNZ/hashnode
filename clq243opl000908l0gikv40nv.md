@@ -98,14 +98,14 @@ mkdir ~/LangChain
     
 
 ```bash
-mkdir -p $HOME/anaconda3/envs/LangChain/etc/conda/activate.d
+mkdir -p $HOME/miniconda3/envs/LangChain/etc/conda/activate.d
 ```
 
 * I use Nano to create the `set_working_directory.sh` shell script:
     
 
 ```bash
-sudo nano $HOME/anaconda3/envs/LangChain/etc/conda/activate.d/set_working_directory.sh
+sudo nano $HOME/miniconda3/envs/LangChain/etc/conda/activate.d/set_working_directory.sh
 ```
 
 * I add the following to the script, save the changes (CTRL + S), and exit (CTRL + X) the Nano text editor:
