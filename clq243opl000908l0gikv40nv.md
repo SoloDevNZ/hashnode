@@ -144,9 +144,9 @@ LangChain is a Python and JavaScript library that helps me build language model 
 pip install langchain
 ```
 
-## Installing Ollama.
+## Updating Ollama.
 
-* I install Ollama:
+* I update Ollama:
     
 
 ```bash
@@ -176,8 +176,8 @@ sudo nano ./langchain-test.py
 
 ```python
 from langchain.llms import Ollama
-ollama = Ollama(base_url='http://localhost:11434', model='llama2')
-print(ollama('Why is the sky blue?'))
+question = Ollama(base_url='http://localhost:11434', model='llama2')
+print(question('Why is the sky blue?'))
 ```
 
 * I run the `langchain-test.py` module:
