@@ -8,11 +8,12 @@ tags: ai, artificial-intelligence, python, machine-learning, miniconda, memory-m
 
 ---
 
-Update: Thursday 25<sup>th</sup> January 2024.
+Update: Thursday 25<sup>th</sup> January 2024.  
+Update: Monday 18<sup>th</sup> March 2024.
 
 # TL;DR.
 
-The post discusses generating local embeddings with LangChain. Embeddings address (some of the) memory limitations in Large Language Models (LLMs). I demonstrate an embedding implementation using various AI tools. Using embeddings for long-term memory management has potential applications in many fields, including business, science, and engineering.
+The post demonstrates how to generate local embeddings with LangChain. Embeddings address some of the memory limitations in Large Language Models (LLMs). I demonstrate an embedding implementation using various AI tools. Using embeddings for long-term memory management has potential applications in many fields, including business, science, and engineering.
 
 > **Attributions:**
 > 
