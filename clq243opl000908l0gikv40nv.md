@@ -130,6 +130,19 @@ conda activate LangChain
 
 > NOTE: I should now, by default, be in the `~/LangChain` home directory.
 
+# What is LangChain?
+
+LangChain is a Python and JavaScript library that helps me build language model applications. It uses these models to help with tasks like answering questions, creating text, or performing other tasks.
+
+## Installing LangChain.
+
+* I install LangChain:
+    
+
+```bash
+pip install langchain
+```
+
 ## Installing Ollama.
 
 * I install Ollama:
@@ -146,15 +159,6 @@ curl https://ollama.ai/install.sh | sh
 
 ```bash
 ollama pull llama2
-```
-
-## Installing LangChain.
-
-* I install LangChain:
-    
-
-```bash
-pip install langchain
 ```
 
 ## Creating a Python Module.
