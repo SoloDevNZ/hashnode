@@ -306,6 +306,16 @@ Visual Studio Code (VS Code) is a simple, yet powerful, code editor that works o
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)***↗.***
 
+# What are Web Page Scrapings?
+
+Web page scraping, or data scraping, is the process of collecting content and data from websites, usually to save it for later use and analysis. Moving information from a website to a spreadsheet is a simple form of web scraping. But when I talk about 'web scrapers,' I'm referring to software 'bots' that automatically visit websites, find important data, and pull out useful information. Almost any data on a website can be scraped and is widely used in data analytics. Web scraping has a dark side and can be used to steal bank details or personal information. It is important to understand the risks, ethics, and legality of web scraping.
+
+[https://beautiful-soup-4.readthedocs.io/en/latest/](https://beautiful-soup-4.readthedocs.io/en/latest/)
+
+# What are Web URL Scrapings?
+
+URLs (uniform resource locations) describe where specific assets (webpages, email services, downloads, etc.) are found. These are usually fed into the address bar of my browser either manually or via a link on a webpage. URL scraping is the process of finding all the URLs at a specified, domain-name address and then saving the results to a file or database.
+
 # The Results.
 
 Technology encompasses an array of tools, platforms, and frameworks that aid in various tasks such as software development, web hosting, data management, and more. From Python and Git for coding, to Docker and LXC for virtual environments, each technology has its unique role and benefits. Tools like AnythingLLM and Ollama leverage AI capabilities to enhance my experience and efficiency. Understanding these technologies and their applications can significantly augment my ability to navigate and excel in today's digital world.
