@@ -9,7 +9,8 @@ tags: ai, artificial-intelligence, python, machine-learning, miniconda, memory-m
 ---
 
 Update: Thursday 25<sup>th</sup> January 2024.  
-Update: Monday 18<sup>th</sup> March 2024.
+Update: Monday 18<sup>th</sup> March 2024.  
+Update: Wednesday 20<sup>th</sup> March 2024.
 
 # TL;DR.
 
@@ -243,7 +244,7 @@ loader = WebBaseLoader('https://solodev.app/12s-my-2024-technology-stack')
 # Load the document contents as 'data'
 data = loader.load()
 # Define the 'text_splitter' params
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=3)
 # Split the 'data'
 all_splits = text_splitter.split_documents(data)
 # Instantiate the vector store
