@@ -193,6 +193,8 @@ MODEL_NAME=codellama
 
 ## Settings for Pythagora.
 
+> NOTE: Whenever the Pythagora extension is updated within VS Code, these steps will enable its' functionality in the newly-deployed `gpt-pilot` directory.
+
 * I change to the `gpt-pilot` directory:
     
 
@@ -256,11 +258,11 @@ pip install -r ~/Pythagora/gpt-pilot/requirements.txt
 deactivate
 ```
 
-* I activate the (base) environment:
+* I deactivate the (Pythagora) environment:
     
 
 ```plaintext
-conda activate
+conda deactivate
 ```
 
 ## Testing VS Code.
