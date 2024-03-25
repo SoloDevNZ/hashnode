@@ -288,6 +288,12 @@ Rust is a systems programming language that empowers everyone to build reliable 
 
 [https://www.rust-lang.org/](https://www.rust-lang.org/)***↗.***
 
+# What is Scrapy?
+
+Scrapy is a simple, open-source, fast, extensible, and powerful Python-based scraping framework that is used to extract website data.
+
+[https://scrapy.org/](https://scrapy.org/)***↗.***
+
 # What is SSH?
 
 The Secure Shell (SSH) protocol is a way to safely send commands to a computer over an unsecured network. SSH uses special codes to check and protect connections between devices. It also allows for tunnelling, or port forwarding, which lets data packets go through networks they couldn't before. SSH is often used to control servers from a distance, manage infrastructure, and transfer files. It lets administrators manage servers and devices remotely. Older methods like Telnet sent commands that anyone could see. But SSH uses a secure connection, which is why it's called Secure Shell.
