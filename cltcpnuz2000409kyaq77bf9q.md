@@ -290,7 +290,7 @@ Rust is a systems programming language that empowers everyone to build reliable 
 
 # What is Scrapy?
 
-Scrapy is a fast, open-source, extensible, and powerful Python-based scraping framework that is used to extract website data. Although Scrapy was originally designed for web scraping, it can also be used to extract data using APIs or as a general purpose web crawler. Like any other framework, Scrapy has a steep learning curve. However, experienced systems operators and software developers should be able to understand the docs, install this utility, and comfortably use it without too many problems.
+Scrapy is a fast, open-source, extensible, and powerful Python-based scraping framework that is used to extract website data. Although it was originally designed for web scraping, Scrapy can also use APIs to extract data, or even as a general purpose web crawler. Like other frameworks, there is a steep learning curve, however experienced systems operators and software developers should be able to understand the documents, install this utility, and comfortably use Scrapy without too much effort.
 
 [https://scrapy.org/](https://scrapy.org/)***↗.***
 
