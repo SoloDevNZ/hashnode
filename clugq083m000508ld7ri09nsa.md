@@ -195,6 +195,8 @@ domain=WORKGROUP
 
 ```plaintext
 sudo mkdir /media/yt/AI && \
+sudo mkdir /media/yt/Desktop && \
+sudo mkdir /media/yt/Documents && \
 sudo mkdir /media/yt/Downloads && \
 sudo mkdir /media/yt/Drawings && \
 sudo mkdir /media/yt/Images && \
@@ -202,7 +204,7 @@ sudo mkdir /media/yt/Media && \
 sudo mkdir /media/yt/Music && \
 sudo mkdir /media/yt/MyDocs && \
 sudo mkdir /media/yt/MyDrive && \
-sudo mkdir /media/yt/Photos && \
+sudo mkdir /media/yt/Pictures && \
 sudo mkdir /media/yt/Public && \
 sudo mkdir /media/yt/Screencasts && \
 sudo mkdir /media/yt/Screenshots && \
@@ -227,44 +229,63 @@ sudo nano /etc/fstab
 Add the following to the bottom of the fstab file:
 
 ```plaintext
-//192.168.0.2/ai             /media/brian/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/downloads      /media/brian/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/drawings       /media/brian/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/images         /media/brian/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/multimedia     /media/brian/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/music          /media/brian/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/mydocs         /media/brian/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/mydrive        /media/brian/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/photos         /media/brian/Photos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/public         /media/brian/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/screencasts    /media/brian/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/screenshots    /media/brian/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/templates      /media/brian/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.0.2/videos         /media/brian/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/ai             /media/yt/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/desktop        /media/yt/Desktop cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/mydocs         /media/yt/Documents cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/downloads      /media/yt/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/drawings       /media/yt/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/images         /media/yt/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/multimedia     /media/yt/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/music          /media/yt/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/mydocs         /media/yt/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/mydrive        /media/yt/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/photos         /media/yt/Pictures cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/public         /media/yt/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/screencasts    /media/yt/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/screenshots    /media/yt/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/templates      /media/yt/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.188.45/videos         /media/yt/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
 ```
 
 * I reboot my system.
     
 * I check the `/media/yt` directory to see if the shares are mounted.
     
-* I create symlinks (symbolic links) in my Home directory:
+* I change to the `Home` directory:
+    
+
+```bash
+cd ~
+```
+
+* I remove these directories:
+    
+
+```bash
+sudo rm -r ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures \
+~/Public ~/Templates ~/Videos
+```
+
+* I create these symlinks (symbolic links) in my `Home` directory:
     
 
 ```plaintext
-sudo ln -s "/media/yt/AI" "~/AI"  && \
-sudo ln -s "/media/yt/Downloads" "~/Downloads" && \
-sudo ln -s "/media/yt/Drawings" "~/Drawings" && \
-sudo ln -s "/media/yt/Images" "~/Images" && \
-sudo ln -s "/media/yt/Media" "~/Media" && \
-sudo ln -s "/media/yt/Music" "~/Music" && \
-sudo ln -s "/media/yt/MyDocs" "~/MyDocs" && \
-sudo ln -s "/media/yt/MyDrive" "~/MyDrive" && \
-sudo ln -s "/media/yt/Photos" "~/Photos" && \
-sudo ln -s "/media/yt/Public" "~/Public" && \
-sudo ln -s "/media/yt/Screencasts" "~/Screencasts" && \
-sudo ln -s "/media/yt/Screenshots" "~/Screencasts" && \
-sudo ln -s "/media/yt/Templates" "~/Templates" && \
-sudo ln -s "/media/yt/Videos" "~/Videos"
+ln -s "/media/yt/AI" "/home/yt/AI"  && \
+ln -s "/media/yt/Desktop" "/home/yt/Desktop" && \
+ln -s "/media/yt/MyDocs" "/home/yt/Documents" && \
+ln -s "/media/yt/Downloads" "/home/yt/Downloads" && \
+ln -s "/media/yt/Drawings" "/home/yt/Drawings" && \
+ln -s "/media/yt/Images" "/home/yt/Images" && \
+ln -s "/media/yt/Media" "/home/yt/Media" && \
+ln -s "/media/yt/Music" "/home/yt/Music" && \
+ln -s "/media/yt/MyDocs" "/home/yt/MyDocs" && \
+ln -s "/media/yt/MyDrive" "/home/yt/MyDrive" && \
+ln -s "/media/yt/Photos" "/home/yt/Pictures" && \
+ln -s "/media/yt/Public" "/home/yt/Public" && \
+ln -s "/media/yt/Screencasts" "/home/yt/Screencasts" && \
+ln -s "/media/yt/Screenshots" "/home/yt/Screencasts" && \
+ln -s "/media/yt/Templates" "/home/yt/Templates" && \
+ln -s "/media/yt/Videos" "/home/yt/Videos"
 ```
 
 > NOTE: Some of these symlinks will replace system directories, e.g. the Downloads directory.
