@@ -97,7 +97,7 @@ Throughout the rest of this post, I will be creating way-point images as recover
     
 
 ```plaintext
-sudo apt install -y apt-transport-https /
+sudo apt install -y apt-transport-https \
 curl wget zip unzip
 ```
 
@@ -194,19 +194,19 @@ domain=WORKGROUP
     
 
 ```plaintext
-sudo mkdir /media/yt/AI
-sudo mkdir /media/yt/Downloads
-sudo mkdir /media/yt/Drawings
-sudo mkdir /media/yt/Images
-sudo mkdir /media/yt/Media
-sudo mkdir /media/yt/Music
-sudo mkdir /media/yt/MyDocs
-sudo mkdir /media/yt/MyDrive
-sudo mkdir /media/yt/Photos
-sudo mkdir /media/yt/Public
-sudo mkdir /media/yt/Screencasts
-sudo mkdir /media/yt/Screenshots
-sudo mkdir /media/yt/Templates
+sudo mkdir /media/yt/AI && \
+sudo mkdir /media/yt/Downloads && \
+sudo mkdir /media/yt/Drawings && \
+sudo mkdir /media/yt/Images && \
+sudo mkdir /media/yt/Media && \
+sudo mkdir /media/yt/Music && \
+sudo mkdir /media/yt/MyDocs && \
+sudo mkdir /media/yt/MyDrive && \
+sudo mkdir /media/yt/Photos && \
+sudo mkdir /media/yt/Public && \
+sudo mkdir /media/yt/Screencasts && \
+sudo mkdir /media/yt/Screenshots && \
+sudo mkdir /media/yt/Templates && \
 sudo mkdir /media/yt/Videos
 ```
 
@@ -227,20 +227,20 @@ sudo nano /etc/fstab
 Add the following to the bottom of the fstab file:
 
 ```plaintext
-//192.168.188.45/ai             /media/brian/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/downloads      /media/brian/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/drawings       /media/brian/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/images         /media/brian/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/multimedia     /media/brian/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/music          /media/brian/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/mydocs         /media/brian/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/mydrive        /media/brian/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/photos         /media/brian/Photos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/public         /media/brian/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/screencasts    /media/brian/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/screenshots    /media/brian/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/templates      /media/brian/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/videos         /media/brian/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/ai             /media/brian/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/downloads      /media/brian/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/drawings       /media/brian/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/images         /media/brian/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/multimedia     /media/brian/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/music          /media/brian/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/mydocs         /media/brian/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/mydrive        /media/brian/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/photos         /media/brian/Photos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/public         /media/brian/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/screencasts    /media/brian/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/screenshots    /media/brian/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/templates      /media/brian/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/videos         /media/brian/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
 ```
 
 * I reboot my system.
@@ -251,19 +251,19 @@ Add the following to the bottom of the fstab file:
     
 
 ```plaintext
-sudo ln -s "/media/yt/AI" "~/AI"
-sudo ln -s "/media/yt/Downloads" "~/Downloads"
-sudo ln -s "/media/yt/Drawings" "~/Drawings"
-sudo ln -s "/media/yt/Images" "~/Images"
-sudo ln -s "/media/yt/Media" "~/Media"
-sudo ln -s "/media/yt/Music" "~/Music"
-sudo ln -s "/media/yt/MyDocs" "~/MyDocs"
-sudo ln -s "/media/yt/MyDrive" "~/MyDrive"
-sudo ln -s "/media/yt/Photos" "~/Photos"
-sudo ln -s "/media/yt/Public" "~/Public"
-sudo ln -s "/media/yt/Screencasts" "~/Screencasts"
-sudo ln -s "/media/yt/Screenshots" "~/Screencasts"
-sudo ln -s "/media/yt/Templates" "~/Templates"
+sudo ln -s "/media/yt/AI" "~/AI"  && \
+sudo ln -s "/media/yt/Downloads" "~/Downloads" && \
+sudo ln -s "/media/yt/Drawings" "~/Drawings" && \
+sudo ln -s "/media/yt/Images" "~/Images" && \
+sudo ln -s "/media/yt/Media" "~/Media" && \
+sudo ln -s "/media/yt/Music" "~/Music" && \
+sudo ln -s "/media/yt/MyDocs" "~/MyDocs" && \
+sudo ln -s "/media/yt/MyDrive" "~/MyDrive" && \
+sudo ln -s "/media/yt/Photos" "~/Photos" && \
+sudo ln -s "/media/yt/Public" "~/Public" && \
+sudo ln -s "/media/yt/Screencasts" "~/Screencasts" && \
+sudo ln -s "/media/yt/Screenshots" "~/Screencasts" && \
+sudo ln -s "/media/yt/Templates" "~/Templates" && \
 sudo ln -s "/media/yt/Videos" "~/Videos"
 ```
 
