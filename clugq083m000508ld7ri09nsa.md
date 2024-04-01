@@ -475,7 +475,7 @@ sudo apt autoremove -y
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-studio</mark>.
     
 
-# System Updates.
+# System Updates and App Installs.
 
 * I power up my Workstation.
     
@@ -490,11 +490,9 @@ sudo apt autoremove -y
 sudo chown -R $USER:$USER [date]-img-work-studio
 ```
 
-# App Installs.
+I update the following system settings and install the following apps (unless they're already pre-installed).
 
-I install the following apps (unless they're already pre-installed).
-
-## Settings
+## Settings.
 
 * I change the volumes visibility on the Dock at `Settings > Appearance > Dock > Configure dock behaviour`, if required.
     
@@ -780,7 +778,6 @@ https://timothycrosley.github.io/streamdeck-ui/
 
 * VS Code:
     
-
 * [Docker](https://solodev.app/installing-docker)
     
 * [Docker Desktop](https://solodev.app/4-of-10-installing-docker-desktop)
