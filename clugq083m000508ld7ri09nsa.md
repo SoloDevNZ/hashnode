@@ -492,7 +492,7 @@ sudo chown -R $USER:$USER [date]-img-work-studio
 
 I update the following system settings and install the following apps (unless they're already pre-installed).
 
-## Settings.
+## Changing the Settings.
 
 * I change the volumes visibility on the Dock at `Settings > Appearance > Dock > Configure dock behaviour`, if required.
     
@@ -503,9 +503,9 @@ I update the following system settings and install the following apps (unless th
 * I change the monitor layout at `Settings > Displays`, if required.
     
 
-## Changing the GPU Driver.
+## Checking the GPU Driver.
 
-* I change the GPU driver from the `Software & Updates > Additional Drivers` tab, if required.
+* I check the GPU driver from the `Software & Updates > Additional Drivers` tab, if required.
     
 * I install the GPU device driver (Metapackage from nvidia-driver-535), if required:
     
@@ -639,7 +639,14 @@ unzip ./DaVinci_Resolve_18.6.4_Linux.zip
 
 > NOTE: At the time of writing, 18.6.4 is the latest version.
 
-* List the contents in the directory
+* I change into the unzipped directory:
+    
+
+```bash
+cd ./DaVinci_Resolve_18.6.4_Linux
+```
+
+* I list the contents of the directory:
     
 
 ```bash
@@ -660,7 +667,7 @@ sudo chmod +x [file-name].run
 sudo ./[file-name].run -i
 ```
 
-## Spotify
+## Installing Spotify.
 
 * I use Snap to install Spotify:
     
@@ -669,21 +676,44 @@ sudo ./[file-name].run -i
 $ snap install spotify
 ```
 
-## Blender
+## Updating Blender.
 
-* I update Blender:
+* I check the Blender version:
     
 
 ```bash
-$ blender --version
-$ sudo apt update && sudo apt upgrade -y
-$ sudo apt purge --auto-remove blender
-$ sudo snap install blender --classic
-$ blender --version
-$ sudo snap remove blender
+blender --version
 ```
 
-## Rust
+* I remove Blender:
+    
+
+```bash
+sudo apt purge --auto-remove blender
+```
+
+* I use Snap to install Blender:
+    
+
+```bash
+sudo snap install blender --classic
+```
+
+* I check the Blender version:
+    
+
+```bash
+blender --version
+```
+
+* I can remove Blender, if required:
+    
+
+```bash
+sudo snap remove blender
+```
+
+## Installing Rust.
 
 * I install Rust,
     
@@ -698,7 +728,7 @@ $ rustup doc
 $ rustup self uninstall
 ```
 
-## Screenkey
+## Installing Screenkey.
 
 * I install Screenkey:
     
@@ -708,7 +738,7 @@ $ sudo apt update && sudo apt upgrade -y
 $ sudo snap install screenkey --beta
 ```
 
-## HydraPaper
+## Installing HydraPaper.
 
 * I install HydraPaper:
     
@@ -746,7 +776,7 @@ $ sudo code wallpaper_merger.py
 * I run HydraPaper in Dark Mode.
     
 
-## Elgato Stream Deck for Linux
+## Installing Elgato Stream Deck for Linux.
 
 * I install streamdeck-ui:
     
@@ -755,7 +785,7 @@ $ sudo code wallpaper_merger.py
 https://timothycrosley.github.io/streamdeck-ui/
 ```
 
-## Media.
+## Other Media Apps to Install.
 
 * VLC Media Player
     
@@ -774,7 +804,7 @@ https://timothycrosley.github.io/streamdeck-ui/
 * OBS Studio
     
 
-## Development.
+## Other Development Tools to Install.
 
 * VS Code:
     
@@ -813,7 +843,7 @@ modular auth mut_511d5ea22b594cd385f8216af63b2d73
 * Rust: `curl --proto '=https' --tlsv1.2 -sSf`[`https://sh.rustup.rs`](https://sh.rustup.rs)`| sh`
     
 
-## Office and Utilities.
+## Other Utilities to Install.
 
 * Thunar: `sudo apt install -y thunar`
     
@@ -837,7 +867,7 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-
 * I use CloneZilla to create an image of the distro called <mark>[date]-img-work-apps</mark>
     
 
-## LLM Installs.
+## Installing LLM Utilities.
 
 * [LXD](https://solodev.app/2-of-10-lxd-on-the-homelab)
     
@@ -858,18 +888,21 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-
 * AutoGen Studio
     
 
-## Developer Services.
-
-This list of tools is yet to be defined.
+# Saving the Final Image.
 
 * I update the system:
     
 
-```plaintext
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
 ```
 
-* I use CloneZilla to create an image of the distro called <mark>[date]-img-work-llm</mark>
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-system</mark>
     
 
 # The Results.
