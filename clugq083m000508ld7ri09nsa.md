@@ -1,5 +1,5 @@
 ---
-title: "Trailer: Preparing for Ubuntu 24.04 LTS."
+title: "Preparing for Ubuntu 24.04 LTS."
 datePublished: Mon Apr 01 2024 09:00:55 GMT+0000 (Coordinated Universal Time)
 cuid: clugq083m000508ld7ri09nsa
 slug: trailer-preparing-for-ubuntu-2404-lts
