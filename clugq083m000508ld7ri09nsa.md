@@ -3,6 +3,7 @@ title: "Preparing for Ubuntu 24.04 LTS."
 datePublished: Mon Apr 01 2024 09:00:55 GMT+0000 (Coordinated Universal Time)
 cuid: clugq083m000508ld7ri09nsa
 slug: preparing-for-ubuntu-2404-lts
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1712058056624/4b22c162-8156-40d1-8927-79851f665284.png
 tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-2404-lts, lts-release, ubuntu-release, ubuntu-experience, ubuntu-desktop, ubuntu-studio, ubuntu-2404, operating-system-upgrade, system-upgrade, tech-upgrade
 
 ---
