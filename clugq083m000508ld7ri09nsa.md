@@ -2,7 +2,7 @@
 title: "Preparing for Ubuntu 24.04 LTS."
 datePublished: Mon Apr 01 2024 09:00:55 GMT+0000 (Coordinated Universal Time)
 cuid: clugq083m000508ld7ri09nsa
-slug: trailer-preparing-for-ubuntu-2404-lts
+slug: preparing-for-ubuntu-2404-lts
 tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-2404-lts, lts-release, ubuntu-release, ubuntu-experience, ubuntu-desktop, ubuntu-studio, ubuntu-2404, operating-system-upgrade, system-upgrade, tech-upgrade
 
 ---
