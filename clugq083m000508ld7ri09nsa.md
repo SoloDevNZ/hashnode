@@ -9,7 +9,7 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 # TL;DR.
 
-Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB on Windows, installing and securing Ubuntu, setting up Ubuntu Studio, and backing up my system with CloneZilla. The guide also talks about installing different package managers, browsers, important software, and LLM utilities to make sure I'm ready to use the new distribution. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer a stable and reliable system for developers and users who need a predictable computing environment.
+Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer a stable system for users who need a predictable computing environment.
 
 > **Attributions:**
 > 
@@ -17,7 +17,7 @@ Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It inc
 
 # An Introduction.
 
-In 2015, I started using CentOS 7 which was my first Linux-based distribution. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distro every 2 years. Like clockwork, it is time again to upgrade my systems:
+In 2015, I started using CentOS 7 which was my first Linux-based distribution. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distro every 2 years like clockwork. It is time again to upgrade my systems:
 
 > The purpose of this post is to define the installation process for Ubuntu 24.04 LTS, many of the development tools I use, and all of the system utilities I need.
 
@@ -36,13 +36,13 @@ On Thursday 25<sup>th</sup> April 2024 (or thereabouts), I will install the new 
 
 My NAS has its own proprietary distribution.
 
-For now, I will practice the installation process of 24.04 with Ubuntu 23.10.
+For now, I will practice the installation process with Ubuntu 23.10.
 
-> NOTE: Ubuntu23.10, code-named "Mantic Minotaur", is a regular release. This means Mantic is only supported until July 2024.
+> NOTE: Ubuntu23.10, code-named "Mantic Minotaur", is a regular release. This means Mantic is only supported until July 2024. Looking at the version number, I can tell that Mantic was released in October (23.<mark>10</mark>) of 2023 (**<mark>23</mark>**.10).
 
 # Prerequisites.
 
-* A NEW Linux-based distribution called Ubuntu 24.04 LTS (or Ubuntu 23.10 "Mantic Minotaur" if I'm practicing my installation process).
+* A NEW Linux-based distribution called Ubuntu 24.04 LTS (or Ubuntu 23.10 "Mantic Minotaur" if I'm practising my installation process).
     
 
 # Making a Bootable USB Installer.
