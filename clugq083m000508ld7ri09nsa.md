@@ -28,7 +28,7 @@ On Thursday 25<sup>th</sup> April 2024 (or thereabouts), I will install the new 
 
 * My Workstation PC (which is a dual-boot system),
     
-* My Homelab NUC (which sits next to my workstation),
+* My Homelab NUC (which sits next to my Workstation),
     
 * My Bedroom NUC (for streaming content from my NAS), and
     
