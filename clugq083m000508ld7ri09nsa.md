@@ -101,7 +101,9 @@ curl wget zip unzip
 
 # Changing Some Settings.
 
-* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behavior > Show Volumes and Devices`, if required.
+* I change the location of the Dock at `Settings > Ubuntu Desktop > Dock > Position on screen > Bottom`,
+    
+* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behaviour > Show Volumes and Devices`, if required.
     
 * I change where new icons appear at `Settings > Ubuntu Desktop > Position of New Icons`, if required.
     
@@ -183,6 +185,8 @@ sudo chown -R $USER:$USER [date]-img-work-ubuntu
 ```
 
 ---
+
+> NOTE: I need to access my NAS early on in this post because of the high number of CloneZilla images I generate. I will occasionally need to off-load these images from the 2GB external HDD to the NAS so I can continue using CloneZilla.
 
 * I install the CIFS utilities:
     
@@ -383,6 +387,11 @@ sudo apt autoclean && \
 sudo apt autoremove -y
 ```
 
+* I reboot my system to check the installation.
+    
+
+> NOTE: I had a small issue with the 535 GPU driver. Here's my fix: I switched to the X.Org open source driver, rebooted my system, re-installed the 535 GPU driver with `sudo ubuntu-drivers install nvidia:535`, and re-booted my system again.
+
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-studio</mark>.
@@ -515,14 +524,14 @@ sudo apt autoremove google-chrome-stable
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 ```
 
-* I download a list of packages:
+* I download the repo:
     
 
 ```bash
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 ```
 
-* I update the APT package manager to integrate the new list of packages:
+* I add the repo to my local system:
     
 
 ```bash
@@ -541,7 +550,7 @@ sudo apt install brave-browser
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-browsers</mark>.
     
 
-# System Updates and App Installs.
+# Installing Apps & Changing Settings.
 
 * I power up my Workstation.
     
@@ -558,7 +567,7 @@ sudo chown -R $USER:$USER [date]-img-work-browsers
 
 ---
 
-I update the following system settings and install the following apps (unless they're already pre-installed).
+I install the following apps and change the following settings.
 
 ## Checking the GPU Driver.
 
@@ -586,10 +595,10 @@ sudo ubuntu-drivers autoinstall
     
 
 ```bash
-$ sudo apt update && sudo apt upgrade -y
-$ timedatectl set-local-rtc 1 --adjust-system-clock
-$ timedatectl
-$ timedatectl set-local-rtc 0 --adjust-system-clock
+sudo apt update && sudo apt upgrade -y
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+timedatectl set-local-rtc 0 --adjust-system-clock
 ```
 
 ## Installing VS Code.
@@ -730,7 +739,7 @@ sudo ./[file-name].run -i
     
 
 ```bash
-$ snap install spotify
+snap install spotify
 ```
 
 ## Updating Blender.
@@ -772,17 +781,46 @@ sudo snap remove blender
 
 ## Installing Rust.
 
-* I install Rust,
+* I install the essential build tools:
     
 
 ```bash
-$ sudo apt update && sudo apt upgrade
-$ sudo apt install build-essential
-$ curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-$ source "$HOME/.cargo/env"
-$ rustup --version
-$ rustup doc
-$ rustup self uninstall
+sudo apt install build-essential
+```
+
+* I install Rust:
+    
+
+```bash
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+```
+
+* I add the Cargo environment to my system:
+    
+
+```bash
+source "$HOME/.cargo/env"
+```
+
+* I check the Rust version:
+    
+
+```bash
+rustup --version
+```
+
+* I open the Rust documents:
+    
+
+```bash
+rustup doc
+```
+
+* I can uninstall Rust, if required:
+    
+
+```bash
+rustup self uninstall
 ```
 
 ## Installing Screenkey.
@@ -791,8 +829,7 @@ $ rustup self uninstall
     
 
 ```bash
-$ sudo apt update && sudo apt upgrade -y
-$ sudo snap install screenkey --beta
+sudo snap install screenkey --beta
 ```
 
 ## Installing HydraPaper.
@@ -801,11 +838,10 @@ $ sudo snap install screenkey --beta
     
 
 ```bash
-$ sudo apt update && sudo apt upgrade -y
-$ sudo apt install flatpak
-$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-$ flatpak install flathub org.gabmus.hydrapaper
-$ flatpak uninstall org.gabmus.hydrapaper
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.gabmus.hydrapaper
+flatpak uninstall org.gabmus.hydrapaper
 ```
 
 > NOTE: There is a known bug in HydraPaper running on Ubuntu 21.10 and later. Here is the (Dark Mode) fix.
@@ -814,7 +850,7 @@ $ flatpak uninstall org.gabmus.hydrapaper
     
 
 ```bash
-$ sudo find / -name "*wallpaper_merger.py*"
+sudo find / -name "*wallpaper_merger.py*"
 ```
 
 * I change to that directory.
@@ -823,7 +859,7 @@ $ sudo find / -name "*wallpaper_merger.py*"
     
 
 ```bash
-$ sudo code wallpaper_merger.py
+sudo code wallpaper_merger.py
 ```
 
 * I find the `set_wallpaper_gnome` function.
@@ -842,29 +878,15 @@ $ sudo code wallpaper_merger.py
 https://timothycrosley.github.io/streamdeck-ui/
 ```
 
-## Other Media Apps to Install.
+## Installing Other Software.
 
-* VLC Media Player
-    
 * Audacity
     
-* Kdenlive
-    
-* Inkscape
-    
-* Blender
-    
-* GIMP
-    
-* Spotify
-    
-* OBS Studio
+* Tweaks
     
 
-## Other Development Tools to Install.
+## Installing Development Tools.
 
-* VS Code:
-    
 * [Docker](https://solodev.app/installing-docker)
     
 * [Docker Desktop](https://solodev.app/4-of-10-installing-docker-desktop)
@@ -883,7 +905,9 @@ sudo apt install -y python3
 sudo apt install -y python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libreadline-dev
 ```
 
-* Modular CLI:
+## Installing the Modular Tools.
+
+* I download the Modular CLI:
     
 
 ```plaintext
@@ -891,38 +915,26 @@ curl https://get.modular.com | sh - && \
 modular auth mut_511d5ea22b594cd385f8216af63b2d73
 ```
 
-* Modular update: `sudo apt install -y modular`
-    
-* Mojo: `modular install mojo`
-    
-* Mojo update: `modular update mojo`
-    
-* Rust: `curl --proto '=https' --tlsv1.2 -sSf`[`https://sh.rustup.rs`](https://sh.rustup.rs)`| sh`
+* I install the Modular CLI:
     
 
-## Other Utilities to Install.
-
-* Thunar: `sudo apt install -y thunar`
-    
-* LibreOffice
-    
-* HydraPaper
-    
-* Screenkey
-    
-* Remmina
-    
-* Tweaks
-    
-* I update the system:
-    
-
-```plaintext
-sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-broken install && sudo apt autoremove -y
+```bash
+sudo apt install -y modular
 ```
 
-* I use CloneZilla to create an image of the distro called <mark>[date]-img-work-apps</mark>
+* I install Mojo:
     
+
+```bash
+modular install mojo
+```
+
+* I update Mojo:
+    
+
+```bash
+modular update mojo
+```
 
 ## Installing LLM Utilities.
 
@@ -935,8 +947,6 @@ sudo apt clean && sudo apt update && sudo apt dist-upgrade -y && sudo apt --fix-
 * [Ollama](https://solodev.app/installing-ollama)
     
 * LiteLLM
-    
-* AutoGen
     
 * MemGPT
     
