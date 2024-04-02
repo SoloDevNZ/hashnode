@@ -84,7 +84,7 @@ https://ubuntu.com/download/desktop
 
 # During the Installation Process.
 
-My Workstation is a Windows/Ubuntu dual-boot system while the rest of my home systems run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process.
+My Workstation is a Windows/Ubuntu dual-boot system while the rest of my home systems run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows, otherwise I'd have to re-install Windows as well. Upgrading Ubuntu is painful enough. There's no point in shoving a thumb in my eye while I'm at it.
 
 # Securing the APT Package Manager.
 
