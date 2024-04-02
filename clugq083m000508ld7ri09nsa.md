@@ -99,6 +99,16 @@ curl wget zip unzip
 
 > NOTE: Some of these utilities may already be installed by default.
 
+# Changing Some Settings.
+
+* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behavior > Show Volumes and Devices`, if required.
+    
+* I change where new icons appear at `Settings > Ubuntu Desktop > Position of New Icons`, if required.
+    
+* I change to Dark Mode at `Settings > Appearance > Style`, if required.
+    
+* I change the monitor layout at `Settings > Displays`, if required.
+    
 * I reduce the animation in the UI at `Settings > Accessibility > Reduce Animation`.
     
 * I change the size of all text in the UI at `Settings > Accessibility > Large Text`.
@@ -107,6 +117,19 @@ curl wget zip unzip
     
 * I turn off the blinking cursor in the terminal at `Settings > Accessibility > Typing > Cursor Blinking`.
     
+* At the terminal `Hamburger Menu > Preferences > Unnamed > Text tab`, I perform the following actions:
+    
+    * Change the terminal size to 92 columns and 24 rows,
+        
+    * Never allow blinking text within the terminal,
+        
+    * Disable the cursor blinking within the terminal, and
+        
+    * Activate the custom font and change the size to 18pt.
+        
+
+> NOTE: These settings are used so that screenshots and screencasts are clearly captured. Also, my eyesight is that of someone in their mid-50s. Oh, wait...
+
 * I update my system:
     
 
@@ -285,7 +308,7 @@ ln -s "/media/yt/MyDrive" "/home/yt/MyDrive" && \
 ln -s "/media/yt/Pictures" "/home/yt/Pictures" && \
 ln -s "/media/yt/Public" "/home/yt/Public" && \
 ln -s "/media/yt/Screencasts" "/home/yt/Screencasts" && \
-ln -s "/media/yt/Screenshots" "/home/yt/Screencasts" && \
+ln -s "/media/yt/Screenshots" "/home/yt/Screenshots" && \
 ln -s "/media/yt/Templates" "/home/yt/Templates" && \
 ln -s "/media/yt/Videos" "/home/yt/Videos"
 ```
@@ -315,6 +338,56 @@ cd ~
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-nas</mark>.
     
 
+# Installing Ubuntu Studio.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate to the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+    
+* I change the owner of the Browsers image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-nas
+```
+
+---
+
+* I download, and install, Ubuntu Studio:
+    
+
+```plaintext
+sudo apt install -y ubuntustudio-installer
+```
+
+* I run the installer:
+    
+
+```plaintext
+ubuntustudio-installer
+```
+
+> NOTE: I can also run the installer from the Apps menu (𐄡).
+
+* When the installer completes, I update my system:
+    
+
+```plaintext
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-studio</mark>.
+    
+
 # Installing Other Package Managers.
 
 * I power up my Workstation.
@@ -327,7 +400,7 @@ cd ~
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-nas
+sudo chown -R $USER:$USER [date]-img-work-studio
 ```
 
 ## The Snap Package Manager.
@@ -468,54 +541,6 @@ sudo apt install brave-browser
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-browsers</mark>.
     
 
-# Installing Ubuntu Studio.
-
-* I power up my Workstation.
-    
-* In the file manager, I navigate to the `img-work` drive.
-    
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
-    
-* I change the owner of the Browsers image:
-    
-
-```plaintext
-sudo chown -R $USER:$USER [date]-img-work-browsers
-```
-
-* I download, and install, Ubuntu Studio:
-    
-
-```plaintext
-sudo apt install -y ubuntustudio-installer
-```
-
-* I run the installer:
-    
-
-```plaintext
-ubuntustudio-installer
-```
-
-> NOTE: I can also run the installer from the Apps menu (𐄡).
-
-* When the installer completes, I update my system:
-    
-
-```plaintext
-sudo apt clean && \
-sudo apt update && \
-sudo apt dist-upgrade -y && \
-sudo apt --fix-broken install && \
-sudo apt autoclean && \
-sudo apt autoremove -y
-```
-
-* I reboot my system with the CloneZilla USB thumb drive installed.
-    
-* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-studio</mark>.
-    
-
 # System Updates and App Installs.
 
 * I power up my Workstation.
@@ -528,21 +553,12 @@ sudo apt autoremove -y
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-studio
+sudo chown -R $USER:$USER [date]-img-work-browsers
 ```
 
+---
+
 I update the following system settings and install the following apps (unless they're already pre-installed).
-
-## Changing the Settings.
-
-* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behavior > Show Volumes and Devices`, if required.
-    
-* I change where new icons appear at `Settings > Ubuntu Desktop > Position of New Icons`, if required.
-    
-* I change to Dark Mode at `Settings > Appearance > Style`, if required.
-    
-* I change the monitor layout at `Settings > Displays`, if required.
-    
 
 ## Checking the GPU Driver.
 
