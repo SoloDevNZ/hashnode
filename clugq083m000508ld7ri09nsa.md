@@ -39,7 +39,7 @@ My NAS has its own proprietary OS.
 
 For now, I will practice the installation process with Ubuntu 23.10.
 
-> NOTE: Ubuntu23.10, code-named "Mantic Minotaur", is a regular release. This means Mantic is only supported until July 2024. Looking at the version number, I can tell that Mantic was released in October (23.<mark>10</mark>) of 2023 (**<mark>23</mark>**.10).
+> NOTE: Ubuntu 23.10, code-named "Mantic Minotaur", is a regular release. This means Mantic is only supported until July 2024. Looking at the version number, I can tell that Mantic was released in October (23.`10`) of 2023 (`23`.10).
 
 # Prerequisites.
 
