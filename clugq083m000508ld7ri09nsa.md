@@ -9,7 +9,7 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 # TL;DR.
 
-Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer a stable system for users who need a predictable computing environment.
+Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
 
 > **Attributions:**
 > 
@@ -17,7 +17,7 @@ Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It inc
 
 # An Introduction.
 
-In 2015, I started using CentOS 7 which was my first Linux-based distribution. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distro every 2 years like clockwork. It is time again to upgrade my systems:
+In 2015, I started using CentOS 7 which was my first Linux-based distribution. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distros every 2 years, like clockwork. It is time again to upgrade my systems:
 
 > The purpose of this post is to define the installation process for Ubuntu 24.04 LTS, many of the development tools I use, and all of the system utilities I need.
 
@@ -25,16 +25,16 @@ In 2015, I started using CentOS 7 which was my first Linux-based distribution. W
 
 On Thursday 25<sup>th</sup> April 2024 (or thereabouts), I will install the new Ubuntu 24.04 LTS (long term service) distribution on every system in my home. These systems include:
 
-* My Workstation PC,
+* My Workstation PC (which is a dual-boot system),
     
-* My Homelab NUC,
+* My Homelab NUC (which sits next to my workstation),
     
-* My Bedroom NUC, and
+* My Bedroom NUC (for streaming content from my NAS), and
     
-* My Lounge Laptop.
+* My Lounge Laptop (for streaming content when I'm not in bed).
     
 
-My NAS has its own proprietary distribution.
+My NAS has its own proprietary OS.
 
 For now, I will practice the installation process with Ubuntu 23.10.
 
@@ -823,6 +823,15 @@ rustup doc
 rustup self uninstall
 ```
 
+## Installing Audacity.
+
+* I install Audacity:
+    
+
+```bash
+sudo apt install audacity
+```
+
 ## Installing Screenkey.
 
 * I install Screenkey:
@@ -878,12 +887,14 @@ sudo code wallpaper_merger.py
 https://timothycrosley.github.io/streamdeck-ui/
 ```
 
-## Installing Other Software.
+## Installing Tweaks.
 
-* Audacity
+* I install the GNOME Tweaks tool:
     
-* Tweaks
-    
+
+```bash
+sudo apt install gnome-tweaks
+```
 
 ## Installing Development Tools.
 
@@ -937,6 +948,8 @@ modular update mojo
 ```
 
 ## Installing LLM Utilities.
+
+> NOTE: There are missing posts related to some of these LLM (large language model) utilities. These missing posts should be available by the end of April 2024.
 
 * [LXD](https://solodev.app/2-of-10-lxd-on-the-homelab)
     
