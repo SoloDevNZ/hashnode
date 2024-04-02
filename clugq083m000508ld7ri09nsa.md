@@ -85,10 +85,6 @@ https://ubuntu.com/download/desktop
 
 My Workstation is a Windows/Ubuntu dual-boot system while the rest of my home systems run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process.
 
-# Stabilizing the New Installation.
-
-Throughout the rest of this post, I will be creating way-point images as recovery mechanisms, although nothing EVER goes wrong. I suggest saving (or writing down) the names of these images in a file (or on a piece of paper) and crossing these names off the list as each image is created. All the image names are highlighted in yellow throughout the rest of this post.
-
 # Securing the APT Package Manager.
 
 * After installing Ubuntu 24.04 LTS, I open the terminal.
@@ -103,6 +99,14 @@ curl wget zip unzip
 
 > NOTE: Some of these utilities may already be installed by default.
 
+* I reduce the animation in the UI at `Settings > Accessibility > Reduce Animation`.
+    
+* I change the size of all text in the UI at `Settings > Accessibility > Large Text`.
+    
+* I change the cursor size in the UI at `Settings > Accessibility > Cursor Size`.
+    
+* I turn off the blinking cursor in the terminal at `Settings > Accessibility > Typing > Cursor Blinking`.
+    
 * I update my system:
     
 
@@ -114,6 +118,10 @@ sudo apt --fix-broken install && \
 sudo apt autoclean && \
 sudo apt autoremove -y
 ```
+
+# Securing the New Installation.
+
+Throughout the rest of this post, I will be creating way-point images as recovery mechanisms, although nothing EVER goes wrong. I suggest saving (or writing down) the names of these images in a file (or on a piece of paper) and crossing these names off the list as each image is created. All the image names are highlighted in yellow throughout the rest of this post.
 
 # Using CloneZilla.
 
@@ -127,7 +135,7 @@ sudo apt autoremove -y
     
 * I (re)start the UEFI BIOS POST sequence.
     
-* After booting into the USB thumb drive, I use CloneZilla to create an image of each stage of my installation process. Just in case. Although nothing EVER goes wrong.
+* After booting into the USB thumb drive, I use CloneZilla to create an image of each stage of my installation process. Just in case. Although nothing EVER goes wrong. Right?
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-ubuntu</mark>.
     
@@ -136,7 +144,7 @@ sudo apt autoremove -y
 
 # Connecting my NAS.
 
-> NOTE: This section of my post is unique to my systems and can be safely ignored. If you have a NAS (network attached server) then you probably already have a plan for connecting it to your system(s).
+> NOTE: This section of my post is unique to my systems and can be safely ignored. If you have a NAS (network attached server) then you probably already have a plan for connecting it/them to your system(s).
 
 * I power up my Workstation.
     
@@ -151,6 +159,8 @@ sudo apt autoremove -y
 sudo chown -R $USER:$USER [date]-img-work-ubuntu
 ```
 
+---
+
 * I install the CIFS utilities:
     
 
@@ -160,11 +170,37 @@ sudo apt install -y cifs-utils smbclient
 
 > NOTE: CIFS is a dialect of SMB.
 
+* I remove these directories:
+    
+
+```bash
+sudo rm -r ~/Desktop ~/Documents ~/Downloads \
+~/Music ~/Pictures ~/Public ~/Templates ~/Videos
+```
+
+> NOTE: It is now VITAL to continue this section of the post until the very end as these directories, which no longer exist, are vital to running this distro.
+
 * I make a hidden file called `.cred_smb` in my home directory:
     
 
 ```bash
-sudo touch ~/.cred_smb
+sudo touch /home/yt/.cred_smb
+```
+
+* I open the `.cred_smb` file using the Nano text editor:
+    
+
+```bash
+sudo nano /home/yt/.cred_smb
+```
+
+* I copy the following, add it (CTRL + SHIFT + V) to the `.cred_smb` file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```plaintext
+username=yt
+password=super-secret-password
+domain=WORKGROUP
 ```
 
 * I change the access permissions for the `.cred_smb` file:
@@ -174,20 +210,40 @@ sudo touch ~/.cred_smb
 sudo chmod 600 ~/.cred_smb
 ```
 
-* I open the `.cred_smb` file using the Nano text editor:
-    
-
-```bash
-sudo nano ~/.cred_smb
-```
-
-* I copy the following, add it (CTRL + SHIFT + V) to the file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+* I make a copy the `fstab` file as `fstab.bak`:
     
 
 ```plaintext
-username=yt
-password=super-secret-password
-domain=WORKGROUP
+sudo cp /etc/fstab /etc/fstab.bak
+```
+
+* I use the Nano text editor to open the `fstab` file:
+    
+
+```plaintext
+sudo nano /etc/fstab
+```
+
+* I copy the following, add it (CTRL + SHIFT + V) to the bottom of the `fstab` file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```plaintext
+//192.168.0.2/ai             /media/yt/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/desktop        /media/yt/Desktop cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/mydocs         /media/yt/Documents cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/downloads      /media/yt/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/drawings       /media/yt/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/images         /media/yt/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/multimedia     /media/yt/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/music          /media/yt/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/mydocs         /media/yt/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/mydrive        /media/yt/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/photos         /media/yt/Pictures cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/public         /media/yt/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/screencasts    /media/yt/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/screenshots    /media/yt/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/templates      /media/yt/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
+//192.168.0.2/videos         /media/yt/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
 ```
 
 * I create these directories where the remote shares will mount:
@@ -212,61 +268,7 @@ sudo mkdir /media/yt/Templates && \
 sudo mkdir /media/yt/Videos
 ```
 
-* I make a copy the `fstab` file as `fstab.bak`:
-    
-
-```plaintext
-sudo cp /etc/fstab /etc/fstab.bak
-```
-
-* I open the `fstab` file:
-    
-
-```plaintext
-sudo nano /etc/fstab
-```
-
-Add the following to the bottom of the fstab file:
-
-```plaintext
-//192.168.188.45/ai             /media/yt/AI cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/desktop        /media/yt/Desktop cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/mydocs         /media/yt/Documents cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/downloads      /media/yt/Downloads cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/drawings       /media/yt/Drawings cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/images         /media/yt/Images cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/multimedia     /media/yt/Media cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/music          /media/yt/Music cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/mydocs         /media/yt/MyDocs cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/mydrive        /media/yt/MyDrive cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/photos         /media/yt/Pictures cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/public         /media/yt/Public cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/screencasts    /media/yt/Screencasts cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/screenshots    /media/yt/Screenshots cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/templates      /media/yt/Templates cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-//192.168.188.45/videos         /media/yt/Videos cifs vers=3.0,uid=1000,gid=1000,credentials=/home/yt/.cred_smb
-```
-
-* I reboot my system.
-    
-* I check the `/media/yt` directory to see if the shares are mounted.
-    
-* I change to the `Home` directory:
-    
-
-```bash
-cd ~
-```
-
-* I remove these directories:
-    
-
-```bash
-sudo rm -r ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures \
-~/Public ~/Templates ~/Videos
-```
-
-* I create these symlinks (symbolic links) in my `Home` directory:
+* I create these symlinks (symbolic links) where the remote shares will display:
     
 
 ```plaintext
@@ -280,7 +282,7 @@ ln -s "/media/yt/Media" "/home/yt/Media" && \
 ln -s "/media/yt/Music" "/home/yt/Music" && \
 ln -s "/media/yt/MyDocs" "/home/yt/MyDocs" && \
 ln -s "/media/yt/MyDrive" "/home/yt/MyDrive" && \
-ln -s "/media/yt/Photos" "/home/yt/Pictures" && \
+ln -s "/media/yt/Pictures" "/home/yt/Pictures" && \
 ln -s "/media/yt/Public" "/home/yt/Public" && \
 ln -s "/media/yt/Screencasts" "/home/yt/Screencasts" && \
 ln -s "/media/yt/Screenshots" "/home/yt/Screencasts" && \
@@ -289,6 +291,24 @@ ln -s "/media/yt/Videos" "/home/yt/Videos"
 ```
 
 > NOTE: Some of these symlinks will replace system directories, e.g. the Downloads directory.
+
+* I reboot my system to check the NAS symlinks.
+    
+* I use Nano to open my `.bashrc` file:
+    
+
+```bash
+sudo nano /home/yt/.bashrc
+```
+
+* I copy the following, add it (CTRL + SHIFT + V) to the bottom of the `.bashrc` file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```bash
+cd ~
+```
+
+---
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
@@ -355,7 +375,7 @@ sudo apt install -y flatpak
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* From a terminal, I change the owner of the Pacman image:
+* From the terminal, I change the owner of the Pacman image:
     
 
 ```plaintext
@@ -515,9 +535,9 @@ I update the following system settings and install the following apps (unless th
 
 ## Changing the Settings.
 
-* I change the volumes visibility on the Dock at `Settings > Appearance > Dock > Configure dock behaviour`, if required.
+* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behavior > Show Volumes and Devices`, if required.
     
-* I change where new icons appear at `Settings > Appearance > Position of New Icons`, if required.
+* I change where new icons appear at `Settings > Ubuntu Desktop > Position of New Icons`, if required.
     
 * I change to Dark Mode at `Settings > Appearance > Style`, if required.
     
