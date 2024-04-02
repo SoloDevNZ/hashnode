@@ -43,7 +43,7 @@ For now, I will practice the installation process with Ubuntu 23.10.
 
 # Prerequisites.
 
-* A NEW Linux-based distribution called Ubuntu 24.04 LTS (or Ubuntu 23.10 "Mantic Minotaur" if I'm practising my installation process).
+* A NEW Linux-based distribution called [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)***↗.***
     
 
 # Making a Bootable USB Installer.
@@ -51,7 +51,7 @@ For now, I will practice the installation process with Ubuntu 23.10.
 * In Windows, I plug in a spare 8GB USB thumb drive.
     
 
-> NOTE: I find quality 8GB thumb drives are cheaper than 4GB thumb drives. This makes sense to me. Making a tape-out of an 8GB die costs the same as a 4GB tape-out. Cooking the wafers costs the same, too. Finally, it's cheaper NOT to re-tool for 4GB chips and just make 8GB chips instead. So, my guess is there's no cost-effective reason for making 4GB thumb drives. As a result, I believe scarcity is the main factor that is driving up the prices for 4GB drives.
+> NOTE: I find quality 8GB thumb drives are cheaper than 4GB thumb drives. This makes sense to me. Making a tape-out of an 8GB die costs the same as a 4GB tape-out. Cooking the wafers costs the same, too. Finally, it's cheaper NOT to re-tool for 4GB chips and just make 8GB chips instead. So, my guess is there's no cost-effective reason for making 4GB thumb drives. As a result, I believe scarcity is the main factor that is driving up the prices of 4GB drives.
 
 * I download the Ubuntu 24.04 LTS ISO file:
     
