@@ -10,9 +10,11 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 # TL;DR.
 
-> NOTE: This is a continually evolving post. Although already published, this document will develop further as testing results show some content needs adding while other content needs moving. Editing will result in better efficiency.
+This is a continually evolving post. Although already published, this document will develop further as testing results show some content needs adding while other content needs moving. Editing this guide will result in improved efficiencies when the deployment rolls out for real. Efficiency is important because I have multiple systems that will need my attention.
 
 Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
+
+Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>when</s> *if* things go to hell in a handbasket.
 
 > **Attributions:**
 > 
@@ -20,9 +22,9 @@ Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It inc
 
 # An Introduction.
 
-In 2015, I started using CentOS 7 which was my first Linux-based distribution. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distros every 2 years, like clockwork. It is time again to upgrade my systems:
+In 2015, I started using CentOS 7 which was my first Linux-based daily driver. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distros every 2 years, like clockwork. It is time again to upgrade my systems:
 
-> The purpose of this post is to define the installation process for Ubuntu 24.04 LTS, many of the development tools I use, and all of the system utilities I need.
+> The purpose of this post is to define the installation process for Ubuntu 24.04 LTS, while also including many of the development tools I use, and all of the system utilities I need.
 
 # The Big Picture.
 
