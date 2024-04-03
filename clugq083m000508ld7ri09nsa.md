@@ -330,7 +330,7 @@ ln -s "/media/yt/Videos" "/home/yt/Videos"
 * I reboot my system to check the NAS symlinks.
     
 
-> NOTE: Within a terminal, my prompt tells me I'm in the `/media/yt/whatever` directory. This makes sense given the symlinks I created.
+> NOTE: Within a terminal, my prompt tells me I'm in the `/media/yt/whatever` directory. This makes sense given the symlinks I just created.
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
