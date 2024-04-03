@@ -118,7 +118,7 @@ sudo snap remove --purge lxd
 sudo apt remove --purge lxd-installer
 ```
 
-> NOTE: The `--purge` flag removes of everything, including configuration files, etc.
+> NOTE: The `--purge` flag removes everything, including configuration files, etc.
 
 ## Setting Up an LXC.
 
