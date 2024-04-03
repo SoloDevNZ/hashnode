@@ -181,7 +181,7 @@ Throughout the rest of this post, I will be creating way-point images as recover
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -329,19 +329,8 @@ ln -s "/media/yt/Videos" "/home/yt/Videos"
 
 * I reboot my system to check the NAS symlinks.
     
-* I use Nano to open my `.bashrc` file:
-    
 
-```bash
-sudo nano /home/yt/.bashrc
-```
-
-* I copy the following, add it (CTRL + SHIFT + V) to the bottom of the `.bashrc` file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
-    
-
-```bash
-cd ~
-```
+> NOTE: Within a terminal, my prompt tells me I'm in the `/media/yt/whatever` directory. This makes sense given the symlinks I created.
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
@@ -352,7 +341,7 @@ cd ~
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -407,7 +396,7 @@ sudo apt autoremove -y
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -459,7 +448,7 @@ sudo apt install -y flatpak
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -560,7 +549,7 @@ sudo apt install brave-browser
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -594,7 +583,7 @@ sudo chown -R $USER:$USER [date]-img-work-browsers
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
@@ -679,19 +668,24 @@ Using a pre-existing Data dir : /var/BlackmagicDesign/DaVinci Resolve
 DaVinci Resolve installed to /opt/resolve
 ```
 
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-davinci</mark>.
+    
+
 # Installing Apps & Changing Settings.
 
 * I power up my Workstation.
     
-* In the file manager, I navigate to the `img-work` drive.
+* In the file manager, I navigate into the `img-work` drive.
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* From a terminal, I change the owner of the Studio image:
+* From a terminal, I change the owner of the `DaVinci` image:
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-browsers
+sudo chown -R $USER:$USER [date]-img-work-davinci
 ```
 
 ---
