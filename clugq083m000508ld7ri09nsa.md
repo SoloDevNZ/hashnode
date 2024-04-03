@@ -339,8 +339,6 @@ sudo nano /home/yt/.bashrc
 cd ~
 ```
 
----
-
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-nas</mark>.
@@ -354,7 +352,7 @@ cd ~
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* I change the owner of the Browsers image:
+* I change the owner of the `Nas` image:
     
 
 ```plaintext
@@ -409,7 +407,7 @@ sudo apt autoremove -y
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* From a terminal, I change the owner of the Nas image:
+* From a terminal, I change the owner of the `Studio` image:
     
 
 ```plaintext
@@ -461,7 +459,7 @@ sudo apt install -y flatpak
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* From the terminal, I change the owner of the Pacman image:
+* From the terminal, I change the owner of the `Pacman` image:
     
 
 ```plaintext
@@ -553,6 +551,129 @@ sudo apt install brave-browser
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-browsers</mark>.
     
+
+# Installing the Container and Environment Managers.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate to the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+    
+* From the terminal, I change the owner of the `Browsers` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-browsers
+```
+
+---
+
+> NOTE: These posts describe how to install the container and environment managers.
+
+* [LXD/LXC](https://solodev.app/installing-lxd-and-using-lxcs)
+    
+* [Distrobox](https://solodev.app/installing-distrobox)
+    
+* [Miniconda](https://solodev.app/installing-miniconda)
+    
+* [Docker](https://solodev.app/installing-docker)
+    
+* [Docker Desktop](https://solodev.app/4-of-10-installing-docker-desktop)
+    
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-envman</mark>.
+    
+
+# Installing DaVinci Resolve Studio 18.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate to the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+    
+* From the terminal, I change the owner of the `EnvMan` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-envman
+```
+
+---
+
+* I change to the Downloads directory:
+    
+
+```bash
+cd ~/Downloads
+```
+
+* I install these libraries:
+    
+
+```bash
+sudo apt install -y libfuse2 libapr1 libaprutil1 libglu1-mesa \
+libnuma1 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
+libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 \
+libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
+libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
+```
+
+* I go to the DaVinci Resolve Studio 18 downloads page:
+    
+
+```bash
+https://www.blackmagicdesign.com/event/davinciresolvedownload
+```
+
+* I download the installer.
+    
+* I unpack the DaVinci Resolve Studio 18 zip file:
+    
+
+```bash
+unzip ./DaVinci_Resolve_18.6.5_Linux.zip
+```
+
+> NOTE: At the time of writing, 18.6.5 is the latest version.
+
+* I change into the unzipped directory:
+    
+
+```bash
+cd ./DaVinci_Resolve_18.6.5_Linux
+```
+
+* I list the contents of the directory:
+    
+
+```bash
+ls
+```
+
+* I change the permission of the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file to an executable:
+    
+
+```bash
+sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
+```
+
+* I install the \[file-name\].run file:
+    
+
+```bash
+sudo ./DaVinci_Resolve_Studio_18.6.5_Linux.run -i
+```
+
+* This is the displayed output after the installation:
+    
+
+```bash
+Using a pre-existing Data dir : /var/BlackmagicDesign/DaVinci Resolve
+DaVinci Resolve installed to /opt/resolve
+```
 
 # Installing Apps & Changing Settings.
 
@@ -674,79 +795,6 @@ I can also install the following VS Code Extensions:
     
 
 > NOTE: These extensions are OS-independent.
-
-## Installing DaVinci Resolve Studio 18.
-
-* I change to the Downloads directory:
-    
-
-```bash
-cd ~/Downloads
-```
-
-* I install these libraries:
-    
-
-```bash
-sudo apt install -y libfuse2 libapr1 libaprutil1 libglu1-mesa \
-libnuma1 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
-libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 \
-libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
-libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
-```
-
-* I go to the DaVinci Resolve Studio 18 downloads page:
-    
-
-```bash
-https://www.blackmagicdesign.com/event/davinciresolvedownload
-```
-
-* I download the installer.
-    
-* I unpack the DaVinci Resolve Studio 18 zip file:
-    
-
-```bash
-unzip ./DaVinci_Resolve_18.6.5_Linux.zip
-```
-
-> NOTE: At the time of writing, 18.6.5 is the latest version.
-
-* I change into the unzipped directory:
-    
-
-```bash
-cd ./DaVinci_Resolve_18.6.5_Linux
-```
-
-* I list the contents of the directory:
-    
-
-```bash
-ls
-```
-
-* I change the permission of the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file to an executable:
-    
-
-```bash
-sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
-```
-
-* I install the \[file-name\].run file:
-    
-
-```bash
-sudo ./DaVinci_Resolve_Studio_18.6.5_Linux.run -i
-```
-
-* This is the displayed output after the installation:
-    
-
-```bash
-DaVinci Resolve installed to /opt/resolve
-```
 
 ## Installing Spotify.
 
@@ -911,20 +959,16 @@ https://timothycrosley.github.io/streamdeck-ui/
 sudo apt install gnome-tweaks
 ```
 
-## Installing Development Tools.
+## Installing Python.
 
-* [Docker](https://solodev.app/installing-docker)
-    
-* [Docker Desktop](https://solodev.app/4-of-10-installing-docker-desktop)
-    
-* Python 3:
+* I install Python 3:
     
 
 ```plaintext
 sudo apt install -y python3
 ```
 
-* Python packages:
+* I install the Python packages:
     
 
 ```plaintext
@@ -966,12 +1010,6 @@ modular update mojo
 
 > NOTE: There are missing posts related to some of these LLM (large language model) utilities. These missing posts should be available by the end of April 2024.
 
-* [LXD/LXC](https://solodev.app/installing-lxd-and-using-lxcs)
-    
-* [Distrobox](https://solodev.app/installing-distrobox)
-    
-* [Miniconda](https://solodev.app/installing-miniconda)
-    
 * [Ollama](https://solodev.app/installing-ollama)
     
 * LiteLLM
