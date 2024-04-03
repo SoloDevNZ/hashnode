@@ -10,6 +10,8 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 # TL;DR.
 
+> NOTE: This is a continually evolving post. Although already published, this document will develop further as testing results show some content needs adding while other content needs moving. Editing will result in better efficiency.
+
 Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
 
 > **Attributions:**
