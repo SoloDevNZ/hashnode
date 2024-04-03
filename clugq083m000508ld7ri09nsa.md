@@ -14,7 +14,7 @@ This is a continually evolving post. Although already published, this document w
 
 Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
 
-Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>when</s> *if* things go to hell in a handbasket.
+Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>when</s>*if* things go to hell in a handbasket.
 
 > **Attributions:**
 > 
@@ -86,11 +86,11 @@ https://ubuntu.com/download/desktop
 * After booting into the USB thumb drive, I begin installing the Ubuntu 24.04 LTS distribution.
     
 
-# During the Installation Process.
+## During the Installation Process.
 
 My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home systems run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows. If things go wrong then I'd have to re-install Windows as well. Upgrading Ubuntu is painful enough. There's no point in shoving a thumb in my eye while I'm at it.
 
-# Securing the APT Package Manager.
+## Securing the APT Package Manager.
 
 * After installing Ubuntu 24.04 LTS, I open the terminal.
     
@@ -104,39 +104,54 @@ curl wget zip unzip
 
 > NOTE: Some of these utilities may already be installed by default.
 
-# Changing Some Settings.
+## Changing the Terminal Settings.
 
-* I change the location of the Dock at `Settings > Ubuntu Desktop > Dock > Position on screen > Bottom`,
+* I right-click the terminal, select `Preferences` from the pop-up menu, and perform the following actions:
     
-* I change the volumes visibility on the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behaviour > Show Volumes and Devices`, if required.
+    * Change the terminal size to 112 columns and 24 rows,
+        
+    * Activate the `Custom font` and change the size to 16pt.
+        
+    * Never `Allow blinking text` within the terminal,
+        
+    * Set the `Cursor shape` to `Block`, if required, and,
+        
+    * Disable the `Cursor blinking` within the terminal.
+        
+
+> NOTE: I change these settings so that screenshots and screencasts will clearly display my prompts in the terminal. Also, I'm old. Even with glasses, I'm still old.
+
+## Changing Some System Settings.
+
+* I open the `Settings` menu from the System menu (top-right of the screen) or the Apps menu (𐄡).
     
-* I change where new icons appear at `Settings > Ubuntu Desktop > Position of New Icons`, if required.
+* I change to `Dark` mode at `Settings > Appearance > Style`, if required.
     
-* I change to Dark Mode at `Settings > Appearance > Style`, if required.
+
+---
+
+* I change the `Position of New Icons` to `Top Left` at `Settings > Ubuntu Desktop > Desktop Icons > Position of New Icons`, if required.
     
-* I change the monitor layout at `Settings > Displays`, if required.
+* I change the `Position on screen` of the Dock to `Bottom` at `Settings > Ubuntu Desktop > Dock > Position on screen`, if required.
     
-* I reduce the animation in the UI at `Settings > Accessibility > Reduce Animation`.
+* I deactivate the `Show Volumes and Devices` option for the Dock at `Settings > Ubuntu Desktop > Dock > Configure dock behaviour > Show Volumes and Devices`, if required.
     
-* I change the size of all text in the UI at `Settings > Accessibility > Large Text`.
+
+---
+
+* I change the monitor layout at `Settings > Screen Display`, if required.
+    
+
+---
+
+* I reduce the animation in the UI at `Settings > Accessibility > Seeing > Reduce Animation`.
+    
+* I change the size of all text in the UI at `Settings > Accessibility > Seeing > Large Text`.
     
 * I change the cursor size in the UI at `Settings > Accessibility > Cursor Size`.
     
 * I turn off the blinking cursor in the terminal at `Settings > Accessibility > Typing > Cursor Blinking`.
     
-* At the terminal `Hamburger Menu > Preferences > Unnamed > Text tab`, I perform the following actions:
-    
-    * Change the terminal size to 92 columns and 24 rows,
-        
-    * Never allow blinking text within the terminal,
-        
-    * Disable the cursor blinking within the terminal, and
-        
-    * Activate the custom font and change the size to 18pt.
-        
-
-> NOTE: These settings are used so that screenshots and screencasts are clearly captured. Also, my eyesight is that of someone in their mid-50s. Oh, wait...
-
 * I update my system:
     
 
@@ -149,11 +164,11 @@ sudo apt autoclean && \
 sudo apt autoremove -y
 ```
 
-# Securing the New Installation.
+## Securing the New Installation.
 
 Throughout the rest of this post, I will be creating way-point images as recovery mechanisms, although nothing EVER goes wrong. I suggest saving (or writing down) the names of these images in a file (or on a piece of paper) and crossing these names off the list as each image is created. All the image names are highlighted in yellow throughout the rest of this post.
 
-# Using CloneZilla.
+## Using CloneZilla.
 
 * I plug the CloneZilla USB thumb drive into my system.
     
