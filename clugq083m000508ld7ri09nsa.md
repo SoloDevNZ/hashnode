@@ -688,7 +688,11 @@ cd ~/Downloads
     
 
 ```bash
-sudo apt install libfuse2 libapr1 libaprutil1 libxcb-cursor0
+sudo apt install -y libfuse2 libapr1 libaprutil1 libglu1-mesa \
+libnuma1 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
+libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 \
+libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
+libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
 ```
 
 * I go to the DaVinci Resolve Studio 18 downloads page:
@@ -704,16 +708,16 @@ https://www.blackmagicdesign.com/event/davinciresolvedownload
     
 
 ```bash
-unzip ./DaVinci_Resolve_18.6.4_Linux.zip
+unzip ./DaVinci_Resolve_18.6.5_Linux.zip
 ```
 
-> NOTE: At the time of writing, 18.6.4 is the latest version.
+> NOTE: At the time of writing, 18.6.5 is the latest version.
 
 * I change into the unzipped directory:
     
 
 ```bash
-cd ./DaVinci_Resolve_18.6.4_Linux
+cd ./DaVinci_Resolve_18.6.5_Linux
 ```
 
 * I list the contents of the directory:
@@ -723,18 +727,25 @@ cd ./DaVinci_Resolve_18.6.4_Linux
 ls
 ```
 
-* I change the permission of the \[file-name\].run file to an executable:
+* I change the permission of the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file to an executable:
     
 
 ```bash
-sudo chmod +x [file-name].run
+sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
 ```
 
 * I install the \[file-name\].run file:
     
 
 ```bash
-sudo ./[file-name].run -i
+sudo ./DaVinci_Resolve_Studio_18.6.5_Linux.run -i
+```
+
+* This is the displayed output after the installation:
+    
+
+```bash
+DaVinci Resolve installed to /opt/resolve
 ```
 
 ## Installing Spotify.
