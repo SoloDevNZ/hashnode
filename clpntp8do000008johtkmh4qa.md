@@ -28,11 +28,13 @@ Distrobox is a container system. The main advantages of using Distrobox include:
 
 # An Introduction.
 
-\[pending\]
+Distrobox is a utility that allows me to run other Linux distributions in my terminal. The advantage is that I can then run any app that was specifically designed for that distro. For example, I can run DaVinci Resolve on CentOS 7 in Distrobox on Ubuntu:
+
+> The purpose of this post is to demonstrate the installation process for Distrobox.
 
 # The Big Picture.
 
-\[pending\]
+When it comes to container solutions, I usually reach for LXD/LXC (LinuX Daemon, the container manager, and the LinuX Containers themselves). The advantage is that running LXCs are isolated and, by default, cannot interfere with other containers or the (base) system. However, it is cumbersome getting data out of, and putting data into, a running LXC. This is where Distrobox shines. Although running processes are isolated, those processes can easily access the (base) file system and, if needed, the computer hardware as well.
 
 # Updating my System.
 
@@ -65,7 +67,19 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 
 > NOTE: If I'm nervous about running a foreign script, I can always download it and manually check its contents.
 
-* I reboot the (base) system to load the Distrobox settings into memory.
+* After installation, the terminal displays the following:
+    
+
+```bash
+ Checking dependencies...
+ Downloading...
+ Unpacking...
+ Installation successful!
+ Shell scripts are located in /usr/local/bin
+ Manpages are located in /usr/local/share/man/man1
+```
+
+* I reboot my system to load the Distrobox settings into memory.
     
 
 ## Uninstalling Distrobox.
