@@ -672,7 +672,6 @@ sudo apt autoremove -y
     
 * # Installing GenApps.
     
-
 * I power up my Workstation.
     
 * In the file manager, I navigate into the `img-work` drive.
@@ -899,6 +898,8 @@ sudo snap install code --classic
 code
 ```
 
+* I activate Auto Save from `File > Auto Save`.
+    
 * I can uninstall the APT-installed VS Code:
     
 
@@ -913,21 +914,31 @@ sudo apt purge --auto-remove code
 sudo snap remove code
 ```
 
-I can also install the following VS Code Extensions:
+I also install the following VS Code Extensions:
 
-* Live Server,
+* Python from Microsoft,
     
-* Geo Data Viewer,
+* Pylance from Microsoft,
     
-* Code Spell Checker,
+* AsciiDoc from asciidictor,
     
-* JavaScript (ES6) Code Snippets,
+* Live Server from Ritwick Dey,
     
-* Prettier - Code formatter,
+* Python Debugger from Microsoft,
     
-* Markdown All in One,
+* Markdown All in One from Yu Zhang,
     
-* rust-analyzer,
+* Prettier - Code formatter from Prettier,
+    
+* Geo Data Viewer from Random Fractals Inc.,
+    
+* Code Spell Checker from Street Side Software,
+    
+* Markdown Table Prettifier from Krisztian Daroczi,
+    
+* JavaScript (ES6) Code Snippets from charalampos karypidis,
+    
+* rust-analyzer from The Rust Programming Language rust-lang.org,
     
 * C/C++,
     
@@ -940,8 +951,6 @@ I can also install the following VS Code Extensions:
 * Rainbow Tags,
     
 * Auto Rename Tag,
-    
-* Markdown Table Prettifier,
     
 
 > NOTE: These extensions are OS-independent.
@@ -1054,7 +1063,7 @@ sudo apt autoremove -y
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-devapps</mark>.
     
 
-# Installing LLM Utilities.
+# Installing Language Model Utilities.
 
 * I power up my Workstation.
     
@@ -1105,7 +1114,7 @@ sudo apt autoremove -y
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
-* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-llms</mark>.
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-langutils</mark>.
     
 
 # Installing DaVinci Resolve Studio 18.
@@ -1116,11 +1125,11 @@ sudo apt autoremove -y
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
     
-* From the terminal, I change the owner of the `LLMs` image:
+* From the terminal, I change the owner of the `LangUtils` image:
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-llms
+sudo chown -R $USER:$USER [date]-img-work-langutils
 ```
 
 ---
