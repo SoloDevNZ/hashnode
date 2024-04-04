@@ -94,6 +94,22 @@ My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home systems
 
 * After installing Ubuntu 24.04 LTS, I open the terminal.
     
+* I reset the terminal:
+    
+
+```bash
+reset
+```
+
+* I make sure my account has all the `sudo` privileges:
+    
+
+```bash
+sudo usermod -aG sudo yt
+```
+
+> NOTE: Fresh-baked irony: I need `sudo` privileges to enable `sudo` privileges.
+
 * I install the secure transport protocol for the `APT` (advanced packaging tool), as well as `curl`, `wget`, `zip`, and `unzip`.
     
 
@@ -668,7 +684,7 @@ ls
 sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
 ```
 
-* I install the \[file-name\].run file:
+* I install the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file:
     
 
 ```bash
