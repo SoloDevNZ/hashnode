@@ -10,11 +10,11 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 # TL;DR.
 
-This is a continually evolving post. Although already published, this document will develop further as testing results show some content needs adding while other content needs moving. Editing this guide will result in improved efficiencies when the deployment rolls out for real. Efficiency is important because I have multiple systems that will need my attention.
+This is a continually evolving post. Although already published, this document will develop further as testing results will show that some content needs to be added, some content needs to be moved, and some content needs to be dropped. Editing this guide will result in improved efficiencies when deploying the rollout for real. Efficiency is important because I have multiple systems that will need my attention.
 
 Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
 
-Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>when</s>*if* things go to hell in a handbasket.
+Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>for when</s> *should* things go to hell in a handbasket.
 
 > **Attributions:**
 > 
@@ -469,6 +469,10 @@ sudo ln -s /var/lib/snapd/snap /snap
 ```plaintext
 sudo apt install -y flatpak
 ```
+
+## The AppImage Package Manager.
+
+I have yet to find any packages that I want to use that is bundled using the AppImage package manager. This is the reason I haven't written a post about the technology. That, and the fact that I'm lazy.
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
