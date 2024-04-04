@@ -668,108 +668,8 @@ sudo apt autoremove -y
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-envman</mark>.
     
-
-# Installing DaVinci Resolve Studio 18.
-
-* I power up my Workstation.
+* # Installing GenApps.
     
-* In the file manager, I navigate into the `img-work` drive.
-    
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
-    
-* From the terminal, I change the owner of the `EnvMan` image:
-    
-
-```plaintext
-sudo chown -R $USER:$USER [date]-img-work-envman
-```
-
----
-
-* I change to the Downloads directory:
-    
-
-```bash
-cd ~/Downloads
-```
-
-* I install these libraries:
-    
-
-```bash
-sudo apt install -y libfuse2 libapr1 libaprutil1 libglu1-mesa \
-libnuma1 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
-libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 \
-libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
-libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
-```
-
-* I go to the [DaVinci Resolve Studio 18 downloads page](https://www.blackmagicdesign.com/event/davinciresolvedownload) and download the installer:
-    
-
-* I unpack the DaVinci Resolve Studio 18 zip file:
-    
-
-```bash
-unzip ./DaVinci_Resolve_18.6.5_Linux.zip
-```
-
-> NOTE: At the time of writing, 18.6.5 is the latest version.
-
-* I change into the unzipped directory:
-    
-
-```bash
-cd ./DaVinci_Resolve_18.6.5_Linux
-```
-
-* I list the contents of the directory:
-    
-
-```bash
-ls
-```
-
-* I change the permission of the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file to an executable:
-    
-
-```bash
-sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
-```
-
-* I install the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file:
-    
-
-```bash
-sudo ./DaVinci_Resolve_Studio_18.6.5_Linux.run -i
-```
-
-* This is the displayed output after the installation:
-    
-
-```bash
-Using a pre-existing Data dir : /var/BlackmagicDesign/DaVinci Resolve
-DaVinci Resolve installed to /opt/resolve
-```
-
-* I update my system:
-    
-
-```bash
-sudo apt clean && \
-sudo apt update && \
-sudo apt dist-upgrade -y && \
-sudo apt --fix-broken install && \
-sudo apt autoclean && \
-sudo apt autoremove -y
-```
-
-* I reboot my system with the CloneZilla USB thumb drive installed.
-    
-* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-davinci</mark>.
-    
-
-# Installing GenApps.
 
 * I power up my Workstation.
     
@@ -777,11 +677,11 @@ sudo apt autoremove -y
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
-* From a terminal, I change the owner of the `DaVinci` image:
+* From a terminal, I change the owner of the `EnvMan` image:
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-davinci
+sudo chown -R $USER:$USER [date]-img-work-envman
 ```
 
 ---
@@ -1206,6 +1106,111 @@ sudo apt autoremove -y
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-llms</mark>.
     
 
+# Installing DaVinci Resolve Studio 18.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate into the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+    
+* From the terminal, I change the owner of the `LLMs` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-llms
+```
+
+---
+
+## Plan A: Install DaVinci Resolve Studio 18 Directly.
+
+If the direct install fails, I can switch to Plan B.
+
+* I change to the Downloads directory:
+    
+
+```bash
+cd ~/Downloads
+```
+
+* I install these libraries:
+    
+
+```bash
+sudo apt install -y libfuse2 libapr1 libaprutil1 libglu1-mesa \
+libnuma1 libxcb-composite0 libxcb-cursor0 libxcb-damage0 \
+libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 \
+libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
+libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
+```
+
+* I go to the [DaVinci Resolve Studio 18 downloads page](https://www.blackmagicdesign.com/event/davinciresolvedownload) and download the installer:
+    
+* I unpack the DaVinci Resolve Studio 18 zip file:
+    
+
+```bash
+unzip ./DaVinci_Resolve_18.6.5_Linux.zip
+```
+
+> NOTE: At the time of writing, 18.6.5 is the latest version.
+
+* I change into the unzipped directory:
+    
+
+```bash
+cd ./DaVinci_Resolve_18.6.5_Linux
+```
+
+* I list the contents of the directory:
+    
+
+```bash
+ls
+```
+
+* I change the permission of the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file to an executable:
+    
+
+```bash
+sudo chmod +x ./DaVinci_Resolve_Studio_18.6.5_Linux.run
+```
+
+* I install the DaVinci\_Resolve\_Studio\_18.6.5\_Linux.run file:
+    
+
+```bash
+sudo ./DaVinci_Resolve_Studio_18.6.5_Linux.run -i
+```
+
+* This is the displayed output after the installation:
+    
+
+```bash
+Using a pre-existing Data dir : /var/BlackmagicDesign/DaVinci Resolve
+DaVinci Resolve installed to /opt/resolve
+```
+
+## Plan B: Install DaVinci Resolve Studio 18 within Distrobox.
+
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-davinci</mark>.
+    
+
 # Saving the Final Image.
 
 * I power up my Workstation.
@@ -1214,11 +1219,11 @@ sudo apt autoremove -y
     
 * I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
-* From a terminal, I change the owner of the `LLMs` image:
+* From a terminal, I change the owner of the `DaVinci` image:
     
 
 ```plaintext
-sudo chown -R $USER:$USER [date]-img-work-llms
+sudo chown -R $USER:$USER [date]-img-work-davinci
 ```
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
