@@ -1125,7 +1125,7 @@ sudo chown -R $USER:$USER [date]-img-work-llms
 
 ## Plan A: Install DaVinci Resolve Studio 18 Directly.
 
-If the direct install fails, I can switch to Plan B.
+If the direct install fails, I can [switch to Plan B](https://solodev.app/preparing-for-ubuntu-2404-lts#heading-plan-a-install-davinci-resolve-studio-18-directly).
 
 * I change to the Downloads directory:
     
