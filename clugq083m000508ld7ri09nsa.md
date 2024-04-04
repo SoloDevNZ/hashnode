@@ -1194,6 +1194,8 @@ DaVinci Resolve installed to /opt/resolve
 
 ## Plan B: Install DaVinci Resolve Studio 18 within Distrobox.
 
+* I can [install DaVinci Resolve Studio 18 within Distrobox](https://solodev.app/using-distrobox-on-ubuntu-to-run-davinci-resolve-on-ubuntu-not-a-typo).
+    
 * I update my system:
     
 
