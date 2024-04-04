@@ -14,7 +14,7 @@ This is a continually evolving post. Although already published, this document w
 
 Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
 
-Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>for when</s>*should* things go to hell in a handbasket.
+Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>for when </s> *should* things go to hell in a handbasket.
 
 > **Attributions:**
 > 
@@ -22,7 +22,7 @@ Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>for 
 
 # An Introduction.
 
-In 2015, I started using CentOS 7 which was my first Linux-based daily driver. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distros every 2 years, like clockwork. It is time again to upgrade my systems:
+In 2015, I started using CentOS 7 which was my first Linux-based daily driver. When it was released in 2016, I switched to Ubuntu 16.04 LTS. Since then, I have upgraded my LTS distro every 2 years, like clockwork. It is time again to upgrade my systems:
 
 > The purpose of this post is to define the installation process for Ubuntu 24.04 LTS, while also including many of the development tools I use, and all of the system utilities I need.
 
@@ -1052,13 +1052,15 @@ modular update mojo
 
 * [Ollama](https://solodev.app/installing-ollama)
     
-* LiteLLM
+* [LiteLLM](https://solodev.app/installing-litellm)
     
 * MemGPT
     
 * LangChain
     
-* AutoGen Studio
+* [AutoGen Studio](https://solodev.app/installing-autogen-studio)
+    
+* [Pythagora & GPT Pilot](https://solodev.app/installing-pythagora-and-gpt-pilot-for-ollama)
     
 
 # Saving the Final Image.
