@@ -8,6 +8,8 @@ tags: ubuntu, linux, linux-distro, linux-community, ubuntu-installation, ubuntu-
 
 ---
 
+Update: Friday 5<sup>th</sup> April 2024.
+
 # TL;DR.
 
 This is a continually evolving post. Although already published, this document will develop further as testing results will show that some content needs to be added, some content needs to be moved, and some content needs to be dropped. Editing this guide will result in improved efficiencies when deploying the rollout for real. Efficiency is important because I have multiple systems that will need my attention.
