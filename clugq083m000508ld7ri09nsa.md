@@ -936,10 +936,13 @@ I also install the following VS Code Extensions:
     
 * Markdown Table Prettifier from Krisztian Daroczi,
     
-* JavaScript (ES6) Code Snippets from charalampos karypidis,
+* JavaScript (ES6) Code Snippets from charalampos karypidis, and
     
-* rust-analyzer from The Rust Programming Language rust-lang.org,
+* rust-analyzer from The Rust Programming Language rust-lang.org.
     
+
+I have also used these extensions in the past:
+
 * C/C++,
     
 * ES Lint,
@@ -948,9 +951,9 @@ I also install the following VS Code Extensions:
     
 * Beautify,
     
-* Rainbow Tags,
+* Rainbow Tags, and
     
-* Auto Rename Tag,
+* Auto Rename Tag.
     
 
 > NOTE: These extensions are OS-independent.
