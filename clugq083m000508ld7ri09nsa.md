@@ -363,6 +363,18 @@ ln -s "/media/yt/Videos" "/home/yt/Videos"
 
 > NOTE: Within a terminal, my prompt tells me I'm in the `/media/yt/whatever` directory. This makes sense given the symlinks I just created.
 
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-nas</mark>.
@@ -401,10 +413,15 @@ ubuntustudio-installer
 
 > NOTE: I can also run the installer from the Apps menu (𐄡).
 
-* When the installer completes, I update my system:
+* When the installer completes, I reboot my system to check the installation.
     
 
-```plaintext
+> NOTE: I had a small issue with the 535 GPU driver. Here's my fix: I switched to the X.Org open source driver, rebooted my system, re-installed the 535 GPU driver with `sudo ubuntu-drivers install nvidia:535`, and re-booted my system again.
+
+* I update my system:
+    
+
+```bash
 sudo apt clean && \
 sudo apt update && \
 sudo apt dist-upgrade -y && \
@@ -412,11 +429,6 @@ sudo apt --fix-broken install && \
 sudo apt autoclean && \
 sudo apt autoremove -y
 ```
-
-* I reboot my system to check the installation.
-    
-
-> NOTE: I had a small issue with the 535 GPU driver. Here's my fix: I switched to the X.Org open source driver, rebooted my system, re-installed the 535 GPU driver with `sudo ubuntu-drivers install nvidia:535`, and re-booted my system again.
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
@@ -473,6 +485,18 @@ sudo apt install -y flatpak
 ## The AppImage Package Manager.
 
 I have yet to find any packages that I want to use that is bundled using the AppImage package manager. This is the reason I haven't written a post about the technology.
+
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
 
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
@@ -582,6 +606,18 @@ sudo apt install brave-browser
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 ```
 
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-browsers</mark>.
@@ -616,6 +652,18 @@ sudo chown -R $USER:$USER [date]-img-work-browsers
     
 * [LXD/LXC](https://solodev.app/installing-lxd-and-using-lxcs)
     
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-envman</mark>.
@@ -656,15 +704,9 @@ libxcb-util1 libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 \
 libxkbcommon-x11-0 ocl-icd-libopencl1 libasound2 libxcb-shape0 libxtst6
 ```
 
-* I go to the DaVinci Resolve Studio 18 downloads page:
+* I go to the [DaVinci Resolve Studio 18 downloads page](https://www.blackmagicdesign.com/event/davinciresolvedownload) and download the installer:
     
 
-```bash
-https://www.blackmagicdesign.com/event/davinciresolvedownload
-```
-
-* I download the installer.
-    
 * I unpack the DaVinci Resolve Studio 18 zip file:
     
 
@@ -710,18 +752,30 @@ Using a pre-existing Data dir : /var/BlackmagicDesign/DaVinci Resolve
 DaVinci Resolve installed to /opt/resolve
 ```
 
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
 * I reboot my system with the CloneZilla USB thumb drive installed.
     
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-davinci</mark>.
     
 
-# Installing Apps & Changing Settings.
+# Installing GenApps.
 
 * I power up my Workstation.
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From a terminal, I change the owner of the `DaVinci` image:
     
@@ -732,7 +786,7 @@ sudo chown -R $USER:$USER [date]-img-work-davinci
 
 ---
 
-I install the following apps and change the following settings.
+I install the following apps.
 
 ## Checking the GPU Driver.
 
@@ -765,6 +819,160 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 timedatectl
 timedatectl set-local-rtc 0 --adjust-system-clock
 ```
+
+## Installing Spotify.
+
+* I use Snap to install Spotify:
+    
+
+```bash
+sudo snap install spotify
+```
+
+## Installing Audacity.
+
+* I use APT to install Audacity:
+    
+
+```bash
+sudo apt install audacity
+```
+
+## Installing Screenkey.
+
+* I use Snap to install Screenkey:
+    
+
+```bash
+sudo snap install screenkey --beta
+```
+
+## Installing Tweaks.
+
+* I use APT to install the GNOME Tweaks tool:
+    
+
+```bash
+sudo apt install gnome-tweaks
+```
+
+## Installing Elgato Stream Deck for Linux.
+
+* I install streamdeck-ui:
+    
+
+```bash
+https://timothycrosley.github.io/streamdeck-ui/
+```
+
+## Installing HydraPaper.
+
+* I use APT to install HydraPaper:
+    
+
+```bash
+sudo apt install hydrapaper
+```
+
+### Troubleshooting.
+
+> NOTE: There is a known bug in HydraPaper running on Ubuntu 21.10 and later. Here is the (Dark Mode) fix.
+
+* I find the `wallpaper_merger.py` module:
+    
+
+```bash
+sudo find / -name "*wallpaper_merger.py*"
+```
+
+* I use VS Code to open the `wallpaper_merger.py` module:
+    
+
+```bash
+code /usr/lib/python3/dist-packages/hydrapaper/wallpaper_merger.py
+```
+
+* I find the `set_wallpaper_gnome` function.
+    
+* I remove the `if` part so all that is left is `wp_key='picture-uri-dark',` (WITH the ending comma.)
+    
+* I save the change.
+    
+* I run HydraPaper in Dark Mode.
+    
+
+## Updating Blender.
+
+* I check the Blender version:
+    
+
+```bash
+blender --version
+```
+
+* I remove Blender:
+    
+
+```bash
+sudo apt purge --auto-remove blender
+```
+
+* I use Snap to install Blender:
+    
+
+```bash
+sudo snap install blender --classic
+```
+
+* I check the Blender version:
+    
+
+```bash
+blender --version
+```
+
+* I can remove Blender, if required:
+    
+
+```bash
+sudo snap remove blender
+```
+
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-genapps</mark>.
+    
+
+# Installing DevApps.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate into the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
+    
+* From a terminal, I change the owner of the `GenApps` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-genapps
+```
+
+---
+
+I install the following apps.
 
 ## Installing VS Code.
 
@@ -836,52 +1044,6 @@ I can also install the following VS Code Extensions:
 
 > NOTE: These extensions are OS-independent.
 
-## Installing Spotify.
-
-* I use Snap to install Spotify:
-    
-
-```bash
-snap install spotify
-```
-
-## Updating Blender.
-
-* I check the Blender version:
-    
-
-```bash
-blender --version
-```
-
-* I remove Blender:
-    
-
-```bash
-sudo apt purge --auto-remove blender
-```
-
-* I use Snap to install Blender:
-    
-
-```bash
-sudo snap install blender --classic
-```
-
-* I check the Blender version:
-    
-
-```bash
-blender --version
-```
-
-* I can remove Blender, if required:
-    
-
-```bash
-sudo snap remove blender
-```
-
 ## Installing Rust.
 
 * I install the essential build tools:
@@ -924,79 +1086,6 @@ rustup doc
 
 ```bash
 rustup self uninstall
-```
-
-## Installing Audacity.
-
-* I install Audacity:
-    
-
-```bash
-sudo apt install audacity
-```
-
-## Installing Screenkey.
-
-* I install Screenkey:
-    
-
-```bash
-sudo snap install screenkey --beta
-```
-
-## Installing HydraPaper.
-
-* I install HydraPaper:
-    
-
-```bash
-sudo apt install flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gabmus.hydrapaper
-flatpak uninstall org.gabmus.hydrapaper
-```
-
-> NOTE: There is a known bug in HydraPaper running on Ubuntu 21.10 and later. Here is the (Dark Mode) fix.
-
-* I find the `wallpaper_`[`merger.py`](http://merger.py) module:
-    
-
-```bash
-sudo find / -name "*wallpaper_merger.py*"
-```
-
-* I change to that directory.
-    
-* I use VS Code to open the `wallpaper_`[`merger.py`](http://merger.py) module:
-    
-
-```bash
-sudo code wallpaper_merger.py
-```
-
-* I find the `set_wallpaper_gnome` function.
-    
-* I remove the `if` part so all that is left is `wp_key='picture-uri-dark',` (WITH the ending comma.)
-    
-* I run HydraPaper in Dark Mode.
-    
-
-## Installing Elgato Stream Deck for Linux.
-
-* I install streamdeck-ui:
-    
-
-```bash
-https://timothycrosley.github.io/streamdeck-ui/
-```
-
-## Installing Tweaks.
-
-* I install the GNOME Tweaks tool:
-    
-
-```bash
-sudo apt install gnome-tweaks
 ```
 
 ## Installing Python.
@@ -1046,9 +1135,41 @@ modular install mojo
 modular update mojo
 ```
 
-## Installing LLM Utilities.
+* I update my system:
+    
 
-> NOTE: There are missing posts related to some of these LLM (large language model) utilities. These missing posts should be available by the end of April 2024.
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-devapps</mark>.
+    
+
+# Installing LLM Utilities.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate into the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
+    
+* From a terminal, I change the owner of the `DevApps` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-devapps
+```
+
+---
+
+> NOTE: There are missing posts which should be available by the end of April 2024.
 
 * [Ollama](https://solodev.app/installing-ollama)
     
@@ -1068,9 +1189,6 @@ modular update mojo
     
 * [Pythagora & GPT Pilot](https://solodev.app/installing-pythagora-and-gpt-pilot-for-ollama)
     
-
-# Saving the Final Image.
-
 * I update my system:
     
 
@@ -1083,7 +1201,29 @@ sudo apt autoclean && \
 sudo apt autoremove -y
 ```
 
-* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-system</mark>
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-llms</mark>.
+    
+
+# Saving the Final Image.
+
+* I power up my Workstation.
+    
+* In the file manager, I navigate into the `img-work` drive.
+    
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
+    
+* From a terminal, I change the owner of the `LLMs` image:
+    
+
+```plaintext
+sudo chown -R $USER:$USER [date]-img-work-llms
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-fullsys</mark>.
     
 
 # The Results.
