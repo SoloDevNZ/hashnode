@@ -1054,11 +1054,17 @@ modular update mojo
     
 * [LiteLLM](https://solodev.app/installing-litellm)
     
+* [ComfyUI](https://solodev.app/installing-comfyui-its-manager-and-sdxl)
+    
 * MemGPT
     
 * LangChain
     
+* [AnythingLLM](https://solodev.app/1-of-2-installing-anythingllm-for-linux)
+    
 * [AutoGen Studio](https://solodev.app/installing-autogen-studio)
+    
+* [Jupyter Notebook](https://solodev.app/installing-jupyter-notebook-within-miniconda)
     
 * [Pythagora & GPT Pilot](https://solodev.app/installing-pythagora-and-gpt-pilot-for-ollama)
     
