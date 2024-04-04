@@ -80,15 +80,26 @@ An LXC (LinuX Container) is an isolated, OS-level virtualization which, for effi
     
 
 ```plaintext
-sudo apt install snapd -y
+sudo apt install -y snapd
 ```
 
-* I install the LXD:
+* I install the LXD manager:
     
 
 ```plaintext
 sudo snap install lxd
 ```
+
+* I find the name of my host interface:
+    
+
+```bash
+ip addr
+```
+
+> NOTE: My host interface name for the NIC (network interface card) is enp6s0.
+> 
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1712191209985/be83bd9c-7efa-4896-a4e8-fa8d22017598.png align="center")
 
 * I initialise the LXD:
     
@@ -97,39 +108,11 @@ sudo snap install lxd
 lxd init
 ```
 
-> NOTE: I choose to use BTRFS and an existing host interface called eno1.  
-> (I used the `ip addr` command to find the name of my host interface.)
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707522220201/f9686c89-4a0b-4749-9b59-32f1cc84bc7a.png align="center")
+> NOTE: When initialised, the host interface (enp6s0) will become available to the LXD manager. Now the LXD manager can connect to the router and ask for IP addresses for any running containers.
+> 
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1712190917770/01120360-fb3d-4186-8921-571e192d5383.png align="center")
 
 ## Troubleshooting.
-
-Here is my process for dealing with this error:
-
-```bash
-Error: Failed to connect to local LXD: Get "http://unix.socket/1.0": dial unix /var/snap/lxd/common/lxd/unix.socket: connect: permission denied
-```
-
-* I provide access to the LXD group for my current account:
-    
-
-```bash
-sudo usermod -aG lxd $(whoami)
-```
-
-* I change the GID (group ID):
-    
-
-```bash
-newgrp lxd
-```
-
-* I test these settings (by generating a JSON response):
-    
-
-```bash
-/snap/bin/lxc query --wait -X GET /1.0
-```
 
 * I run a simple `LXC` command:
     
@@ -138,20 +121,42 @@ newgrp lxd
 lxc ls
 ```
 
+* Running the `LXC` command may result in one of these errors:
+    
+
+```bash
+Error: Failed to connect to local LXD: Get "http://unix.socket/1.0": dial unix /var/snap/lxd/common/lxd/unix.socket: connect: permission denied
+bash: /usr/sbin/lxc: No such file or directory
+```
+
+* To fix this issue, I provide access to the LXD group for my current account:
+    
+
+```bash
+sudo usermod -aG lxd $(whoami)
+```
+
+* I change the GID (group ID) for the `LXD` manager:
+    
+
+```bash
+newgrp lxd
+```
+
+* I test these changes by running the `LXC` command again:
+    
+
+```bash
+lxc ls
+```
+
 ## Deleting the LXD.
 
-* I can delete the LXD:
+* I can delete the LXD, if required:
     
 
 ```plaintext
 sudo snap remove --purge lxd
-```
-
-* I can also delete the LXD installer, if required:
-    
-
-```plaintext
-sudo apt remove --purge lxd-installer
 ```
 
 > NOTE: The `--purge` flag removes everything, including configuration files, etc.
