@@ -102,6 +102,42 @@ lxd init
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707522220201/f9686c89-4a0b-4749-9b59-32f1cc84bc7a.png align="center")
 
+## Troubleshooting.
+
+Here is my process for dealing with this error:
+
+```bash
+Error: Failed to connect to local LXD: Get "http://unix.socket/1.0": dial unix /var/snap/lxd/common/lxd/unix.socket: connect: permission denied
+```
+
+* I provide access to the LXD group for my current account:
+    
+
+```bash
+sudo usermod -aG lxd $(whoami)
+```
+
+* I change the GID (group ID):
+    
+
+```bash
+newgrp lxd
+```
+
+* I test these settings (by generating a JSON response):
+    
+
+```bash
+/snap/bin/lxc query --wait -X GET /1.0
+```
+
+* I run a simple `LXC` command:
+    
+
+```bash
+lxc ls
+```
+
 ## Deleting the LXD.
 
 * I can delete the LXD:
