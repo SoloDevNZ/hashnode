@@ -54,6 +54,12 @@ Cloudflare is a worldwide network of data centres that offer content and service
 
 [https://www.cloudflare.com/](https://www.cloudflare.com/)***↗.***
 
+# What is Distrobox?
+
+Distrobox is a tool that allows me to run any Linux distribution within my terminal. It enables both backward and forward compatibility with any software, and the freedom to use whichever distribution I'm most comfortable with. Distrobox uses Podman, Docker, or Lilipod to create containers using the Linux distribution of my choosing. It aims to run any software, on top of my host system, without any hassle.
+
+[https://distrobox.it/](https://distrobox.it/)***↗.***
+
 # What is Docker?
 
 Docker is a tool for easily deploying, and running my applications on any platform. I can package an application with all its code, libraries, dependencies, and tools, which allows me to deploy that app as a single bundle. Docker guarantees that my application will run on any computer that also runs Docker.
