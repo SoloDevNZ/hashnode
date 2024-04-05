@@ -1028,7 +1028,7 @@ curl https://get.modular.com | sh - && \
 modular auth mut_511d5ea22b594cd385f8216af63b2d73
 ```
 
-* I install the Modular CLI:
+* I update the Modular CLI:
     
 
 ```bash
