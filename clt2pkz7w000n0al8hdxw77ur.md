@@ -55,103 +55,53 @@ Miniconda is a free, small, bootstrap version of Anaconda that includes the cond
 
 ## Installing Miniconda.
 
-* I download the Miniconda installer from the following website:
+* I make the Miniconda directory:
     
 
 ```bash
-https://docs.anaconda.com/free/miniconda/
+mkdir -p ~/miniconda3
 ```
 
-* In a terminal, I change to the Downloads directory:
+* I download the installation payload:
     
 
 ```bash
-cd ~/Downloads
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 ```
 
-* I bash into the Miniconda installer and follow the prompts, e.g.:
+* I run the installation:
     
 
 ```bash
-sudo bash Miniconda3-latest-Linux-x86_64.sh -u
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 ```
 
-> NOTE 1: I use the ARROW DOWN key to scroll through the license agreement.
-> 
-> NOTE 2: I accept the license agreement.
-> 
-> NOTE 2: I change the Miniconda location to `/home/brian/miniconda3`.
-> 
-> NOTE 3: I answer 'yes' to automatically initializing conda.
-
-* After the installation, I check if the `conda` command works:
+* I remove the payload:
     
 
 ```bash
-conda env list
-```
-
-* If the conda command returns a `conda: command not found` message, I use the Nano text editor to open the `.bashrc` file:
-    
-
-```bash
-sudo nano ~/.bashrc
-```
-
-* I copy the following, paste (CTRL + SHIFT + V) it to the bottom of the `.bashrc` file, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
-    
-
-```bash
-export PATH=$PATH:/home/brian/miniconda3/bin
-```
-
-* In a new terminal, I check if the conda command works:
-    
-
-```bash
-conda env list
+rm -rf ~/miniconda3/miniconda.sh
 ```
 
 ## Initialising Miniconda.
 
-* I initialize `conda`:
+* I initialize `Miniconda`:
     
 
 ```bash
-source ~/miniconda3/bin/activate
-```
-
-* Here is another way to initialize `conda`:
-    
-
-```bash
-conda init
-```
-
-* I run this command to tell the base environment to activate by default:
-    
-
-```bash
-conda config --set auto_activate_base True
-```
-
-* I can also run this command to tell the base environment *not* to activate by default:
-    
-
-```bash
-conda config --set auto_activate_base False
+~/miniconda3/bin/conda init bash
 ```
 
 # Updating Miniconda.
 
-* I make my account the owner of the Miniconda directory:
+* I make my account the owner of the `Miniconda` directory:
     
 
 ```bash
-sudo chown -R $USER:$USER /home/brian/miniconda3
+sudo chown -R $USER:$USER $HOME/miniconda3
 ```
 
-* I update Miniconda:
+* I update `Miniconda`:
     
 
 ```bash
@@ -160,32 +110,32 @@ conda update -n base -c defaults conda
 
 # Uninstalling Miniconda.
 
-* I activate the Miniconda (base) environment:
+* I activate the `Miniconda` (base) environment:
     
 
 ```bash
 conda activate
 ```
 
-* I remove any conda initialization scripts:
+* I remove any `conda` initialization scripts:
     
 
 ```bash
 conda init --reverse --all
 ```
 
-* I remove Miniconda from the $HOME directory:
+* I remove `Miniconda` from the $HOME directory:
     
 
 ```bash
-rm -rf ~/miniconda3
+rm -rf $HOME/miniconda3
 ```
 
-* Alternatively, I remove Miniconda from the /opt directory in the $HOME directory:
+* I also remove `Miniconda` from the `/opt` directory, if required:
     
 
 ```bash
-rm -rf ~/opt/miniconda3
+rm -rf $HOME/opt/miniconda3
 ```
 
 # Miniconda Environment Commands.
