@@ -1028,11 +1028,18 @@ curl https://get.modular.com | sh - && \
 modular auth mut_511d5ea22b594cd385f8216af63b2d73
 ```
 
-* I update the Modular CLI:
+* I can update the Modular CLI, if required:
     
 
 ```bash
 sudo apt install -y modular
+```
+
+* I sign into your Modular account:
+    
+
+```bash
+modular auth
 ```
 
 * I install Mojo:
@@ -1042,11 +1049,45 @@ sudo apt install -y modular
 modular install mojo
 ```
 
-* I update Mojo:
+* I can update Mojo, if required:
     
 
 ```bash
 modular update mojo
+```
+
+* I install MAX:
+    
+
+```bash
+modular install max
+```
+
+* I can update MAX, if required:
+    
+
+```bash
+modular update max
+```
+
+* I install the MAX Engine Python package:
+    
+
+```bash
+MAX_PATH=$(modular config max.path) \
+&& python3 -m pip install --find-links $MAX_PATH/wheels max-engine
+```
+
+* I use `Bash` to set environment variables:
+    
+
+```bash
+MAX_PATH=$(modular config max.path) \
+&& BASHRC=$( [ -f "$HOME/.bash_profile" ] \
+&& echo "$HOME/.bash_profile" || echo "$HOME/.bashrc" ) \
+&& echo 'export MODULAR_HOME="'$HOME'/.modular"' >> "$BASHRC" \
+&& echo 'export PATH="'$MAX_PATH'/bin:$PATH"' >> "$BASHRC" \
+&& source "$BASHRC"
 ```
 
 * I update my system:
