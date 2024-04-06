@@ -96,6 +96,17 @@ My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home systems
 
 * After installing Ubuntu 24.04 LTS, I open the terminal.
     
+* I install the Terminator:
+    
+
+```bash
+sudo apt install terminator
+```
+
+* I close the Ubuntu terminal.
+    
+* I open the terminal again (which should now be the Terminator.)
+    
 * I reset the terminal:
     
 
