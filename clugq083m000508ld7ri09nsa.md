@@ -133,26 +133,42 @@ curl wget zip unzip
 
 > NOTE: Some of these utilities may already be installed by default.
 
-## Changing the Terminal Settings.
+## Changing the Terminator Settings.
 
 * I right-click the terminal, select `Preferences` from the pop-up menu, and perform the following actions:
     
-    * Change the terminal size to 112 columns and 24 rows,
+    * Activate `Profiles > default > General > Show titlebar` then change the terminal size to 112 columns and 24 rows,
         
-    * Activate the `Custom font` and change the size to 16pt.
+    * `Layouts > default > Save` button to save changes,
         
-    * Never `Allow blinking text` within the terminal,
+    * Change `Global > Appearance > Unfocused...` settings to `50%`,
         
-    * Set the `Cursor shape` to `Block`, if required, and,
+    * Change `Global > Appearance > Unfocused...` settings to `70%`,
         
-    * Disable the `Cursor blinking` within the terminal.
+    * Deactivate `Profiles > default > General > Use the system fixed width font` and set the `Font` to Monospace Regular 16pt.
+        
+    * Deactivate `Profiles > default > General > Blink`,
+        
+    * Change `Profiles > default > General > Cursor > Shape` to `Block`, if required, and,
+        
+    * Deactivate `Profiles > default > Colours > Foreground and Background > Use colours from system theme`,
+        
+    * Change `Profiles > default > Colours > Foreground and Background > Built-in schemes` to `Ambience`,
+        
+    * Change `Profiles > default > Colours > Foreground and Background > Foreground` to custom `#FAFAFA`, and
+        
+    * Change `Profiles > default > Colours > Foreground and Background > Background` to custom `#300A24`,
+        
+    * Deactivate `Profiles > default > General > Show titlebar`, and
+        
+    * `Layouts > default > Save` button to save changes.
         
 
 > NOTE: I change these settings so that screenshots and screencasts will clearly display my prompts in the terminal. Also, I'm old. Even with glasses, I'm still old.
 
 ## Changing Some System Settings.
 
-* I open the `Settings` menu from the System menu (top-right of the screen) or the Apps menu (𐄡).
+* I open the `Settings` menu (⚙) from the `System` menu (top-right of the screen) or the `Show Apps` menu (𐄡).
     
 * I change to `Dark` mode at `Settings > Appearance > Style`, if required.
     
@@ -227,7 +243,7 @@ Throughout the rest of this post, I will be creating way-point images as recover
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From the terminal, I change the owner of the `Ubuntu` image:
     
@@ -399,7 +415,7 @@ sudo apt autoremove -y
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * I change the owner of the `Nas` image:
     
@@ -424,7 +440,7 @@ sudo apt install -y ubuntustudio-installer
 ubuntustudio-installer
 ```
 
-> NOTE: I can also run the installer from the Apps menu (𐄡).
+> NOTE: I can also run the installer from the `Show Apps` menu (𐄡).
 
 * When the installer completes, I reboot my system to check the installation.
     
@@ -454,7 +470,7 @@ sudo apt autoremove -y
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From a terminal, I change the owner of the `Studio` image:
     
@@ -522,7 +538,7 @@ sudo apt autoremove -y
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From the terminal, I change the owner of the `Pacman` image:
     
@@ -642,7 +658,7 @@ sudo apt autoremove -y
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From the terminal, I change the owner of the `Browsers` image:
     
@@ -1178,7 +1194,7 @@ sudo apt autoremove -y
     
 * In the file manager, I navigate into the `img-work` drive.
     
-* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the popup menu).
+* I open the `img-work` drive in a terminal (`Right-click > Open in Terminal` from the pop-up menu).
     
 * From the terminal, I change the owner of the `LangUtils` image:
     
