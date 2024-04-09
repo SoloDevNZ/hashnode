@@ -123,15 +123,15 @@ sudo usermod -aG sudo yt
 
 > NOTE: Fresh-baked irony: I need `sudo` privileges to enable `sudo` privileges.
 
-* I install the secure transport protocol for the `APT` (advanced packaging tool), as well as `curl`, `wget`, `zip`, and `unzip`.
+* I install the secure transport protocol for the `APT` (advanced packaging tool), as well as `curl`, `wget`, `zip`, `unzip` ,, an
     
 
 ```plaintext
-sudo apt install -y apt-transport-https \
+,sudo apt install -y apt-transport-https \
 curl wget zip unzip
 ```
 
-> NOTE: Some of these utilities may already be installed by default.
+> NOTE: Some of these utilties may already be installed by default.
 
 ## Changing the Terminator Settings.
 
