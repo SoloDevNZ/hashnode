@@ -221,7 +221,7 @@ pip install Scrapy twisted[tls]
 scrapy startproject tutorial
 ```
 
-## Writing a Spider.
+## Creating a Spider.
 
 * I use the Nano text editor to create a file called `quotes_spider01.py`:
     
