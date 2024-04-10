@@ -750,7 +750,40 @@ timedatectl set-local-rtc 0 --adjust-system-clock
 
 ## Installing Pika Backup.
 
-\[pending\]
+* I install the Flatpak package manager, if required:
+    
+
+```bash
+sudo apt install flatpak
+```
+
+* I add the Flathub repository:
+    
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+* I install the Pika Backup utility:
+    
+
+```bash
+flatpak install flathub -y org.gnome.World.PikaBackup
+```
+
+* I can uninstall Pika Backup, if required:
+    
+
+```bash
+flatpak uninstall --delete-data org.gnome.World.PikaBackup
+```
+
+* I can uninstall any unused Flatpacks, if required:
+    
+
+```bash
+flatpak uninstall --unused
+```
 
 ## Installing Spotify.
 
