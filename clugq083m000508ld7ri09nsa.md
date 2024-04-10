@@ -748,6 +748,10 @@ timedatectl
 timedatectl set-local-rtc 0 --adjust-system-clock
 ```
 
+## Installing Pika Backup.
+
+\[pending\]
+
 ## Installing Spotify.
 
 * I use Snap to install Spotify:
