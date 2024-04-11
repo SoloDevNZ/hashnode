@@ -985,6 +985,10 @@ class QuotesSpider(scrapy.Spider):
 > 
 > [https://docs.scrapy.org/en/latest/topics/spiders.html#spider-arguments](https://docs.scrapy.org/en/latest/topics/spiders.html#spider-arguments)
 
+# Following Up.
+
+Now that I have a *very basic* understanding of how Scrapy works, it is time to follow up, and reinforce what I have learned with other, structured tutorials. Choosing the right tutorials can be problematic but it does *not* have to be complicated. I tend to start with learning materials that are short and cover very specific points.
+
 # The Results.
 
 In this post, I've covered the basics of using Scrapy for web scraping. From setting up my environment with Miniconda, understanding the essentials of Python virtual environments, and diving into the creation of Scrapy spiders for data extraction, I've covered a broad spectrum of knowledge. I demonstrated how to scrape quotes, navigate through pages, and even extract detailed information about authors. The [original tutorial](https://docs.scrapy.org/en/latest/intro/tutorial.html) (of which this is but pale copy) helped me get familiar with Scrapy's capabilities and also led to acquiring the practical skills needed to undertake my own web scraping projects. With this knowledge, I'm better prepared to use web scraping for opening up a world of analysis, insight, and innovation. My interest lies in creating large language model embeddings for web development and Scrapy will help me collect processes and procedures for the latest WebDev and AppDev technologies and best practices.
