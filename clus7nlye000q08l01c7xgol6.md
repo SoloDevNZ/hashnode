@@ -462,7 +462,7 @@ response.css("noelement").get()
 
 ```python
 # This line of code is using the `CSS` selector to extract the text
-# content of an HTML element with the tag name "title"and then using
+# content of an HTML element with the tag name "title" and then using
 # the `re` method to perform a regular expression match on the extracted
 # text. The regular expression pattern used in this case is `"Quotes.*"`
 # which matches any string that starts with "Quotes".
