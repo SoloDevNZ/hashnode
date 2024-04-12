@@ -987,7 +987,9 @@ class QuotesSpider(scrapy.Spider):
 
 # Following Up.
 
-Now that I have a *very basic* understanding of how Scrapy works, it is time to follow up, and reinforce what I have learned with other, structured tutorials. Choosing the right tutorials can be problematic but it does *not* have to be complicated. I tend to start with learning materials that are short and cover very specific points.
+Now that I have a *very basic* understanding of how Scrapy works, it is time to follow up, and reinforce what I have learned, with other tutorials. Choosing the right tutorials can be problematic but it does *not* have to be complicated. I tend to start with learning materials that cover very specific points, especially if they are short.
+
+A quick search for Scrapy tutorials should work a treat.
 
 # The Results.
 
