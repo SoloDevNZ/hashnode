@@ -1,5 +1,5 @@
 ---
-title: "2 of 4: Scraping Tutorial for the Scrapy Tool."
+title: "2 of 5: Scraping Tutorial for the Scrapy Tool."
 datePublished: Tue Apr 09 2024 10:00:27 GMT+0000 (Coordinated Universal Time)
 cuid: clus7nlye000q08l01c7xgol6
 slug: 2-of-4-scraping-tutorial-for-the-scrapy-tool
