@@ -2,8 +2,8 @@
 title: "2 of 5: Scraping Tutorial for the Scrapy Tool."
 datePublished: Tue Apr 09 2024 10:00:27 GMT+0000 (Coordinated Universal Time)
 cuid: clus7nlye000q08l01c7xgol6
-slug: 2-of-4-scraping-tutorial-for-the-scrapy-tool
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1712565830230/8d93d994-c5aa-4598-a7d2-0a1e28d2bb45.png
+slug: 2-of-5-scraping-tutorial-for-the-scrapy-tool
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1713399562843/42a1f6b7-2728-4f1e-b4c3-2f8cf2deb656.png
 tags: python, scrapy, web-scraping, web-crawling, python-programming, miniconda, programming-tips, virtual-environment, data-extraction, tech-insights, tech-tutorial, scrapy-tutorial, scrapy-spiders
 
 ---
