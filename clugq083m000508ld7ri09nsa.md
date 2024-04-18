@@ -738,6 +738,20 @@ sudo ubuntu-drivers autoinstall
 
 > [https://ubuntu.com/server/docs/nvidia-drivers-installation](https://ubuntu.com/server/docs/nvidia-drivers-installation)
 
+* I can remove NVIDIA, if required:
+    
+
+```plaintext
+sudo apt remove *nvidia*
+```
+
+* I can then use APT to re-install the 535 driver:
+    
+
+```plaintext
+sudo apt install nvidia-driver-535
+```
+
 ## Fixing the Dual-Boot Time Issue.
 
 * I adjust the clock to fix the dual-boot time issue:
