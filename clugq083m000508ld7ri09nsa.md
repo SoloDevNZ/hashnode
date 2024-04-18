@@ -722,7 +722,7 @@ I install the following apps.
 
 * I check the GPU driver from the `Software & Updates > Additional Drivers` tab, if required.
     
-* I install the GPU device driver (the nvidia-driver-535 Metapackage) for my GTX3060 graphics card, if required:
+* I install the GPU device driver (the `nvidia-driver-535` Metapackage) for my GTX3060 graphics card, if required:
     
 
 ```bash
