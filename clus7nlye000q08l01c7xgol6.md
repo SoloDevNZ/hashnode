@@ -8,7 +8,7 @@ tags: python, scrapy, web-scraping, web-crawling, python-programming, miniconda,
 
 ---
 
-[Scraping URLs](https://solodev.app/1-of-4-scraping-website-urls) | Scraping Websites | Making Embeddings | Using Embeddings
+[Scraping URLs](https://solodev.app/1-of-5-scraping-website-urls) | [Scraping Tutorial](https://solodev.app/2-of-5-scraping-tutorial-for-the-scrapy-tool) | Scraping Data | Making Embeddings | Using Embeddings
 
 Originally published: Tuesday 9<sup>th</sup> April 2024.
 
@@ -1017,4 +1017,4 @@ Until next time: Be safe, be kind, be awesome.
 
 #Scrapy #ScrapyTutorial #ScrapySpiders #WebScraping #WebCrawling #DataExtraction #Python #PythonProgramming #Miniconda #VirtualEnvironments #ProgrammingTips #TechTutorial #TechInsights
 
-[Scraping URLs](https://solodev.app/1-of-4-scraping-website-urls) | Scraping Websites | Making Embeddings | Using Embeddings
+[Scraping URLs](https://solodev.app/1-of-5-scraping-website-urls) | [Scraping Tutorial](https://solodev.app/2-of-5-scraping-tutorial-for-the-scrapy-tool) | Scraping Data | Making Embeddings | Using Embeddings
