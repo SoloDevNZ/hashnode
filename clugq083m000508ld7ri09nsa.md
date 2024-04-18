@@ -722,7 +722,7 @@ I install the following apps.
 
 * I check the GPU driver from the `Software & Updates > Additional Drivers` tab, if required.
     
-* I install the GPU device driver (Metapackage from nvidia-driver-535), if required:
+* I install the GPU device driver (the nvidia-driver-535 Metapackage) for my GTX3060 graphics card, if required:
     
 
 ```bash
@@ -738,7 +738,7 @@ sudo ubuntu-drivers autoinstall
 
 > [https://ubuntu.com/server/docs/nvidia-drivers-installation](https://ubuntu.com/server/docs/nvidia-drivers-installation)
 
-* I can remove NVIDIA, if required:
+* I can remove the NVIDIA packages, if required:
     
 
 ```plaintext
