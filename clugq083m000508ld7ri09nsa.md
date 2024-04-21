@@ -585,7 +585,7 @@ sudo apt update
     
 
 ```bash
-sudo apt install brave-browser
+sudo apt install -y brave-browser
 ```
 
 * I run the following command that creates, or replaces, the `brave-browser-release.list` file so that it includes the `arch=amd64` parameter:
