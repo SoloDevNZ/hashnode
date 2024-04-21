@@ -53,6 +53,8 @@ For now, I will practice the installation process with Ubuntu 23.10.
 
 * A NEW Linux-based distribution called [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)***↗.***
     
+* Deregistering any important apps, e.g. DaVinci Resolve Studio.
+    
 
 # Making a Bootable USB Installer.
 
@@ -92,81 +94,37 @@ https://ubuntu.com/download/desktop
 
 ## During the Installation Process.
 
-My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home systems run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows. If things go wrong then I'd have to re-install Windows as well. Upgrading Ubuntu is painful enough. There's no point in shoving a thumb in my eye while I'm at it.
+My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home-based PCs run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows. If things go wrong then I'd have to re-install Windows as well. Upgrading Ubuntu is a painful process and there's no point in shoving a thumb in my eye while I'm at it.
 
-## Securing the APT Package Manager.
+## OPTIONAL: Fix for the Terminal Input Delay.
 
-* After installing Ubuntu 24.04 LTS, I open the terminal.
-    
-* I install the Terminator:
+* I add a new repo to my system:
     
 
 ```bash
-sudo apt install terminator
+sudo add-apt-repository ppa:vanvugt/mutter
 ```
 
-* I close the Ubuntu terminal.
-    
-* I open the terminal again (which should now be the Terminator.)
-    
-* I reset the terminal:
+* I update my local repo list:
     
 
 ```bash
-reset
+sudo apt update
 ```
 
-* I make sure my account has all the `sudo` privileges:
+* I upgrade my system:
     
 
 ```bash
-sudo usermod -aG sudo yt
+sudo apt upgrade
 ```
 
-> NOTE: Fresh-baked irony: I need `sudo` privileges to enable `sudo` privileges.
-
-* I install the secure transport protocol for the `APT` (advanced packaging tool), as well as `curl`, `wget`, `zip`, `unzip` , and `pavucontrol`.
+* I reboot my system:
     
 
-```plaintext
-,sudo apt install -y apt-transport-https \
-curl wget zip unzip pavucontrol
+```bash
+reboot # Or use 'sudo reboot'
 ```
-
-> NOTE: Some of these utilities may already be installed by default.
-
-## Changing the Terminator Settings.
-
-* I right-click the terminal, select `Preferences` from the pop-up menu, and perform the following actions:
-    
-    * Activate `Profiles > default > General > Show titlebar` then change the terminal size to 112 columns and 24 rows,
-        
-    * `Layouts > default > Save` button to save changes,
-        
-    * Change `Global > Appearance > Unfocused...` settings to `50%`,
-        
-    * Change `Global > Appearance > Unfocused...` settings to `70%`,
-        
-    * Deactivate `Profiles > default > General > Use the system fixed width font` and set the `Font` to Monospace Regular 16pt.
-        
-    * Deactivate `Profiles > default > General > Blink`,
-        
-    * Change `Profiles > default > General > Cursor > Shape` to `Block`, if required, and,
-        
-    * Deactivate `Profiles > default > Colours > Foreground and Background > Use colours from system theme`,
-        
-    * Change `Profiles > default > Colours > Foreground and Background > Built-in schemes` to `Ambience`,
-        
-    * Change `Profiles > default > Colours > Foreground and Background > Foreground` to custom `#FAFAFA`, and
-        
-    * Change `Profiles > default > Colours > Foreground and Background > Background` to custom `#300A24`,
-        
-    * Deactivate `Profiles > default > General > Show titlebar`, and
-        
-    * `Layouts > default > Save` button to save changes.
-        
-
-> NOTE: I change these settings so that screenshots and screencasts will clearly display my prompts in the terminal. Also, I'm old. Even with glasses, I'm still old.
 
 ## Changing Some System Settings.
 
