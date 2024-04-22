@@ -322,7 +322,7 @@ There are many other features that Twinny provides.
 
 # What is VS Code?
 
-Visual Studio Code (VS Code) is a simple, yet powerful, code editor that works on my computer with versions for Windows, macOS, and Linux. It natively supports JavaScript, TypeScript, and Node.js. Other programming languages and technical abilities are available to VS Code through the use of appropriate extensions.
+Visual Studio Code (VS Code) is a simple, yet powerful, code editor that works on my computer with versions for Windows, macOS, and Linux. It natively supports JavaScript, TypeScript, and Node.js. Other programming languages and technical abilities are available to VS Code through the use of appropriate Extensions.
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)***↗.***
 
