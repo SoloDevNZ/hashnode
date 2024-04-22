@@ -318,11 +318,11 @@ Twinny is the definitive, no-nonsense, AI code completion plugin for VS Code. It
 
 There are many other features that Twinny provides.
 
-[https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny](https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny↗)↗.
+[https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny](https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny%E2%86%97)↗.
 
 # What is VS Code?
 
-Visual Studio Code (VS Code) is a simple, yet powerful, code editor that works on my computer with versions for Windows, macOS, and Linux. It natively supports JavaScript, TypeScript, and Node.js, and I can add more languages like C++, C#, Java, Python, PHP, Go, .NET, and others through extensions.
+Visual Studio Code (VS Code) is a simple, yet powerful, code editor that works on my computer with versions for Windows, macOS, and Linux. It natively supports JavaScript, TypeScript, and Node.js. Other programming languages and technical abilities are available to VS Code through the use of appropriate extensions.
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)***↗.***
 
