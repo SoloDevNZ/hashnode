@@ -314,9 +314,16 @@ Streamlit is a free, open-source framework that helps me make web apps from data
 
 # What is Twinny?
 
-Twinny is the definitive, no-nonsense, AI code completion plugin for VS Code. It is also compatible with the VSCodium editor. Twinny is designed to seamlessly work with locally-hosted LLMs (large language models), frameworks, and tools. It supports FIM (fill in the middle) code completion using real-time, AI-based suggestions that helps with auto-completion as I type my code. I can also discuss my code via the sidebar, get function explanations, generate tests, request refactoring, and more.
+Twinny is an AI code completion plugin for VS Code. It is also compatible with the VSCodium editor. Twinny is designed to seamlessly work with locally-hosted LLMs (large language models), frameworks, and tools. It supports FIM (fill in the middle) code completion by providing real-time, AI-based suggestions that help as I type my code. I can also discuss my code with an LLM via the sidebar, where I can:
 
-There are many other features that Twinny provides.
+* Get explanations for how a function works,
+    
+* Ask the LLM to generate tests,
+    
+* Request code refactoring,
+    
+* and more.
+    
 
 [https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny](https://marketplace.visualstudio.com/items?itemName=rjmacarthy.twinny%E2%86%97)↗.
 
