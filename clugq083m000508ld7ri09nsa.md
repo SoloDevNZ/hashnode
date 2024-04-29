@@ -369,6 +369,76 @@ sudo apt autoremove -y
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-nas</mark>.
     
 
+# Setting the Audio Output Device.
+
+> NOTE: These settings relate to the devices that drive speakers and headphones.
+
+* I power up my Workstation.
+    
+* I open a Terminal.
+    
+* I list my Pulse Audio output devices:
+    
+
+```bash
+pactl list short sinks
+```
+
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1714383256357/ce161c48-7b53-45dd-b256-05492abbdbc2.png align="center")
+
+> NOTE: I can also use the `pactl list short sources` command to list audio inputs.
+
+* I set my default output audio device:
+    
+
+```bash
+pactl set-default-sink alsa_output.pci-0000_0a_00.3.analog-stereo
+```
+
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1714383400186/be7dcfa2-4bfd-4034-92e8-165023a2aaad.png align="center")
+
+* I list my output audio devices again, to confirm the change:
+    
+
+```bash
+pactl list short sinks
+```
+
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1714383439393/27ac9050-92b8-4e18-b671-74a7c3705b0f.png align="center")
+
+* I open the default Pulse Audio file with the Nano text editor:
+    
+
+```bash
+sudo nano /etc/pulse/default.pa
+```
+
+* I scroll to the end of the file (CTRL + END), comment out the existing `set-default-sink` setting with a hash (#), replace it with the following, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```bash
+set-default-sink alsa_output.pci-0000_0a_00.3.analog-stereo
+```
+
+> ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1714383918633/ad6e875c-2eeb-49ae-a8a4-5202f31ef8d3.png align="center")
+
+* I update my system:
+    
+
+```bash
+sudo apt clean && \
+sudo apt update && \
+sudo apt dist-upgrade -y && \
+sudo apt --fix-broken install && \
+sudo apt autoclean && \
+sudo apt autoremove -y
+```
+
+* I reboot my system with the CloneZilla USB thumb drive installed.
+    
+* I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-audio</mark>.
+    
+
 # Installing Ubuntu Studio.
 
 * I power up my Workstation.
