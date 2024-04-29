@@ -1,5 +1,5 @@
 ---
-title: "Preparing for Ubuntu 24.04 LTS."
+title: "Installing Ubuntu 24.04 LTS."
 datePublished: Mon Apr 01 2024 09:00:55 GMT+0000 (Coordinated Universal Time)
 cuid: clugq083m000508ld7ri09nsa
 slug: preparing-for-ubuntu-2404-lts
@@ -14,11 +14,9 @@ Update: Thursday 11<sup>th</sup> April 2024.
 
 # TL;DR.
 
-This is a continually evolving post. Although already published, this document will develop further as testing results will show that some content needs to be added, some content needs to be moved, and some content needs to be dropped. Editing this guide will result in improved efficiencies when deploying the rollout for real. Efficiency is important because I have multiple systems that will need my attention.
+Installing Ubuntu 24.04 LTS is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The Ubuntu 24.04 LTS distro offers a stable system and a predictable computing environment.
 
-Getting ready for the Ubuntu 24.04 LTS upgrade is a step-by-step process. It includes making a bootable USB thumb drive on Windows 11, installing and securing Ubuntu, setting up Ubuntu Studio, and imaging my system with CloneZilla. This post also covers installing different package managers, browsers, various software, and LLM utilities. The upgrade to Ubuntu 24.04 LTS, happening on April 25, 2024, aims to offer me a stable system with a predictable computing environment.
-
-Fortunately, I already have Ubuntu 22.04 LTS images waiting in the wings <s>for when </s> *should* things go to hell in a handbasket.
+Fortunately, I also have images of my previous system if anything should go wrong.
 
 > **Attributions:**
 > 
@@ -32,7 +30,7 @@ In 2015, I started using CentOS 7 which was my first Linux-based daily driver. W
 
 # The Big Picture.
 
-On Thursday 25<sup>th</sup> April 2024 (or thereabouts), I will install the new Ubuntu 24.04 LTS (long term service) distribution on every system in my home. These systems include:
+I will install the new Ubuntu 24.04 LTS (long term service) distribution on every system in my home. These systems include:
 
 * My Workstation PC (which is a dual-boot system),
     
@@ -44,10 +42,6 @@ On Thursday 25<sup>th</sup> April 2024 (or thereabouts), I will install the new 
     
 
 My NAS has its own proprietary OS.
-
-For now, I will practice the installation process with Ubuntu 23.10.
-
-> NOTE: Ubuntu 23.10, code-named "Mantic Minotaur", is a regular release. This means Mantic is only supported until July 2024. Looking at the version number, I can tell that Mantic was released in October (23.`10`) of 2023 (`23`.10).
 
 # Prerequisites.
 
@@ -66,9 +60,7 @@ For now, I will practice the installation process with Ubuntu 23.10.
 * I download the Ubuntu 24.04 LTS ISO file:
     
 
-```plaintext
-https://ubuntu.com/download/desktop
-```
+[https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 
 * I download, and install, an ISO-to-USB utility like [Rufus](https://rufus.ie/en/) or [balenaEtcher](https://etcher.balena.io/).
     
@@ -83,9 +75,9 @@ https://ubuntu.com/download/desktop
     
 * I (re)start my system.
     
-* During POST (power-on self test), I boot into my UEFI BIOS (unified extensible firmware interface basic input output system).
+* During POST (power-on self test), I boot into my UEFI BIOS (unified extensible firmware interface basic input output system) by tapping the F2 key.
     
-* I set the bootable USB thumb drive as the first boot device.
+* Within the UEFI BIOS, I set the bootable USB thumb drive as the first boot device.
     
 * I (re)start the UEFI BIOS POST sequence.
     
@@ -94,7 +86,9 @@ https://ubuntu.com/download/desktop
 
 ## During the Installation Process.
 
-My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home-based PCs run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows. If things go wrong then I'd have to re-install Windows as well. Upgrading Ubuntu is a painful process and there's no point in shoving a thumb in my eye while I'm at it.
+My Workstation is a Windows/Ubuntu dual-boot system. The rest of my home-based PCs run Ubuntu only. Therefore, only my Workstation requires a carefully crafted installation process, i.e. installing Ubuntu without destroying Windows. If things go wrong then I'd have to re-install Windows as well. Upgrading Ubuntu on a dual-boot system is a painful process.
+
+> NOTE: I may need to use the 'Grubfix' utility, that I keep on a separate USB thumb drive, if I can't choose Ubuntu or Windows when booting into my Workstation.
 
 ## OPTIONAL: Fix for the Terminal Input Delay.
 
@@ -190,7 +184,7 @@ Throughout the rest of this post, I will be creating way-point images as recover
 * I use CloneZilla to create an image of the distribution called <mark>[date]-img-work-ubuntu</mark>.
     
 
-> NOTE: The `[date]-img` is automatically generated by CloneZilla, `work` refers to the Workstation, and `ubuntu` is a reference to the contents of the image file. For instance, another system might use a name like `[date]-img-bed-porn` (which stands for `processes operating registration networks`, of course).
+> NOTE: The `[date]-img` is automatically generated by CloneZilla, `work` refers to the Workstation, and `ubuntu` is a reference to the contents of the image file. For instance, another system might use a name like `[date]-img-bed-porn` (which stands for `packaging opinions regarding nachos`, of course).
 
 * The last option in my imaging sequence is to power off the system after the image is created.
     
