@@ -8,6 +8,8 @@ tags: ubuntu, python, data-science, coding, programming-ciovqvfcb008mb253jrczo9y
 
 ---
 
+Update: 2<sup>nd</sup> May 2024.
+
 # TL;DR.
 
 This post provides a comprehensive guide on how to install, use, and uninstall Miniconda, a compact version of Anaconda, on a Debian-based Linux distro. It explains the process of creating, renaming, and deleting environments in Miniconda, as well as how to test Python scripts. I also offer a brief introduction to Python and its advantages for application development.
@@ -107,6 +109,31 @@ sudo chown -R $USER:$USER $HOME/miniconda3
 ```bash
 conda update -n base -c defaults conda
 ```
+
+# Setting the (base) Home Directory.
+
+* I make new directories within the (`base`) environment:
+    
+
+```bash
+mkdir -p ~/miniconda3/etc/conda/activate.d
+```
+
+* I use the Nano text editor to create the (`set_working_directory.sh`) shell script:
+    
+
+```bash
+sudo nano ~/miniconda3/etc/conda/activate.d/set_working_directory.sh
+```
+
+* I copy the following, paste (CTRL + SHIFT + V) it to the set\_working\_directory.sh script, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```bash
+cd ~
+```
+
+> NOTE: I will now return to my `Home` directory whenever I run `conda activate`.
 
 # Uninstalling Miniconda.
 
