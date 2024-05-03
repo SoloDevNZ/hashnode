@@ -234,6 +234,16 @@ The microservice architecture enables an organization to deliver large, complex 
 
 [https://www.ibm.com/topics/microservices](https://www.ibm.com/topics/microservices)***↗.***
 
+# What is a Multi-Agent Workflow?
+
+An agent is an entity that is powered by an LLM (large language model). The agent will also have its own prompt, a selection of tools, and some custom code that helps with collaboration. A multi-agent workflow is built with *at least* two agents that collaborate with each other in order to achieve my specifically defined outcome.
+
+[https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/](https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/) ***↗,***
+
+[https://blog.langchain.dev/langgraph-multi-agent-workflows/](https://blog.langchain.dev/langgraph-multi-agent-workflows/) ***↗,***
+
+[https://docs.crewai.com/core-concepts/Collaboration/](https://docs.crewai.com/core-concepts/Collaboration/) ***↗.***
+
 # What is NGINX?
 
 NGINX is a free, open-source tool for web hosting, reverse proxying, caching, load balancing, media streaming, and more. It began as a web server focused on top performance and stability. Besides its HTTP server features, NGINX can also work as an email proxy server (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.
