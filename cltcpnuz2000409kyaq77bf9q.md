@@ -10,17 +10,19 @@ tags: cloudflare, github, technology, python, git, miniconda, streamlit, anacond
 
 # TL;DR.
 
-This post provides an overview of various technologies used in the digital world. It covers Python and Git for coding, Docker and LXC for creating virtual environments, AnythingLLM and Ollama for AI capabilities, and Cloudflare and Streamlit for web hosting and data management. It emphasizes the importance of understanding these technologies to excel in the online landscape.
+This post provides an overview of the various technologies I use in this blog. This list is *not* extensive, yet still emphasizes the importance of understanding, and applying, technology. If I want to excel in the continually-evolving development landscape, then quickly adapting to new tech needs to be an integral part of my daily routine.
 
 # An Introduction.
 
-Using a template provides a standard layout the helps with parsing the content of my posts. This blueprint continues to evolve as new methods of presenting information are adopted.
+Using a template provides a layout that helps with parsing the content of my posts. This blueprint evolves as I adopt new ways of presenting my content to the world. This list will expand as I also adopt new tech that solves common problems.
 
-> The purpose of this post is to centralise the short descriptions, and attributions, that are used as segment headings in my articles.
+> The purpose of this post is to centralise the descriptions of the technologies I employ in my solutions.
 
 # The Big Picture.
 
-As part of my ever-evolving layout, I've decided to centralise a specific part of my template. Below are small descriptions of specific technologies that are used to preface new coding and/or operations segments in my posts.
+As part of my layout, there's a common section where I describe a technology that I use. As a result of containing each post in my blog as a separate entity, many of the summaries that I use are repeated throughout my blog. Having a repository of all of these outlines makes creating new post much easier, because then I can mix these technical tools in subtle, or complex, ways.
+
+Below are descriptions of many technologies that I use to build my solutions.
 
 # What is Anaconda and Miniconda?
 
@@ -238,11 +240,11 @@ The microservice architecture enables an organization to deliver large, complex 
 
 An agent is an entity that is powered by an LLM (large language model). The agent will also have its own prompt, a selection of tools, and some custom code that helps with collaboration. A multi-agent workflow is built with *at least* two agents that collaborate with each other in order to achieve my specifically defined outcome.
 
-[https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/](https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/) ***↗,***
+[https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/](https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/)***↗,***
 
-[https://blog.langchain.dev/langgraph-multi-agent-workflows/](https://blog.langchain.dev/langgraph-multi-agent-workflows/) ***↗,***
+[https://blog.langchain.dev/langgraph-multi-agent-workflows/](https://blog.langchain.dev/langgraph-multi-agent-workflows/)***↗,***
 
-[https://docs.crewai.com/core-concepts/Collaboration/](https://docs.crewai.com/core-concepts/Collaboration/) ***↗.***
+[https://docs.crewai.com/core-concepts/Collaboration/](https://docs.crewai.com/core-concepts/Collaboration/)***↗.***
 
 # What is NGINX?
 
