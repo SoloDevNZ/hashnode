@@ -40,7 +40,11 @@ Combined, these tools provide a wide range of options when developing AI solutio
 
 * A Debian-based Linux distro (I use Ubuntu),
     
-* [Miniconda](https://solodev.app/installing-miniconda).
+* [Miniconda](https://solodev.app/installing-miniconda),
+    
+* [LiteLLM](https://solodev.app/installing-litellm), and
+    
+* Flowise UI.
     
 
 # Updating my Base System.
