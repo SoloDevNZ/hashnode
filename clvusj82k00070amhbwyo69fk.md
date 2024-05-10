@@ -1,8 +1,8 @@
 ---
-title: "Installing Langflow and Flowise."
+title: "00: Installing Langflow and Flowise."
 datePublished: Mon May 06 2024 10:00:09 GMT+0000 (Coordinated Universal Time)
 cuid: clvusj82k00070amhbwyo69fk
-slug: installing-langflow-and-flowise
+slug: 00-installing-langflow-and-flowise
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1714952656308/8a8b36fa-c02d-41dd-bb5e-a1be3cae95f3.png
 tags: ai, artificial-intelligence, software-development, innovation, workflow-automation, tech-community, ai-integration, ai-applications, low-code-platforms, tech-tools, langflow, flowise
 
