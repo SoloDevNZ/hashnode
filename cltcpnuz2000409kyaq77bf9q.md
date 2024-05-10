@@ -116,11 +116,17 @@ Docker Swarm mode is part of the current versions of Docker and helps manage a g
 
 [https://docs.docker.com/engine/swarm/](https://docs.docker.com/engine/swarm/)***↗.***
 
+# What is Flowise?
+
+Flowise is an open-source, low-code platform that helps me easily create customized AI workflows and agents. It simplifies the development of AI applications, which usually require many iterations, by allowing for quick changes from testing to production. Chatflows link AI models with various tools like memory, data loaders, and cache, along with over a hundred other integrations including LangChain and LlamaIndex. This setup enables the creation of autonomous agents and assistants that can perform diverse tasks using custom tools. I can build functional agents and OpenAI assistants, or opt for local AI models to save costs. Flowise supports extensions and integrations through APIs, SDKs, and embedded chat features. It is platform-agnostic, meaning Flowise can work with local, open-source AI models in secure, offline environments using local data storage. It is compatible with various platforms and technologies like Ollama, HuggingFace, AWS (Amazon Web Services), Azure, and GCP (Google Cloud Platform), offering flexibility in deployment.
+
+[https://docs.flowiseai.com/](https://docs.flowiseai.com/)↗.
+
 # What is Gatsby?
 
 Gatsby is an open-source, React-based, static site generator (SSG) framework. It is used to build websites that are performant, scalable, and secure. I can also pull data from a headless CMS.
 
-[https://www.gatsbyjs.com/](https://www.gatsbyjs.com/)
+[https://www.gatsbyjs.com/](https://www.gatsbyjs.com/)***↗.***
 
 # What is Git?
 
@@ -178,6 +184,12 @@ LangGraph is a tool for creating complex applications with LLMs that involve mul
 [https://python.langchain.com/docs/langgraph](https://python.langchain.com/docs/langgraph)↗.
 
 These LangChain tools must be installed (`pip show langchain`) before continuing with this post.
+
+# What is Langflow?
+
+Langflow is a user-friendly interface for LangChain, built using react-flow. It lets me easily create, and test, different setups by dragging and dropping components and using a chat box. Each part of the graph in Langflow works on its own. It's designed to help me quickly try out new ideas and build AI applications without needing to write much code. Langflow comes with ready-to-use components that I can mix and match to build AI apps. It fits perfectly with the tools I already use and makes it simple to develop basic, or advanced, AI applications. Langflow is all about making AI integration straightforward while expanding what I can do with AI in both tests and real-life use cases.
+
+[https://docs.langflow.org/](https://docs.langflow.org/)↗.
 
 # What is LiteLLM?
 
