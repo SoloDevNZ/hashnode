@@ -292,9 +292,15 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 Ollama is a tool for downloading, setting up, and running LLMs (large language models). It lets me access powerful models like Llama 2 and Mistral and helps me run them on my local Linux, macOS, and Windows systems.
 
-[https://ollama.com/↗](https://ollama.com/%E2%86%97).
+[https://ollama.com/](https://ollama.com/%E2%86%97) ↗.
 
 [Ollama must be installed](https://solodev.app/installing-ollama) (`ollama -v`) before continuing with this post.
+
+# What is Open WebUI?
+
+Open WebUI is a flexible, feature-rich, and easy-to-use web interface that runs locally and works completely offline. It supports OpenAI-compatible APIs and the Ollama LLM manager. Ollama is a free, open-source manager that lets me run multiple LLMs on my PC. It uses llama.cpp, an open-source library that helps run LLMs on less powerful hardware. Ollama also includes a feature for downloading LLMs.
+
+[https://github.com/open-webui/open-webui](https://github.com/open-webui/open-webui) ↗.
 
 # What is Pythagora?
 
