@@ -46,7 +46,7 @@ AnythingLLM is a free, easy-to-use, and versatile document chatbot. It is made f
 
 # What is Chroma?
 
-Chroma is an open-source vector database for saving, and using, embeddings. Its main job is to store embeddings, with related information, for use by large language models. Chroma works well as a foundation for text-based search engines and is perfect for handling lots of unstructured and partly structured data.
+Chroma is an open-source vector database used for saving, and using, embeddings. Its main job is to store embeddings, with related meta data, that is used by large language models. Chroma works well as a foundation for text-based search engines and is perfect for handling lots of unstructured and partly structured data.
 
 [https://www.trychroma.com/](https://www.trychroma.com/)***↗.***
 
