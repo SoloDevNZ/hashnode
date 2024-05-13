@@ -288,6 +288,12 @@ NVM (Node Version Manager) is used to switch between versions of Node.js. NVM wo
 
 [Node.js must be installed](https://solodev.app/installing-node-and-npm-with-nvm) (`node -v`) before continuing with this post.
 
+# What is Nomic Embed?
+
+Nomic Embed is a text embedding model that is open source and fully reproducible. It can process text up to 8,192 characters long and uses openly available, curated data for training. Text embeddings are crucial for modern NLP (natural language processing) applications that offer enhanced search, or mechanisms that generate responses for LLMs (large language models). Embeddings models turn text into vectors, which are then used in various tasks such as clustering for visualization, classifying information, and retrieving data.
+
+[https://blog.nomic.ai/posts/nomic-embed-text-v1](https://blog.nomic.ai/posts/nomic-embed-text-v1) ↗.
+
 # What is Ollama?
 
 Ollama is a tool for downloading, setting up, and running LLMs (large language models). It lets me access powerful models like Llama 2 and Mistral and helps me run them on my local Linux, macOS, and Windows systems.
