@@ -117,7 +117,7 @@ sudo apt upgrade
     
 
 ```bash
-reboot # Or use 'sudo reboot'
+sudo reboot
 ```
 
 ## OPTIONAL: Settings for the Default Audio.
@@ -125,14 +125,14 @@ reboot # Or use 'sudo reboot'
 * In a Terminal, I list the audio output devices:
     
 
-```plaintext
+```bash
 pactl list short sinks
 ```
 
 * I list the audio input devices:
     
 
-```plaintext
+```bash
 pactl list short sources
 ```
 
@@ -144,7 +144,7 @@ pactl list short sources
 * I use the Nano text editor to open the Pulse settings file:
     
 
-```plaintext
+```bash
 sudo nano /etc/pulse/default.pa
 ```
 
@@ -159,7 +159,7 @@ set-default-source 8
 * I reboot my PC:
     
 
-```plaintext
+```bash
 sudo reboot
 ```
 
