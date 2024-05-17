@@ -165,7 +165,7 @@ sudo reboot
 
 ## Changing Some Other System Settings.
 
-* I open the `Settings` menu (⚙) from the `System` menu (top-right of the screen) or the `Show Apps` menu (𐄡).
+* I open the `Settings` menu (⚙) from the `System` menu (top-right of the screen) or the `App Drawer` (𐄡).
     
 * I change to `Dark` mode at `Settings > Appearance > Style`, if required.
     
@@ -507,7 +507,7 @@ sudo apt install -y ubuntustudio-installer
 ubuntustudio-installer
 ```
 
-> NOTE: I can also run the installer from the `Show Apps` menu (𐄡).
+> NOTE: I can also run the installer from the `App Drawer` (𐄡).
 
 * When the installer completes, I reboot my system to check the installation.
     
