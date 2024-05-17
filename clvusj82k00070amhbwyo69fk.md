@@ -230,7 +230,7 @@ Langflow is a user-friendly interface for LangChain, built using react-flow. It 
     
 
 ```plaintext
-pip install langflow -U --force-reinstall
+pip install langflow[local] -U --force-reinstall
 ```
 
 * I run Langflow:
