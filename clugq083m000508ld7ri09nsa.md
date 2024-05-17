@@ -120,7 +120,50 @@ sudo apt upgrade
 reboot # Or use 'sudo reboot'
 ```
 
-## Changing Some System Settings.
+## OPTIONAL: Settings for the Default Audio.
+
+* In a Terminal, I list the audio output devices:
+    
+
+```plaintext
+pactl list short sinks
+```
+
+* I list the audio input devices:
+    
+
+```plaintext
+pactl list short sources
+```
+
+* I note the numbers of the devices I want to set as the default audio input and output, e.g. 6 and 8:
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1715929608801/655e215d-f13a-4cd9-91ae-30d82bd43ecf.png align="center")
+
+* I use the Nano text editor to open the Pulse settings file:
+    
+
+```plaintext
+sudo nano /etc/pulse/default.pa
+```
+
+* I navigate to the bottom of the file (CTRL + END), add the following, save (CTRL + S) the changes, and exit (CTRL + X) Nano:
+    
+
+```plaintext
+set-default-sink 6 
+set-default-source 8
+```
+
+* I reboot my PC:
+    
+
+```plaintext
+sudo reboot
+```
+
+## Changing Some Other System Settings.
 
 * I open the `Settings` menu (⚙) from the `System` menu (top-right of the screen) or the `Show Apps` menu (𐄡).
     
