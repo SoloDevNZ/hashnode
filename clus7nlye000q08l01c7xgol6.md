@@ -1,5 +1,5 @@
 ---
-title: "2 of 5: Scraping Tutorial for the Scrapy Tool."
+title: "2 of 5: Learning the Scrapy Framework."
 datePublished: Tue Apr 09 2024 10:00:27 GMT+0000 (Coordinated Universal Time)
 cuid: clus7nlye000q08l01c7xgol6
 slug: 2-of-5-scraping-tutorial-for-the-scrapy-tool
@@ -8,7 +8,7 @@ tags: python, scrapy, web-scraping, web-crawling, python-programming, miniconda,
 
 ---
 
-[Scraping URLs](https://solodev.app/1-of-5-scraping-website-urls) | [Scraping Tutorial](https://solodev.app/2-of-5-scraping-tutorial-for-the-scrapy-tool) | Scraping Data | Making Embeddings | Using Embeddings
+JavaScript Scraping | Scrapy | ScrapeGraphAI | Nomic Embed | Embeddings & LLMs
 
 Originally published: Tuesday 9<sup>th</sup> April 2024.
 
