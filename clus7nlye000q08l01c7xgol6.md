@@ -8,7 +8,7 @@ tags: python, scrapy, web-scraping, web-crawling, python-programming, miniconda,
 
 ---
 
-JavaScript Scraping | Scrapy | ScrapeGraphAI | Nomic Embed | Embeddings & LLMs
+JavaScript Scraping | Scrapy | ScrapeGraphAI | Nomic | Embeddings & LLMs
 
 Originally published: Tuesday 9<sup>th</sup> April 2024.
 
