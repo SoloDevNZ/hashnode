@@ -116,6 +116,12 @@ Docker Swarm mode is part of the current versions of Docker and helps manage a g
 
 [https://docs.docker.com/engine/swarm/](https://docs.docker.com/engine/swarm/)***↗.***
 
+# What is Elia?
+
+Elia is a terminal-based app for interacting with LLMs. It's designed to be keyboard-focused, efficient, and fun to use. It saves your conversations in a local SQLite database and lets you interact with different models. You can chat with proprietary models like ChatGPT and Claude, or with local models using ollama or LocalAI.
+
+[https://github.com/darrenburns/elia](https://github.com/darrenburns/elia) ↗.
+
 # What is Flowise?
 
 Flowise is an open-source, low-code platform that helps me easily create customized AI workflows and agents. It simplifies the development of AI applications, which usually require many iterations, by allowing for quick changes from testing to production. Chatflows link AI models with various tools like memory, data loaders, and cache, along with over a hundred other integrations including LangChain and LlamaIndex. This setup enables the creation of autonomous agents and assistants that can perform diverse tasks using custom tools. I can build functional agents and OpenAI assistants, or opt for local AI models to save costs. Flowise supports extensions and integrations through APIs, SDKs, and embedded chat features. It is platform-agnostic, meaning Flowise can work with local, open-source AI models in secure, offline environments using local data storage. It is compatible with various platforms and technologies like Ollama, HuggingFace, AWS (Amazon Web Services), Azure, and GCP (Google Cloud Platform), offering flexibility in deployment.
