@@ -12,7 +12,7 @@ tags: ai, python, machine-learning, deep-learning, nvidia, speech-recognition, c
 
 # TL;DR.
 
-This post guides me through the process of installing WhisperAI from OpenAI for FREE. It covers prerequisites like a Debian-based Linux distro and Miniconda, steps to update my system, and installing essential technologies such as FFMPEG, CUDA Toolkit, PyTorch, and Whisper. It also covers how to set up a Miniconda environment, creating directories, and running Whisper for speech recognition and translation. A future post will further explore how to use Python and Whisper together.
+This post guides me through the process of installing WhisperAI from OpenAI for FREE. It covers prerequisites like a Debian-based Linux distro and Miniconda, steps to update my system, and installing essential technologies such as FFmpeg, CUDA Toolkit, PyTorch, and Whisper. It also covers how to set up a Miniconda environment, creating directories, and running Whisper for speech recognition and translation. A future post will further explore how to use Python and Whisper together.
 
 > **Attributions:**
 > 
@@ -38,7 +38,7 @@ Please note that VocalCue.com is a working title and *may* be replaced on launch
 
 # The Big Picture.
 
-Whisper is an open-source project from OpenAI and is available to the public under the MIT license. If I decide to use Whisper as part of my VocalCue teleprompter project, then I will also open-source my code under the same license. For now, this post is all about installing, and evaluating, the Whisper tool.
+Whisper is an open-source project from OpenAI and is available to the public under the MIT license. If I decide to use Whisper as part of my VocalCue teleprompter project, then I will also open-source my code under the same license. This post is all about installing the Whisper tool, as well as three other supporting technologies.
 
 ---
 
@@ -69,27 +69,39 @@ sudo apt autoremove -y
 
 ---
 
-# Preparing my (base) Environment.
+# What is FFmpeg?
 
-Whisper requires 4 technologies to work properly.
+FFmpeg is a top multimedia tool that can decode, encode, transcode, mux, demux, stream, filter, and play almost any format created by humans or machines. It supports both old and new formats, whether made by a standards group, the community, or a company. FFmpeg is also very portable: it can be compiled, run, and tested on Linux, Mac OS X, Windows, BSDs, Solaris, and more, across different build environments, machine types, and setups.
 
-## 1 of 4: Installing FFMPEG.
+[https://ffmpeg.org/](https://ffmpeg.org/) ***↗.***
 
-* I check which version of FFMPEG is installed:
+## 1 of 4: Installing FFmpeg.
+
+* I check to see which version of FFmpeg is installed:
     
 
 ```bash
 ffmpeg -v
 ```
 
-> NOTE: FFMPEG will need installing if it's not on my system.
+> NOTE: FFmpeg will need installing if it is not already on my system.
 
-* I install FFMPEG, if required, into my (base) environment:
+* I install FFmpeg, if required, into my (base) environment:
     
 
 ```bash
 sudo apt update && sudo apt install ffmpeg
 ```
+
+# What is CUDA?
+
+CUDA is a parallel computing platform and programming model created by NVIDIA. It has been downloaded over 20 million times and helps developers speed up their applications using GPU accelerators. CUDA is used in many fields, not just high-performance computing and research. For example, pharmaceutical companies use CUDA to find new treatments, cars use it to improve self-driving, and stores use it to analyse customer data for recommendations and ads.
+
+Some people think CUDA, launched in 2006, is just a programming language or an API. But with over 150 CUDA-based libraries, SDKs, and tools, it's much more than that. NVIDIA keeps innovating, and thousands of GPU-accelerated applications use the NVIDIA CUDA platform. CUDAs flexibility and programmability make it the top choice for developing new deep learning and parallel computing algorithms.
+
+CUDA also helps developers easily use the latest GPU features, like those in the NVIDIA Ampere GPU architecture.
+
+[https://blogs.nvidia.com/blog/what-is-cuda-2/](https://blogs.nvidia.com/blog/what-is-cuda-2/) ***↗.***
 
 ## 2 of 4: Installing the CUDA Toolkit.
 
@@ -257,7 +269,7 @@ whisper test1.wav
 
 > NOTE: I didn't set the `--language` flag. Whisper decided I was speaking Maori. Actually, the recording is of a Maori speaking. The model may have detected my accent. Or not. Who knows?
 
-* Next, I test Whisper to see if FFMPEG can provide it with the original MP4 file:
+* Next, I test Whisper to see if FFmpeg can provide it with the original MP4 file:
     
 
 ```bash
@@ -326,7 +338,7 @@ In a follow-up post, I will look at [using Python to manipulate Whisper](https:/
 
 # The Results.
 
-Installing WhisperAI from OpenAI is a straightforward process *if* I follow these steps and prerequisites. By ensuring I have the right environment, tools like FFMPEG, CUDA Toolkit, PyTorch, and Whisper itself, I can effectively set up and utilize this powerful speech recognition model. Whispers' ability to transcribe text and translate audio to English, from multiple languages, makes it a versatile tool for numerous applications. In a future post, I will explore more advanced usage and customization by using Python, opening up even more possibilities for integrating Whisper into my projects.
+Installing WhisperAI from OpenAI is a straightforward process *if* I follow these steps and prerequisites. By ensuring I have the right environment, tools like FFmpeg, CUDA Toolkit, PyTorch, and Whisper itself, I can effectively set up and utilize this powerful speech recognition model. Whispers' ability to transcribe text and translate audio to English, from multiple languages, makes it a versatile tool for numerous applications. In a future post, I will explore more advanced usage and customization by using Python, opening up even more possibilities for integrating Whisper into my projects.
 
 ---
 
@@ -351,7 +363,7 @@ I can install, and use, Whisper from OpenAI for FREE. Yes, you heard that right!
         
 2. **I installed essential technologies:**
     
-    * **FFMPEG:** I checked for FFMPEG, and installed if it was not available.
+    * FFmpeg**:** I checked for FFmpeg, and installed if it was not available.
         
     * **CUDA Toolkit:** The CUDA toolkit is used to access NVIDIA GPUs.
         
@@ -387,7 +399,7 @@ I can install, and use, Whisper from OpenAI for FREE. Yes, you heard that right!
 
 **Results:**
 
-* Setting up Whisper is straightforward if I follow these steps and prerequisites. With tools like FFMPEG, CUDA Toolkit, PyTorch, and Whisper, I can effectively utilize this powerful speech recognition model.
+* Setting up Whisper is straightforward if I follow these steps and prerequisites. With tools like FFmpeg, CUDA Toolkit, PyTorch, and Whisper, I can effectively utilize this powerful speech recognition model.
     
 
 Are you excited to try Whisper in your own projects? What other AI tools are you interested in exploring? Let's discuss in the comments below!
@@ -396,7 +408,7 @@ Until next time: Be safe, be kind, be awesome.
 
 ---
 
-#WhisperAI #OpenAI #SpeechRecognition #Transcription #LanguageTranslation #AI #Python #PyTorch #NVIDIA #CUDA #FFMPEG #AItools #AIresearch #MachineLearning #DeepLearning #Miniconda #TechInnovation #FreeTools #OpenSource #TechTutorial #Ubuntu #Linux #Programming
+#WhisperAI #OpenAI #SpeechRecognition #Transcription #LanguageTranslation #AI #Python #PyTorch #NVIDIA #CUDA #FFmpeg #AItools #AIresearch #MachineLearning #DeepLearning #Miniconda #TechInnovation #FreeTools #OpenSource #TechTutorial #Ubuntu #Linux #Programming
 
 ---
 
@@ -406,9 +418,9 @@ Until next time: Be safe, be kind, be awesome.
 
 3/ Update your base system to ensure it’s stable and up-to-date. This is a crucial step before installing any new software or dependencies.
 
-4/ Whisper requires four key technologies: FFMPEG, CUDA Toolkit, PyTorch, and Whisper itself. I’ll walk you through installing each one.
+4/ Whisper requires four key technologies: FFmpeg, CUDA Toolkit, PyTorch, and Whisper itself. I’ll walk you through installing each one.
 
-5/ Check if FFMPEG is installed. If not, install it in your base environment. FFMPEG is crucial for handling audio files.
+5/ Check if FFmpeg is installed. If not, install it in your base environment. FFmpeg is crucial for handling audio files.
 
 6/ If you have an NVIDIA GPU, install the CUDA Toolkit. This toolkit allows Whisper to leverage the power of your GPU for faster processing.
 
