@@ -16,7 +16,7 @@ This post provides an overview of the various technologies I use in this blog. T
 
 This list evolves as I adopt new ways of solving problems. This list will also expand as new technologies are added to my toolkit.
 
-> The purpose of this post is to centralise the descriptions of the techniques, and technologies, I employ in my workflows.
+> The purpose of this post is to centralise the descriptions of the techniques, and technologies, I employ in my workflow.
 
 # The Big Picture.
 
@@ -64,7 +64,7 @@ Some people think CUDA, launched in 2006, is just a programming language or an A
 
 CUDA also helps developers easily use the latest GPU features, like those in the NVIDIA Ampere GPU architecture.
 
-[https://blogs.nvidia.com/blog/what-is-cuda-2/](https://blogs.nvidia.com/blog/what-is-cuda-2/) ***↗.***
+[https://blogs.nvidia.com/blog/what-is-cuda-2/](https://blogs.nvidia.com/blog/what-is-cuda-2/)***↗.***
 
 # What is Distrobox?
 
@@ -136,7 +136,7 @@ Elia is a terminal-based app for interacting with LLMs. It's designed to be keyb
 
 FFmpeg is a top multimedia tool that can decode, encode, transcode, mux, demux, stream, filter, and play almost any format created by humans or machines. It supports both old and new formats, whether made by a standards group, the community, or a company. FFmpeg is also very portable: it can be compiled, run, and tested on Linux, Mac OS X, Windows, BSDs, Solaris, and more, across different build environments, machine types, and setups.
 
-[https://ffmpeg.org/](https://ffmpeg.org/) ***↗.***
+[https://ffmpeg.org/](https://ffmpeg.org/)***↗.***
 
 # What is Flowise?
 
