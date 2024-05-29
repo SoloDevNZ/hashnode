@@ -332,6 +332,12 @@ Python is an easy-to-understand programming language that is ideal for quickly d
 
 [https://www.python.org/doc/essays/blurb/](https://www.python.org/doc/essays/blurb/)***↗.***
 
+# What is PyTorch?
+
+PyTorch is an open-source deep learning framework known for its flexibility and ease of use. It works well with Python, a popular language among machine learning developers and data scientists. PyTorch is a complete framework for building deep learning models, which are often used in tasks like image recognition and language processing. Since it is written in Python, most machine learning developers find it easy to learn and use. PyTorch was created by developers at Facebook AI Research and other labs. It combines fast and flexible GPU-accelerated back-end libraries from [Torch.ch](http://Torch.ch) with an easy-to-use Python frontend. This makes it great for quick prototyping, readable code, and supporting many types of deep learning models. PyTorch allows AI engineers to use a familiar programming style while still creating graphs. It was open-sourced in 2017, and its' Python base has made it popular with machine learning developers.
+
+[https://pytorch.org/](https://pytorch.org/↗)↗.
+
 # What is RSA?
 
 Rivest-Shamir-Adleman (RSA) is a type of encryption that is popular in many products and services. It uses two connected keys to lock and unlock data. There is a private key and a public key. The public key can be shared with anyone, but the private key is kept secret by the person who made the keys. With RSA, the public key can lock the data, but only the private key can unlock it.
@@ -392,6 +398,14 @@ Web page scraping, or data scraping, is the process of collecting content and da
 # What are Web URL Scrapings?
 
 URLs (uniform resource locations) describe where specific assets (webpages, email services, downloads, etc.) are found. These are usually fed into the address bar of my browser either manually or via a link on a webpage. URL scraping is the process of finding all the URLs at a specified, domain-name address and then saving the results to a file or database.
+
+# What is WhisperAI?
+
+From the [GitHub page](https://github.com/openai/whisper) ↗:
+
+Whisper is a speech recognition model. It is trained on a large set of audio types and can perform multiple tasks like recognizing different languages, transcribing spoken text, and translating multiple languages to English.
+
+[https://github.com/openai/whisper](https://github.com/openai/whisper) ↗:
 
 # The Results.
 
