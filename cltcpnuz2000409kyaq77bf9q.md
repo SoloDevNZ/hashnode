@@ -308,6 +308,14 @@ Open WebUI is a flexible, feature-rich, and easy-to-use web interface that runs 
 
 [https://github.com/open-webui/open-webui](https://github.com/open-webui/open-webui) ↗.
 
+# What is pipx?
+
+pipx is a tool that helps me install and run Python applications in isolated environments. It's similar to macOS's brew, JavaScript's npx, and Linux's apt. It works with pip, but it focuses on installing and managing Python packages that I can run from the command line as applications.
+
+pip is a general-purpose package installer for both libraries and apps that have no environment isolation. pipx is made specifically for application installation, as it adds isolation yet still makes the apps available in my shell: pipx creates an isolated environment for each application and its associated packages. pipx does not ship with pip, but installing it is often an important part of bootstrapping my system.
+
+[https://pipx.pypa.io/stable/](https://pipx.pypa.io/stable/) ↗.
+
 # What is Pythagora?
 
 Pythagora is a tool that helps create apps from the ground up using large language models. It's an extension for VS Code and runs on GPT Pilot, one of the best code generators around. While designed around GPT-4, I have adjusted the GPT Pilot settings so Pythagora can work with local LLMs (large language models).
