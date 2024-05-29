@@ -3,26 +3,26 @@ title: "What is Technology?"
 datePublished: Mon Mar 04 2024 09:00:31 GMT+0000 (Coordinated Universal Time)
 cuid: cltcpnuz2000409kyaq77bf9q
 slug: what-is-technology
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1709191615668/1ba33f01-8bf8-45f4-ab61-71991981a755.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1717021916325/1c69c81e-b126-4b07-8ffe-8af38cc7d3ef.png
 tags: cloudflare, github, technology, python, git, miniconda, streamlit, anaconda, chromadb, ollama, anythingllm, tech-talk, gitlab-ce, digital-world, chroma
 
 ---
 
 # TL;DR.
 
-This post provides an overview of the various technologies I use in this blog. This list is *not* extensive, yet still emphasizes the importance of understanding, and applying, technology. If I want to excel in the continually-evolving development landscape, then quickly adapting to new tech needs to be an integral part of my daily routine.
+This post provides an overview of the various technologies I use in this blog. This list is *not* extensive, yet still emphasizes the importance of understanding, and applying, technological solutions. To excel in the continually-evolving development landscape, adapting to new tools needs to be an integral part of my daily routine.
 
 # An Introduction.
 
-Using a template provides a layout that helps with parsing the content of my posts. This blueprint evolves as I adopt new ways of presenting my content to the world. This list will expand as I also adopt new tech that solves common problems.
+This list evolves as I adopt new ways of solving problems. This list will also expand as new technologies are added to my toolkit.
 
-> The purpose of this post is to centralise the descriptions of the technologies I employ in my solutions.
+> The purpose of this post is to centralise the descriptions of the techniques, and technologies, I employ in my workflows.
 
 # The Big Picture.
 
-As part of my layout, there's a common section where I describe a technology that I use. As a result of containing each post in my blog as a separate entity, many of the summaries that I use are repeated throughout my blog. Having a repository of all of these outlines makes creating new post much easier, because then I can mix these technical tools in subtle, or complex, ways.
+I usually describe the technologies I use within the posts that I write. As a result, my tool descriptions are usually repeated throughout my blog. This is the result of trying to ensure each post is self-contained. (Sometimes, however, I may need to divide a topic across multiple posts.) Repetitive tool descriptions will happen when using the same tool on multiple projects. Therefore, having a repository of these descriptions makes creating new posts a little easier.
 
-Below are descriptions of many technologies that I use to build my solutions.
+Below are descriptions of many technologies I use to build my solutions.
 
 # What is Anaconda and Miniconda?
 
@@ -55,6 +55,16 @@ Chroma is an open-source vector database used for saving, and using, embeddings.
 Cloudflare is a worldwide network of data centres that offer content and services that make websites and apps faster, safer, and more reliable. It's one of the biggest networks in the world. Companies, non-profits, bloggers, and anyone with an online presence enjoy quicker, more secure websites and apps because of Cloudflare. It supports millions of internet properties, and its network grows by tens of thousands daily. Cloudflare handles internet requests for millions of websites and manages, on average, 55 million HTTP requests per second.
 
 [https://www.cloudflare.com/](https://www.cloudflare.com/)***↗.***
+
+# What is CUDA?
+
+CUDA is a parallel computing platform and programming model created by NVIDIA. It has been downloaded over 20 million times and helps developers speed up their applications using GPU accelerators. CUDA is used in many fields, not just high-performance computing and research. For example, pharmaceutical companies use CUDA to find new treatments, cars use it to improve self-driving, and stores use it to analyse customer data for recommendations and ads.
+
+Some people think CUDA, launched in 2006, is just a programming language or an API. But with over 150 CUDA-based libraries, SDKs, and tools, it's much more than that. NVIDIA keeps innovating, and thousands of GPU-accelerated applications use the NVIDIA CUDA platform. CUDAs flexibility and programmability make it the top choice for developing new deep learning and parallel computing algorithms.
+
+CUDA also helps developers easily use the latest GPU features, like those in the NVIDIA Ampere GPU architecture.
+
+[https://blogs.nvidia.com/blog/what-is-cuda-2/](https://blogs.nvidia.com/blog/what-is-cuda-2/) ***↗.***
 
 # What is Distrobox?
 
@@ -121,6 +131,12 @@ Docker Swarm mode is part of the current versions of Docker and helps manage a g
 Elia is a terminal-based app for interacting with LLMs. It's designed to be keyboard-focused, efficient, and fun to use. It saves your conversations in a local SQLite database and lets you interact with different models. You can chat with proprietary models like ChatGPT and Claude, or with local models using ollama or LocalAI.
 
 [https://github.com/darrenburns/elia](https://github.com/darrenburns/elia) ↗.
+
+# What is FFmpeg?
+
+FFmpeg is a top multimedia tool that can decode, encode, transcode, mux, demux, stream, filter, and play almost any format created by humans or machines. It supports both old and new formats, whether made by a standards group, the community, or a company. FFmpeg is also very portable: it can be compiled, run, and tested on Linux, Mac OS X, Windows, BSDs, Solaris, and more, across different build environments, machine types, and setups.
+
+[https://ffmpeg.org/](https://ffmpeg.org/) ***↗.***
 
 # What is Flowise?
 
@@ -336,7 +352,7 @@ Python is an easy-to-understand programming language that is ideal for quickly d
 
 PyTorch is an open-source deep learning framework known for its flexibility and ease of use. It works well with Python, a popular language among machine learning developers and data scientists. PyTorch is a complete framework for building deep learning models, which are often used in tasks like image recognition and language processing. Since it is written in Python, most machine learning developers find it easy to learn and use. PyTorch was created by developers at Facebook AI Research and other labs. It combines fast and flexible GPU-accelerated back-end libraries from [Torch.ch](http://Torch.ch) with an easy-to-use Python frontend. This makes it great for quick prototyping, readable code, and supporting many types of deep learning models. PyTorch allows AI engineers to use a familiar programming style while still creating graphs. It was open-sourced in 2017, and its' Python base has made it popular with machine learning developers.
 
-[https://pytorch.org/](https://pytorch.org/↗)↗.
+[https://pytorch.org/](https://pytorch.org/%E2%86%97)↗.
 
 # What is RSA?
 
