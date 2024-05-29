@@ -200,12 +200,6 @@ conda activate Whisper
 
 ---
 
-# What is WhisperAI?
-
-From the [GitHub page](https://github.com/openai/whisper)↗:
-
-Whisper is a speech recognition model. It is trained on a large set of audio types and can perform multiple tasks like recognizing different languages, transcribing spoken text, and translating multiple languages to English.
-
 # What is PyTorch?
 
 PyTorch is an open-source deep learning framework known for its flexibility and ease of use. It works well with Python, a popular language among machine learning developers and data scientists. PyTorch is a complete framework for building deep learning models, which are often used in tasks like image recognition and language processing. Since it is written in Python, most machine learning developers find it easy to learn and use. PyTorch was created by developers at Facebook AI Research and other labs. It combines fast and flexible GPU-accelerated back-end libraries from Torch.ch with an easy-to-use Python frontend. This makes it great for quick prototyping, readable code, and supporting many types of deep learning models. PyTorch allows AI engineers to use a familiar programming style while still creating graphs. It was open-sourced in 2017, and its' Python base has made it popular with machine learning developers.
@@ -229,6 +223,14 @@ pip3 install torch torchvision torchaudio \
 --index-url https://download.pytorch.org/whl/cu118
 ```
 
+---
+
+# What is WhisperAI?
+
+From the GitHub page↗:
+
+Whisper is a speech recognition model. It is trained on a large set of audio types and can perform multiple tasks like recognizing different languages, transcribing spoken text, and translating multiple languages to English.
+
 ## 4 of 4: Installing Whisper AI.
 
 * I use the pip command to install Whisper into the (Whisper) environment:
@@ -240,9 +242,7 @@ pip install -U openai-whisper
 
 > NOTE: The `-U` flag means upgrade, if Whisper is already installed.
 
----
-
-# Running WhisperAI.
+## Running WhisperAI.
 
 * I place an audio file, called test.wav, into the Whisper directory.
     
