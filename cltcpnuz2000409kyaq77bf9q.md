@@ -348,6 +348,12 @@ Python is an easy-to-understand programming language that is ideal for quickly d
 
 [https://www.python.org/doc/essays/blurb/](https://www.python.org/doc/essays/blurb/)***↗.***
 
+# What is the Python Interpreter?
+
+The Python interpreter is a computer program that converts human-readable, high-level program statements into computer-readable, low-level machine code. In other words, the interpreter translates the high-level, human-readable commands into low-level, computer-executable commands. High-level, human-readable programming languages require low-level, computer-executable translations. In the case of Python and JavaScript, these translations are provided by runtime interpreters. Other high-level languages, like C and Rust, use compilers and linkers to build executable files and libraries.
+
+[https://docs.python.org/3/tutorial/interpreter.html](https://docs.python.org/3/tutorial/interpreter.html↗) ↗.
+
 # What is PyTorch?
 
 PyTorch is an open-source deep learning framework known for its flexibility and ease of use. It works well with Python, a popular language among machine learning developers and data scientists. PyTorch is a complete framework for building deep learning models, which are often used in tasks like image recognition and language processing. Since it is written in Python, most machine learning developers find it easy to learn and use. PyTorch was created by developers at Facebook AI Research and other labs. It combines fast and flexible GPU-accelerated back-end libraries from [Torch.ch](http://Torch.ch) with an easy-to-use Python frontend. This makes it great for quick prototyping, readable code, and supporting many types of deep learning models. PyTorch allows AI engineers to use a familiar programming style while still creating graphs. It was open-sourced in 2017, and its' Python base has made it popular with machine learning developers.
