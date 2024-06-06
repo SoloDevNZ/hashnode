@@ -26,17 +26,17 @@ Below are descriptions of many technologies I use to build my solutions.
 
 # What is Anaconda and Miniconda?
 
-Python projects can run in virtual environments. These isolated spaces are used to manage project dependencies. Different versions of the same package can run in different environments specifically to avoid any conflicts between these versions.
+Python projects run in virtual environments. These isolated spaces are used to manage project dependencies. Different environments are used specifically to avoid conflicting versions of the same program, for instance, different versions of Python.
 
-venv is a built-in Python 3.3+ module that runs virtual environments. Anaconda is a Python and R distribution for scientific computing that includes the `conda` package manager. Miniconda is a small, free, bootstrap version of Anaconda that also includes the `conda` package manager, Python, and other packages that are required or useful (like pip and zlib).
+venv is a virtual environment manager that is bundled with Python since version 3.3. However, venv is not the only environment manager. Anaconda is a Python and R distribution for scientific computing that includes the conda package manager. Miniconda, a bootstrap version of Anaconda, is a virtual environment manager that is small, FREE, and also includes the conda package manager, Python, and other packages that are required or useful to a developer, like pip and zlib.
 
-[http://www.anaconda.com/](http://www.anaconda.com/)***↗,***
+[http://www.anaconda.com/](http://www.anaconda.com/↗)↗,
 
-[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html)***↗, and***
+[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html↗)↗, and
 
 [https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
 
-[Miniconda must be installed](https://solodev.app/installing-miniconda) (`conda -V`) before continuing with this post.
+Miniconda must be installed (conda -V) before continuing with this post.
 
 # What is AnythingLLM?
 
@@ -352,7 +352,7 @@ Python is an easy-to-understand programming language that is ideal for quickly d
 
 The Python interpreter is a computer program that converts human-readable, high-level program statements into computer-readable, low-level machine code. In other words, the interpreter translates the high-level, human-readable commands into low-level, computer-executable commands. High-level, human-readable programming languages require low-level, computer-executable translations. In the case of Python and JavaScript, these translations are provided by runtime interpreters. Other high-level languages, like C and Rust, use compilers and linkers to build executable files and libraries.
 
-[https://docs.python.org/3/tutorial/interpreter.html](https://docs.python.org/3/tutorial/interpreter.html↗) ↗.
+[https://docs.python.org/3/tutorial/interpreter.html](https://docs.python.org/3/tutorial/interpreter.html%E2%86%97) ↗.
 
 # What is PyTorch?
 
