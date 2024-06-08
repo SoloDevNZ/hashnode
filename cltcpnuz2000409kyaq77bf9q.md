@@ -30,9 +30,9 @@ Python projects run in virtual environments. These isolated spaces are used to m
 
 venv is a virtual environment manager that is bundled with Python since version 3.3. However, venv is not the only environment manager. Anaconda is a Python and R distribution for scientific computing that includes the conda package manager. Miniconda, a bootstrap version of Anaconda, is a virtual environment manager that is small, FREE, and also includes the conda package manager, Python, and other packages that are required or useful to a developer, like pip and zlib.
 
-[http://www.anaconda.com/](http://www.anaconda.com/↗)↗,
+[http://www.anaconda.com/](http://www.anaconda.com/%E2%86%97)↗,
 
-[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html↗)↗, and
+[https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html%E2%86%97)↗, and
 
 [https://solodev.app/installing-miniconda](https://solodev.app/installing-miniconda).
 
@@ -344,9 +344,33 @@ Pythagora is a tool that helps create apps from the ground up using large langua
 
 # What is Python?
 
-Python is an easy-to-understand programming language that is ideal for quickly developing applications and integrating various components. It features built-in tools for code organization and reuse. Both the Python interpreter and a comprehensive standard library are freely available across all major platforms, making it a favourite among programmers for its efficiency in speeding up the development process. Unlike compiled languages, Python allows immediate editing, testing, and debugging, which enhances productivity. Debugging in Python is straightforward; instead of crashing, the interpreter presents exceptions, or stack traces, for uncaught errors. It also offers a source-level debugger for inspecting variables, evaluating expressions, setting breakpoints, and step-by-step code walk-throughs, all showcasing Python's versatility. Interestingly, the debugger itself is written in Python. Often, simply adding print statements to the code is the fastest debugging approach, benefiting from Python's quick edit-test-debug cycle.
+Python is an easy-to-understand programming language that is ideal for quickly developing applications. It features built-in tools for code organization and code reuse, as well as support for using C and C++ custom extensions. Both the Python interpreter and the standard library are freely available across all major platforms.
 
-[https://www.python.org/doc/essays/blurb/](https://www.python.org/doc/essays/blurb/)***↗.***
+Python is a favourite language among programmers because it speeds up the development process. Unlike compiled languages, enhanced productivity is the result of allowing immediate editing, testing, and debugging of your source code.
+
+Debugging in Python is very straightforward; instead of crashing the process that is running your code, the interpreter presents exceptions, or stack traces, for uncaught errors. The debugger also offers:
+
+* A source-level debugger for inspecting variables,
+    
+* A way of evaluating expressions,
+    
+* A way of setting breakpoints, and
+    
+* Support for step-by-step code walk-throughs.
+    
+
+These features showcase Python's debugging versatility. The debugger itself is written in Python, and adding print statements to your source code is the fastest debugging approach. This is another benefit of Python's edit-test-debug cycle.
+
+Thanks to this section of the video, you now know that Python:
+
+* Is made up of a language, interpreter, and standard library,
+    
+* Supports custom extensions made with C and C++, and
+    
+* Uses the edit-test-debug cycle as a coding practice.
+    
+
+[https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html↗)↗.
 
 # What is the Python Interpreter?
 
