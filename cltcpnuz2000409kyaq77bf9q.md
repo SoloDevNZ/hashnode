@@ -10,7 +10,9 @@ tags: cloudflare, github, technology, python, git, miniconda, streamlit, anacond
 
 # TL;DR.
 
-This post provides an overview of the various technologies I use in this blog. This list is *not* extensive, yet still emphasizes the importance of understanding, and applying, technological solutions. To excel in the continually-evolving development landscape, adapting to new tools needs to be an integral part of my daily routine.
+This post provides an overview of the various technologies I refer to in this blog. This list is *not* extensive, yet still emphasizes the importance of understanding, and applying, technological solutions. To excel in the continually-evolving development landscape, adapting to new tools needs to be an integral part of my daily routine.
+
+Also, writing (and maintaining) this list is how I flex.
 
 # An Introduction.
 
