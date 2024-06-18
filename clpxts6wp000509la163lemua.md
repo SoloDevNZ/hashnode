@@ -24,6 +24,8 @@ This post describes the installation of Ollama, a local large language model (LL
 > 
 > [Ollama.ai](https://ollama.ai/)↗.
 
+> NOTE: After extensive use, I have decided that Ollama should be installed in the (base) environment. This installation process reflects my opinion.
+
 ---
 
 # An Introduction.
