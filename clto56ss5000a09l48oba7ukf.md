@@ -61,7 +61,7 @@ sudo apt autoremove -y
 
 Ollama is a tool for downloading, setting up, and running LLMs (large language models). It lets me access powerful models like Llama 2 and Mistral and helps me run them on my local Linux, macOS, and Windows systems.
 
-[https://ollama.com/↗](https://ollama.com/%E2%86%97).
+[https://ollama.com/](https://ollama.com/)↗.
 
 [Miniconda must be installed](https://solodev.app/installing-miniconda) (`conda --version`) before continuing with this post.
 
