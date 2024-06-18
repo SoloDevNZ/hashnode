@@ -8,7 +8,7 @@ tags: ai, artificial-intelligence, ubuntu, linux, development, machine-learning,
 
 ---
 
-Published: Saturday 12<sup>th</sup> December 2023.  
+Update: Saturday 12<sup>th</sup> December 2023.  
 Update: Sunday 31<sup>st</sup> December 2023 (yes, I'm working on New Year's Eve.)  
 Update: Tuesday 20<sup>th</sup> February 2024.  
 Update: Sunday 10<sup>th</sup> March 2024.  
