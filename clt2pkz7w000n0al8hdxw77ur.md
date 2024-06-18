@@ -11,6 +11,8 @@ tags: ubuntu, python, data-science, coding, programming-ciovqvfcb008mb253jrczo9y
 Update: Thursday 2<sup>nd</sup> May 2024.  
 Update: Wednesday 19<sup>th</sup> June 2024.
 
+---
+
 # TL;DR.
 
 This post provides a comprehensive guide on how to install, use, and uninstall Miniconda, a compact version of Anaconda, on a Debian-based Linux distro. It explains the process of creating, renaming, and deleting environments in Miniconda, as well as how to test Python scripts. I also offer a brief introduction to Python and its advantages for application development.
