@@ -8,7 +8,8 @@ tags: ubuntu, python, data-science, coding, programming-ciovqvfcb008mb253jrczo9y
 
 ---
 
-Update: 2<sup>nd</sup> May 2024.
+Update: Thursday 2<sup>nd</sup> May 2024.  
+Update: Wednesday 19<sup>th</sup> June 2024.
 
 # TL;DR.
 
@@ -18,11 +19,19 @@ This post provides a comprehensive guide on how to install, use, and uninstall M
 > 
 > [https://docs.anaconda.com/free/miniconda/index.html](https://docs.anaconda.com/free/miniconda/index.html)***↗.***
 
+.
+
+> NOTE: Installing this utility will establish my Linux distribution as the (base) environment.
+
+---
+
 # An Introduction.
 
 This post is a guide to installing Miniconda on Ubuntu. It is a tool for managing and deploying Python applications, environments, and packages.
 
 > The purpose of this post is to introduce the Miniconda package manager, `conda`.
+
+---
 
 # The Big Picture.
 
@@ -32,10 +41,14 @@ Programs like [LXD](https://solodev.app/installing-lxd-and-using-lxcs), [Docker]
 
 Miniconda includes a package manager called `conda`. Below is a description of how to install Miniconda, which is a free installer form the creators of [Anaconda](https://www.anaconda.com/).
 
+---
+
 # Prerequisites.
 
 * A Debian-based Linux distro (I use Ubuntu).
     
+
+---
 
 # Updating the System.
 
@@ -50,6 +63,8 @@ sudo apt --fix-broken install && \
 sudo apt autoclean && \
 sudo apt autoremove -y
 ```
+
+---
 
 # What is Miniconda?
 
@@ -94,7 +109,7 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ```
 
-# Updating Miniconda.
+## Updating Miniconda.
 
 * I make my account the owner of the `Miniconda` directory:
     
@@ -110,7 +125,7 @@ sudo chown -R $USER:$USER $HOME/miniconda3
 conda update -n base -c defaults conda
 ```
 
-# Setting the (base) Home Directory.
+## Setting the (base) Home Directory.
 
 * I make new directories within the (`base`) environment:
     
@@ -135,7 +150,7 @@ cd ~
 
 > NOTE: I will now return to my `Home` directory whenever I run `conda activate`.
 
-# Uninstalling Miniconda.
+## Uninstalling Miniconda.
 
 * I activate the `Miniconda` (base) environment:
     
@@ -164,6 +179,8 @@ rm -rf $HOME/miniconda3
 ```bash
 rm -rf $HOME/opt/miniconda3
 ```
+
+---
 
 # Miniconda Environment Commands.
 
@@ -276,6 +293,8 @@ conda activate better-env
 
 > NOTE: I should now, by default, be in the `~/better-dir` home directory.
 
+---
+
 # What is Python?
 
 Python is an easy-to-understand programming language that is perfect for quickly creating applications and connecting different parts. It has built-in tools for organizing and reusing code. The Python interpreter and a large standard library are free for everyone on all major platforms. Programmers like Python because it speeds up our work. Since there's no need to compile my programs, editing, testing, and debugging is fast. Debugging Python programs is simple, as errors or bad inputs don't cause crashes. Instead, the interpreter shows an exception. If the program doesn't catch it, the interpreter displays a stack trace. A source level debugger lets me check variables, evaluate expressions, set breakpoints, and go through the code step by step. The debugger is even made in Python, showing its power. Sometimes, the quickest way to debug my code is to add print statements *to* my code. The fast edit-test-debug cycle makes this method very effective.
@@ -319,9 +338,13 @@ conda activate
 conda env remove -n better-env
 ```
 
+---
+
 # The Results.
 
 Miniconda is a compact version of Anaconda that comes with Python and the conda package manager. It allows me to create separate environments for different projects, ensuring that I have the right versions of Python and any packages I need. By following the steps outlined in this post, I can smoothly install, use, and even uninstall Miniconda on a Debian-based Linux distro. Moreover, with a basic understanding of Python, I can start creating applications quickly and efficiently.
+
+---
 
 # In Conclusion.
 
@@ -338,5 +361,7 @@ I use Miniconda to make my Python project management a breeze.
 Has anyone else used Miniconda? What's been your experience? Share your thoughts below!
 
 Until next time: Be safe, be kind, be awesome.
+
+---
 
 #Python #PythonDevelopment, #Miniconda #MinicondaGuide, #Programming, #Coding, #DataScience, #Ubuntu, #EnvironmentManagement, #Anaconda, #PythonApplications
