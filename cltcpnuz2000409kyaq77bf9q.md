@@ -126,6 +126,21 @@ Docker Swarm mode is part of the current versions of Docker and helps manage a g
 
 [https://docs.docker.com/engine/swarm/](https://docs.docker.com/engine/swarm/)***↗.***
 
+# What is a Domain Name?
+
+The Internet uses an octet (8-bit) numbering system to identify the locations of the numerous, online resources. These locations are called IPs, or Internet Protocol v4 addresses. (IP v6 addresses are also available, but they are rarely used.) Trying to remember 4 sets of numbers is tiresome so, in the early 1970s, domain names were introduced. When I type a domain name into the address bar of a browser, that name resolves to a specific IP address thanks to the Domain Name System, or DNS. DNS is the phone book of the Internet and uses a distributed service that resolves domain names to IP addresses. (New domains can take up to 48-hours to resolve.) Now that the browser knows the IP address, it can start interacting with the services at that given location. The computer at that specific IP address may be hosting any number of services, including (but not limited to):
+
+* Web servers,
+    
+* Email servers,
+    
+* Gaming servers, and
+    
+* FTP (File Transfer Protocol) servers.
+    
+
+Every device gets an IP address when it connects to the Internet. These dynamic IP addresses are pooled by each Internet Service Provider, or ISP. When a device disconnects from the Internet, the IP address is released and returned to the ISP pool. Companies (and people) that use domain names typically rent space on someone else's servers. They go to their domain name provider, point the domain name(s) to the DNS (Domain Name System) run by the host, activates some settings on the hosting service, and the domain name *eventually* points to the provided service (web hosting, email server, etc.) Less frequently, people like me rent static IPs from our ISPs, pass our domain name(s) through Cloudflare, use Cloudflare to resolve our domain names to our static IP addresses, and host our own services (web servers, email servers, etc.) on our own premises.
+
 # What is Elia?
 
 Elia is a terminal-based app for interacting with LLMs. It's designed to be keyboard-focused, efficient, and fun to use. It saves your conversations in a local SQLite database and lets you interact with different models. You can chat with proprietary models like ChatGPT and Claude, or with local models using ollama or LocalAI.
@@ -370,7 +385,7 @@ Thanks to this section of the video, you now know that Python:
 * Uses the edit-test-debug cycle as a coding practice.
     
 
-[https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html↗)↗.
+[https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html%E2%86%97)↗.
 
 # What is the Python Interpreter?
 
